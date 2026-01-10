@@ -48,7 +48,7 @@ export default function Contact() {
                         Connect on LinkedIn
                     </Link>
                     <Link
-                        href="mailto:contact@samirautanen.com"
+                        href="mailto:samrude1@outlook.com"
                         className="px-8 py-4 border font-medium rounded-full transition-all hover:scale-105 active:scale-95 hover:bg-white/5 flex items-center gap-2"
                         style={{
                             backgroundColor: 'var(--surface)',
