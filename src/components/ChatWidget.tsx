@@ -17,6 +17,7 @@ export default function ChatWidget() {
     ]);
     const [inputValue, setInputValue] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    const [isFirstRequest, setIsFirstRequest] = useState(true);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -54,6 +55,7 @@ export default function ChatWidget() {
 
             const data = await res.json();
             setMessages((prev) => [...prev, { role: "assistant", content: data.reply }]);
+            setIsFirstRequest(false);
         } catch (error) {
             console.error(error);
             setMessages((prev) => [...prev, { role: "assistant", content: "I'm having trouble connecting to my brain right now. Please try again later!" }]);
@@ -149,12 +151,25 @@ export default function ChatWidget() {
                             {isLoading && (
                                 <div className="flex gap-3">
                                     <div className="w-8 h-8 rounded-full bg-primary/20 border border-primary/50 flex items-center justify-center">
-                                        <Bot size={14} className="text-primary" />
+                                        <Bot size={14} className="text-primary animate-pulse" />
                                     </div>
-                                    <div className="bg-white/5 border border-white/10 p-3 rounded-lg flex gap-1 items-center">
-                                        <span className="w-1.5 h-1.5 bg-white/40 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-                                        <span className="w-1.5 h-1.5 bg-white/40 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-                                        <span className="w-1.5 h-1.5 bg-white/40 rounded-full animate-bounce"></span>
+                                    <div className="bg-white/5 border border-white/10 p-3 rounded-lg">
+                                        {isFirstRequest ? (
+                                            <div className="flex flex-col gap-2">
+                                                <div className="flex gap-1 items-center">
+                                                    <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                                                    <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                                                    <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce"></span>
+                                                </div>
+                                                <span className="text-xs text-white/50 italic">Waking up my neural networks...</span>
+                                            </div>
+                                        ) : (
+                                            <div className="flex gap-1 items-center">
+                                                <span className="w-1.5 h-1.5 bg-white/40 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                                                <span className="w-1.5 h-1.5 bg-white/40 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                                                <span className="w-1.5 h-1.5 bg-white/40 rounded-full animate-bounce"></span>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             )}
