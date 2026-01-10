@@ -16,8 +16,7 @@ const projects = [
     {
         title: "Autonomous Agents",
         description: "Suite of Python-based automation agents designed for complex decision-making tasks and workflow optimization.",
-        tags: ["Python", "Automation", "LLMs"],
-        link: "https://github.com/Samrude1"
+        tags: ["Python", "Automation", "LLMs"]
     },
     {
         title: "Bootcamp Finder",
