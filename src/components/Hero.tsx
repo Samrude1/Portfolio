@@ -31,7 +31,7 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight"
+                        className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-[0.2em]"
                         style={{
                             fontFamily: 'var(--font-syne)',
                             color: 'var(--foreground)'
