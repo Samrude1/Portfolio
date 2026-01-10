@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="w-full py-8 mt-20 border-t backdrop-blur-sm" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--surface)' }}>
+        <footer className="w-full py-8 pb-24 mt-20 border-t backdrop-blur-sm" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--surface)' }}>
             <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
 
                 <div className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>
