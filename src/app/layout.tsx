@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Syne } from "next/font/google";
+import { Inter, Space_Grotesk, Syne, Bodoni_Moda } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -23,6 +23,12 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
 });
 
+const bodoniModa = Bodoni_Moda({
+  variable: "--font-bodoni",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
 export const metadata: Metadata = {
   title: "Sami Rautanen | AI Developer & Technical Designer",
   description: "Portfolio of Sami Rautanen - Specializing in Agentic AI, Technical Art, and Game Development.",
@@ -36,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${syne.variable} ${inter.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${syne.variable} ${inter.variable} ${spaceGrotesk.variable} ${bodoniModa.variable} antialiased`}
       >
         <ThemeProvider>
           <Navbar />
