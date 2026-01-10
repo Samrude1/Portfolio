@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Syne, Bodoni_Moda } from "next/font/google";
+import { Inter, Space_Grotesk, Syne, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -23,10 +23,10 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
 });
 
-const bodoniModa = Bodoni_Moda({
-  variable: "--font-bodoni",
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${syne.variable} ${inter.variable} ${spaceGrotesk.variable} ${bodoniModa.variable} antialiased`}
+        className={`${syne.variable} ${inter.variable} ${spaceGrotesk.variable} ${bebasNeue.variable} antialiased`}
       >
         <ThemeProvider>
           <Navbar />
