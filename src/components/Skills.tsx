@@ -1,0 +1,119 @@
+"use client";
+
+import Section from "./Section";
+import { motion } from "framer-motion";
+
+const skills = [
+    {
+        category: "AI & Logic",
+        items: ["Python Agents", "Game AI", "LLM Integration", "Algorithm Design"]
+    },
+    {
+        category: "Game Development",
+        items: ["Unity Engine", "C# Scripting", "Level Design", "Itch.io Publishing"]
+    },
+    {
+        category: "Full-Stack Web",
+        items: ["React / Next.js", "TypeScript", "Tailwind CSS", "Node.js"]
+    },
+    {
+        category: "Technical Design",
+        items: ["3D Modeling", "Visualization", "Technical Drawing", "UI/UX Design"]
+    }
+];
+
+export default function Skills() {
+    return (
+        <Section id="skills">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                {/* Text / Context */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
+                    <h2
+                        className="text-3xl md:text-4xl font-light tracking-widest mb-8"
+                        style={{ color: 'var(--foreground)' }}
+                    >
+                        FULL-SPECTRUM <br />
+                        <span className="opacity-60">CAPABILITIES</span>
+                    </h2>
+                    <p
+                        className="text-base leading-relaxed mb-6 opacity-80"
+                        style={{ color: 'var(--foreground)' }}
+                    >
+                        Bridging the gap between creative vision and technical implementation.
+                        I offer a rare combination of **structural design thinking** (from my background in technical design)
+                        and **logic-driven development**.
+                    </p>
+                    <p
+                        className="text-base leading-relaxed opacity-80"
+                        style={{ color: 'var(--foreground)' }}
+                    >
+                        Whether building intelligent agents or immersive web experiences,
+                        I focus on performance, aesthetics, and user-centric functionality.
+                    </p>
+                    <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
+                        <p className="text-xs font-medium tracking-widest mb-2 opacity-60" style={{ color: 'var(--foreground)' }}>EDUCATION</p>
+                        <h4 className="text-lg font-medium" style={{ color: 'var(--foreground)' }}>
+                            Vocational Qualification in Technical Design
+                        </h4>
+                        <p className="opacity-60" style={{ color: 'var(--foreground)' }}>
+                            Hyria Ammattiopisto • Tekninen suunnittelija
+                        </p>
+                        <p className="text-sm mt-1 opacity-50" style={{ color: 'var(--foreground)' }}>
+                            3D Visualization & Structural Design
+                        </p>
+                    </div>
+                </motion.div>
+
+                {/* Skills Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {skills.map((skillGroup, index) => (
+                        <motion.div
+                            key={skillGroup.category}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="p-6 rounded-xl border hover:border-primary/30 transition-colors"
+                            style={{
+                                backgroundColor: 'var(--surface)',
+                                borderColor: 'var(--border)'
+                            }}
+                        >
+                            <h3
+                                className="text-lg font-medium mb-4 border-b pb-2"
+                                style={{
+                                    color: 'var(--foreground)',
+                                    borderColor: 'var(--border)'
+                                }}
+                            >
+                                {skillGroup.category}
+                            </h3>
+                            <ul className="space-y-2">
+                                {skillGroup.items.map(item => (
+                                    <li
+                                        key={item}
+                                        className="text-base flex items-center gap-2 opacity-80"
+                                        style={{ color: 'var(--foreground)' }}
+                                    >
+                                        <span
+                                            className="w-1 h-1 rounded-full"
+                                            style={{ backgroundColor: 'var(--secondary)' }}
+                                        />
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    ))}
+                </div>
+
+            </div>
+        </Section>
+    );
+}

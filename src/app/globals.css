@@ -1,26 +1,174 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Default Theme: AI Purple Dark */
+  --background: #030303;
+  --foreground: #ededed;
+  --primary: #8b5cf6;
+  --secondary: #06b6d4;
+  --accent: #d946ef;
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* Fonts */
+  --font-heading: 'Outfit', var(--font-geist-sans), sans-serif;
+  --font-body: 'Inter', var(--font-geist-sans), sans-serif;
+  --font-mono: 'Space Grotesk', var(--font-geist-mono), monospace;
+}
+
+/* Monochrome Theme */
+/* Unified Dark Mode */
+[data-mode="dark"] {
+  --background: #030303;
+  --foreground: #ededed;
+
+  /* Deep Blue for Effects/Accents */
+  --primary: #2563eb;
+  --secondary: #1e40af;
+  --accent: #3b82f6;
+
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-hover: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.1);
+
+  /* Neural Network Colors */
+  --node-primary: #2563eb;
+  --node-secondary: #1e40af;
+  --connection: #3b82f6;
+}
+
+/* Unified Light Mode */
+[data-mode="light"] {
+  --background: #F5F3EF;
+  --foreground: #0D4D2C;
+
+  /* Black for Effects/Accents as requested */
+  --primary: #000000;
+  --secondary: #333333;
+  --accent: #000000;
+
+  --surface: rgba(13, 77, 44, 0.04);
+  --surface-hover: rgba(13, 77, 44, 0.08);
+  --border: rgba(13, 77, 44, 0.12);
+
+  /* Neural Network Colors - Pure Black */
+  --node-primary: #000000;
+  --node-secondary: #333333;
+  --connection: #000000;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+
+  /* New Artistic/Technical Font Stack */
+  --font-heading: var(--font-syne);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-space);
+
+  /* Background Pattern Opacity */
+  --bg-pattern-opacity: 0.3;
+  /* Subtle but visible in dark mode */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Unified Light Mode */
+/* Unified Light Mode */
+[data-mode="light"] {
+  --background: #F5F3EF;
+  --foreground: #0D4D2C;
+
+  /* Black for Effects/Accents as requested */
+  --primary: #000000;
+  --secondary: #333333;
+  --accent: #000000;
+
+  --surface: rgba(13, 77, 44, 0.04);
+  --surface-hover: rgba(13, 77, 44, 0.08);
+  --border: rgba(13, 77, 44, 0.12);
+
+  /* Neural Network Colors - Pure Black */
+  --node-primary: #000000;
+  --node-secondary: #333333;
+  --connection: #000000;
+
+  --bg-pattern-opacity: 1.0;
+  /* Texture visible on cream */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+  position: relative;
+
+  ::selection {
+    background-color: var(--primary);
+    color: white;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+.glass-hover:hover {
+  background: var(--surface-hover);
+  border-color: var(--primary);
+}
+
+/* Smooth Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
 }

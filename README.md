@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio 2026: Sami Rautanen
 
-## Getting Started
+The technical portfolio of **Sami Rautanen**, an AI Developer & Technical Designer focusing on **Agentic AI** and **3D Orchestration Systems**.
 
-First, run the development server:
+* **Live Demo:** [portfolio-2026.vercel.app](https://portfolio-2026.vercel.app) (Replace with real link after deploy)
+* **Tech Stack:** Next.js 16, Three.js (R3F), Tailwind CSS, Framer Motion.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Key Features
+
+*   **Interactive 3D Background:** A neural-network inspired particle system using `react-three-fiber` that responds to scroll and mouse movement.
+*   **Agentic AI Showcase:** Dedicated section for "Autonomous Agents" (Python/CrewAI) projects.
+*   **Themed UI:** Custom "AI Dark Mode" aesthetics using specialized HSL color tokens.
+*   **Performance:** Optimized animations and component-level code splitting.
+
+## 🛠️ Tech Stack
+
+*   **Core:** [Next.js 16](https://nextjs.org/) (App Router), [React 19](https://react.dev/)
+*   **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+*   **3D / Visuals:** [Three.js](https://threejs.org/), [React Three Fiber](https://docs.pmnd.rs/react-three-fiber), [Drei](https://github.com/pmndrs/drei)
+*   **Animation:** [Framer Motion](https://www.framer.com/motion/)
+*   **Icons:** [Lucide React](https://lucide.dev/)
+
+## 📦 Project Structure
+
+```
+src/
+├── app/                  # Next.js App Router pages
+├── components/           # React components
+│   ├── ThreeScene.tsx    # The 3D Neural Network background
+│   ├── Projects.tsx      # Portfolio grid (inc. AI Agents)
+│   ├── Hero.tsx          # Landing section with scroll-driven animations
+│   └── ...
+└── lib/                  # Utilities (if any)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏃‍♂️ Running Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2.  **Run the dev server:**
+    ```bash
+    npm run dev
+    ```
 
-## Learn More
+3.  **Build for production:**
+    ```bash
+    npm run build
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+## 🚢 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ready for zero-config deployment on **Vercel**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npx vercel
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+*Created by Sami Rautanen as part of the "AI Architect 2026" Career Plan.*
