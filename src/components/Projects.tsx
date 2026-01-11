@@ -9,8 +9,8 @@ import Image from "next/image";
 const projects = [
     {
         title: "AI-Integrated Chess",
-        description: "Classic chess engine enhanced with custom Python AI agents. Demonstrates algorithmic thinking and game logic implementation.",
-        tags: ["Python", "Game AI", "Algorithms"],
+        description: "Interactive chess game with Stockfish AI engine and Gemini-powered commentary. Features real-time move analysis and an entertaining AI commentator.",
+        tags: ["TypeScript", "React", "Stockfish WASM", "Gemini API"],
         link: "https://github.com/Samrude1/ChessAI",
         cta: "View on GitHub",
         image: "/projects/chess-ai.png",
