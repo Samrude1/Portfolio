@@ -4,6 +4,7 @@ import Section from "./Section";
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
     {
@@ -11,41 +12,53 @@ const projects = [
         description: "Classic chess engine enhanced with custom Python AI agents. Demonstrates algorithmic thinking and game logic implementation.",
         tags: ["Python", "Game AI", "Algorithms"],
         link: "https://github.com/Samrude1/ChessAI",
-        cta: "View on GitHub"
+        cta: "View on GitHub",
+        image: "/projects/chess-ai.png",
+        linkDescription: "Source code & documentation"
     },
     {
         title: "Autonomous Agents",
         description: "Suite of Python-based automation agents designed for complex decision-making tasks and workflow optimization.",
         tags: ["Python", "Automation", "LLMs"],
-        cta: "Coming Soon"
+        cta: "Coming Soon",
+        image: "/projects/agents.png",
+        linkDescription: "In development"
     },
     {
         title: "Bootcamp Finder",
         description: "Full-stack web application for discovering and filtering coding bootcamps. Features robust search and filtering.",
         tags: ["React", "Node.js", "API Integration"],
         link: "https://bootcampfinder.onrender.com/",
-        cta: "Try Live Demo"
+        cta: "Try Live Demo",
+        image: "/projects/bootcamp.png",
+        linkDescription: "Interactive web app"
     },
     {
         title: "Activity Finder",
         description: "Social activity discovery platform. Clean UI/UX focused on connecting users with local events.",
         tags: ["Next.js", "Tailwind", "Vercel"],
         link: "https://activity-finder-nu.vercel.app/",
-        cta: "Try Live Demo"
+        cta: "Try Live Demo",
+        image: "/projects/activity.png",
+        linkDescription: "Interactive web app"
     },
     {
         title: "Indie Game Portfolio",
         description: "Collection of published indie games on Itch.io. Showcase of C# Unity scripting and level design.",
         tags: ["Unity", "C#", "Game Design"],
         link: "https://sr3design.itch.io/",
-        cta: "Play Games"
+        cta: "Play Games",
+        image: "/projects/games.png",
+        linkDescription: "5+ playable games"
     },
     {
         title: "Technical Art & 3D",
         description: "3D visualization and level design portfolio. Featuring technical CAD drawings, game environment modeling, and structural design implementations.",
         tags: ["3D Modeling", "Level Design", "CAD"],
         link: "https://www.artstation.com/samrude",
-        cta: "View Gallery"
+        cta: "View Gallery",
+        image: "/projects/3d-art.png",
+        linkDescription: "Visual portfolio"
     }
 ];
 
@@ -72,8 +85,19 @@ export default function Projects() {
                 {projects.map((project, index) => {
                     const cardContent = (
                         <>
+                            {/* Thumbnail */}
+                            <div className="relative w-full aspect-video mb-4 rounded-xl overflow-hidden">
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+
                             {/* Header */}
-                            <div className="flex justify-between items-start mb-4">
+                            <div className="flex justify-between items-start mb-3">
                                 <h3
                                     className="text-xl font-medium group-hover:text-primary transition-colors"
                                     style={{ color: 'var(--foreground)' }}
@@ -91,18 +115,18 @@ export default function Projects() {
 
                             {/* Description */}
                             <p
-                                className="text-base mb-6 leading-relaxed opacity-70 flex-grow"
+                                className="text-sm mb-4 leading-relaxed opacity-70 flex-grow"
                                 style={{ color: 'var(--foreground)' }}
                             >
                                 {project.description}
                             </p>
 
                             {/* Tags */}
-                            <div className="flex flex-wrap gap-2 mb-6">
+                            <div className="flex flex-wrap gap-2 mb-4">
                                 {project.tags.map(tag => (
                                     <span
                                         key={tag}
-                                        className="text-xs px-3 py-1 rounded-full border opacity-60"
+                                        className="text-xs px-2 py-1 rounded-full border opacity-60"
                                         style={{
                                             backgroundColor: 'var(--surface)',
                                             color: 'var(--foreground)',
@@ -114,26 +138,32 @@ export default function Projects() {
                                 ))}
                             </div>
 
-                            {/* CTA Button */}
-                            <div
-                                className={`flex items-center gap-2 text-sm font-medium transition-all
-                                    ${project.link
-                                        ? 'group-hover:gap-3 opacity-70 group-hover:opacity-100'
-                                        : 'opacity-40'}`}
-                                style={{ color: project.link ? 'var(--primary)' : 'var(--foreground)' }}
-                            >
-                                <span>{project.cta}</span>
-                                {project.link && (
-                                    <ArrowRight
-                                        size={16}
-                                        className="transition-transform group-hover:translate-x-1"
-                                    />
-                                )}
+                            {/* CTA Button with link description */}
+                            <div className="mt-auto pt-3 border-t" style={{ borderColor: 'var(--border)' }}>
+                                <div
+                                    className={`flex items-center justify-between text-sm font-medium transition-all
+                                        ${project.link
+                                            ? 'opacity-80 group-hover:opacity-100'
+                                            : 'opacity-40'}`}
+                                >
+                                    <div className="flex items-center gap-2" style={{ color: project.link ? 'var(--primary)' : 'var(--foreground)' }}>
+                                        <span>{project.cta}</span>
+                                        {project.link && (
+                                            <ArrowRight
+                                                size={16}
+                                                className="transition-transform group-hover:translate-x-1"
+                                            />
+                                        )}
+                                    </div>
+                                    <span className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>
+                                        {project.linkDescription}
+                                    </span>
+                                </div>
                             </div>
                         </>
                     );
 
-                    const cardClasses = `group relative p-6 rounded-2xl border transition-all duration-300 flex flex-col h-full
+                    const cardClasses = `group relative p-4 rounded-2xl border transition-all duration-300 flex flex-col h-full
                         hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 hover:scale-[1.02]
                         ${project.link ? 'cursor-pointer' : 'cursor-default opacity-80'}`;
 
@@ -171,3 +201,4 @@ export default function Projects() {
         </Section>
     );
 }
+
