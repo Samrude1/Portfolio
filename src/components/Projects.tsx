@@ -2,7 +2,7 @@
 
 import Section from "./Section";
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -97,21 +97,12 @@ export default function Projects() {
                             </div>
 
                             {/* Header */}
-                            <div className="flex justify-between items-start mb-3">
-                                <h3
-                                    className="text-xl font-medium group-hover:text-primary transition-colors"
-                                    style={{ color: 'var(--foreground)' }}
-                                >
-                                    {project.title}
-                                </h3>
-                                {project.link && (
-                                    <ExternalLink
-                                        size={18}
-                                        className="opacity-40 group-hover:opacity-100 transition-opacity flex-shrink-0"
-                                        style={{ color: 'var(--foreground)' }}
-                                    />
-                                )}
-                            </div>
+                            <h3
+                                className="text-xl font-medium mb-3 group-hover:text-primary transition-colors"
+                                style={{ color: 'var(--foreground)' }}
+                            >
+                                {project.title}
+                            </h3>
 
                             {/* Description */}
                             <p
