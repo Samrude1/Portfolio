@@ -31,11 +31,11 @@ export default function Navbar() {
                 <li>
                     <button
                         onClick={toggleMode}
-                        className="p-2 rounded-full opacity-70 hover:opacity-100 transition-all duration-300 hover:bg-white/10"
+                        className="p-2.5 rounded-full opacity-70 hover:opacity-100 transition-all duration-300 hover:bg-white/10"
                         style={{ color: 'var(--foreground)' }}
                         aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
                     >
-                        {mode === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+                        {mode === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
                     </button>
                 </li>
             </ul>
