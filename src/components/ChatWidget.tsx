@@ -203,8 +203,7 @@ export default function ChatWidget() {
                 onClick={() => setIsOpen(!isOpen)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="pointer-events-auto flex items-center gap-3 px-5 py-4 bg-primary text-white font-bold rounded-full shadow-[0_0_20px_-5px_rgba(var(--primary-rgb),0.5)] hover:shadow-[0_0_30px_-5px_rgba(var(--primary-rgb),0.7)] transition-all"
-                style={{ '--primary-rgb': '255, 255, 255' } as any} // Fallback if css var missing
+                className="pointer-events-auto flex items-center gap-3 px-5 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/40 hover:shadow-xl hover:shadow-primary/60 transition-all"
             >
                 <Bot size={24} />
                 <span className="hidden sm:inline">Ask AI Clone</span>
