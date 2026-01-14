@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Bot, User, Info } from "lucide-react";
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Message {
     role: "user" | "assistant";
@@ -144,7 +146,19 @@ export default function ChatWidget() {
                                             : "bg-white/5 text-white/90 border border-white/10"
                                             }`}
                                     >
-                                        {msg.content}
+                                        <ReactMarkdown
+                                            remarkPlugins={[remarkGfm]}
+                                            components={{
+                                                a: ({ node, ...props }) => (
+                                                    <a {...props} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline" />
+                                                ),
+                                                ul: ({ node, ...props }) => <ul {...props} className="list-disc list-inside my-1" />,
+                                                ol: ({ node, ...props }) => <ol {...props} className="list-decimal list-inside my-1" />,
+                                                p: ({ node, ...props }) => <p {...props} className="mb-1 last:mb-0" />,
+                                            }}
+                                        >
+                                            {msg.content}
+                                        </ReactMarkdown>
                                     </div>
                                 </div>
                             ))}
