@@ -90,10 +90,10 @@ export default function ChatWidget() {
                                 <div className="relative">
                                     <button
                                         onClick={() => setShowInfo(!showInfo)}
-                                        className="p-1 hover:bg-white/10 rounded-full transition-colors text-white/50 hover:text-white"
+                                        className="p-1.5 hover:bg-white/20 rounded-full transition-colors text-white/70 hover:text-white"
                                         aria-label="Bot Info"
                                     >
-                                        <Info size={16} />
+                                        <Info size={20} />
                                     </button>
                                     <AnimatePresence>
                                         {showInfo && (
@@ -106,7 +106,7 @@ export default function ChatWidget() {
                                                 <h4 className="font-bold text-white mb-1">Bot Usage Limits</h4>
                                                 <ul className="list-disc list-inside space-y-1">
                                                     <li>Rate Limit: <span className="text-primary">5 msg/min</span></li>
-                                                    <li>Powered by Gemini Flash (Free Tier)</li>
+                                                    <li>Powered by Gemini Flash</li>
                                                     <li>May pause if limits exceeded.</li>
                                                 </ul>
                                             </motion.div>
