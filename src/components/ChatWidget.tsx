@@ -203,7 +203,7 @@ export default function ChatWidget() {
                 onClick={() => setIsOpen(!isOpen)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="pointer-events-auto flex items-center gap-3 px-5 py-4 bg-primary text-white font-bold rounded-full shadow-lg shadow-primary/40 hover:shadow-xl hover:shadow-primary/60 transition-all"
+                className="pointer-events-auto flex items-center gap-3 px-5 py-4 bg-primary text-white font-bold rounded-full shadow-md shadow-primary/30 hover:shadow-lg hover:shadow-primary/50 transition-all"
             >
                 <Bot size={24} />
                 <span className="hidden sm:inline">Ask AI Clone</span>
