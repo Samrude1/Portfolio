@@ -17,6 +17,15 @@ const projects = [
         linkDescription: "Source code & documentation"
     },
     {
+        title: "AI Portfolio Assistant",
+        description: "Live AI agent running on this site. Built with Python, FastAPI, and Gemini. Features guardrails, email integration, lead capture, and push notifications.",
+        tags: ["Python", "FastAPI", "Gemini API", "AI Agents"],
+        link: null, // No external link - it's live on this site
+        cta: "Try it below ↘️",
+        image: "/projects/ai-assistant.png",
+        linkDescription: "Live on this site"
+    },
+    {
         title: "Autonomous Agents",
         description: "Suite of Python-based automation agents designed for complex decision-making tasks and workflow optimization.",
         tags: ["Python", "Automation", "LLMs"],

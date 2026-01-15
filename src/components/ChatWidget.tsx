@@ -85,7 +85,7 @@ export default function ChatWidget() {
                                 </div>
                                 <div>
                                     <h3 className="text-sm font-medium text-white">Sami AI Clone</h3>
-                                    <p className="text-xs text-white/50">Powered by Agentic Logic</p>
+                                    <p className="text-xs text-white/50">Built by me • Python + Gemini</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-2">
@@ -103,14 +103,38 @@ export default function ChatWidget() {
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 exit={{ opacity: 0, y: 10 }}
-                                                className="absolute right-0 top-8 w-64 p-3 bg-black/90 border border-white/20 rounded-xl text-xs text-white/80 shadow-xl z-50 backdrop-blur-md"
+                                                className="absolute right-0 top-8 w-72 p-4 bg-black/95 border border-white/20 rounded-xl text-xs text-white/80 shadow-xl z-50 backdrop-blur-md"
                                             >
-                                                <h4 className="font-bold text-white mb-1">Bot Usage Limits</h4>
-                                                <ul className="list-disc list-inside space-y-1">
-                                                    <li>Rate Limit: <span className="text-primary">5 msg/min</span></li>
-                                                    <li>Powered by Gemini Flash</li>
-                                                    <li>May pause if limits exceeded.</li>
+                                                <h4 className="font-bold text-white mb-2 text-sm">About This AI Agent</h4>
+                                                <ul className="space-y-1.5 mb-3">
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary mt-0.5">✨</span>
+                                                        <span>Built by Sami Rautanen</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary mt-0.5">🛡️</span>
+                                                        <span>Guardrails: Stays on-topic</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary mt-0.5">📧</span>
+                                                        <span>Email integration for leads</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary mt-0.5">💾</span>
+                                                        <span>Lead capture system</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary mt-0.5">🔔</span>
+                                                        <span>Push notifications (Pushover)</span>
+                                                    </li>
+                                                    <li className="flex items-start gap-2">
+                                                        <span className="text-primary mt-0.5">⚡</span>
+                                                        <span>Python, FastAPI, Gemini</span>
+                                                    </li>
                                                 </ul>
+                                                <div className="pt-2 border-t border-white/10 text-xs text-white/50">
+                                                    Rate Limit: <span className="text-primary">5 msg/min</span>
+                                                </div>
                                             </motion.div>
                                         )}
                                     </AnimatePresence>

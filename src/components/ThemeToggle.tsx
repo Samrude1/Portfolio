@@ -11,7 +11,7 @@ export default function ThemeToggle() {
     return (
         <button
             onClick={toggleMode}
-            className="fixed bottom-8 right-8 z-50 p-4 rounded-full glass backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all hover:scale-105 active:scale-95 shadow-lg"
+            className="fixed bottom-6 left-6 z-50 p-4 rounded-full glass backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all hover:scale-105 active:scale-95 shadow-lg"
             aria-label="Toggle light/dark mode"
         >
             <AnimatePresence mode="wait">

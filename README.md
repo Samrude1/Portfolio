@@ -24,7 +24,7 @@ This project is built using a modern **Full-Stack AI** architecture:
 
 ### Backend (AI Logic)
 *   **Server:** [FastAPI](https://fastapi.tiangolo.com/) (Python) hosted on Render.
-*   **AI Model:** Google Gemini API (Flash 1.5).
+*   **AI Model:** Google Gemini API (Flash 2.0).
 *   **Security:** Rate-limiting via `slowapi` to prevent abuse.
 *   **Automation:** UptimeRobot monitoring to keep the free-tier backend responsive.
 
