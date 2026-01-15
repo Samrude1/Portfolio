@@ -43,9 +43,9 @@ export default function Navbar() {
             </nav>
 
             {/* Subtle AI Banner */}
-            <div className="fixed top-20 left-0 right-0 z-40 flex justify-center pointer-events-none">
+            <div className="fixed top-24 left-0 right-0 z-40 flex justify-center pointer-events-none">
                 <div
-                    className="px-3 py-1.5 rounded-full text-[10px] tracking-wider opacity-40 hover:opacity-70 transition-opacity pointer-events-auto"
+                    className="px-5 py-2.5 rounded-full text-sm tracking-wide opacity-60 hover:opacity-90 transition-opacity pointer-events-auto"
                     style={{
                         backgroundColor: 'var(--surface)',
                         borderWidth: '1px',
