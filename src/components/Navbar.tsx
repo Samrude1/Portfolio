@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, ArrowDownRight } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 
 export default function Navbar() {
@@ -45,7 +45,7 @@ export default function Navbar() {
             {/* Subtle AI Banner */}
             <div className="fixed top-24 left-0 right-0 z-40 flex justify-center pointer-events-none">
                 <div
-                    className="px-5 py-2.5 rounded-full text-sm tracking-wide opacity-60 hover:opacity-90 transition-opacity pointer-events-auto"
+                    className="px-5 py-2.5 rounded-full text-sm tracking-wide opacity-60 hover:opacity-90 transition-opacity pointer-events-auto flex items-center gap-2"
                     style={{
                         backgroundColor: 'var(--surface)',
                         borderWidth: '1px',
@@ -53,7 +53,8 @@ export default function Navbar() {
                         color: 'var(--foreground)'
                     }}
                 >
-                    💬 Live AI Agent
+                    <span>Live AI Agent</span>
+                    <ArrowDownRight size={16} className="text-primary" />
                 </div>
             </div>
         </>
