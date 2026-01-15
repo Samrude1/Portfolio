@@ -60,19 +60,6 @@ export default function Hero() {
                     >
                         AI-FORWARD DEVELOPER & TECHNICAL DESIGNER
                     </motion.p>
-
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: 1.8 }}
-                        className="mt-6 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-xs tracking-wider"
-                        style={{
-                            fontFamily: 'var(--font-body)',
-                            color: 'var(--primary)'
-                        }}
-                    >
-                        ✨ Live AI Agent Running Below
-                    </motion.div>
                 </div>
             </motion.div>
 

@@ -15,30 +15,47 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center py-6 pointer-events-none">
-            <ul className="flex gap-8 px-8 py-3 rounded-full glass pointer-events-auto items-center">
-                {navLinks.map((link) => (
-                    <li key={link.name}>
-                        <Link
-                            href={link.href}
-                            className="text-sm tracking-[0.2em] opacity-70 hover:opacity-100 transition-opacity duration-300 font-medium"
+        <>
+            <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center py-6 pointer-events-none">
+                <ul className="flex gap-8 px-8 py-3 rounded-full glass pointer-events-auto items-center">
+                    {navLinks.map((link) => (
+                        <li key={link.name}>
+                            <Link
+                                href={link.href}
+                                className="text-sm tracking-[0.2em] opacity-70 hover:opacity-100 transition-opacity duration-300 font-medium"
+                                style={{ color: 'var(--foreground)' }}
+                            >
+                                {link.name}
+                            </Link>
+                        </li>
+                    ))}
+                    <li>
+                        <button
+                            onClick={toggleMode}
+                            className="p-2.5 rounded-full opacity-70 hover:opacity-100 transition-all duration-300 hover:bg-white/10"
                             style={{ color: 'var(--foreground)' }}
+                            aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
                         >
-                            {link.name}
-                        </Link>
+                            {mode === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+                        </button>
                     </li>
-                ))}
-                <li>
-                    <button
-                        onClick={toggleMode}
-                        className="p-2.5 rounded-full opacity-70 hover:opacity-100 transition-all duration-300 hover:bg-white/10"
-                        style={{ color: 'var(--foreground)' }}
-                        aria-label={mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-                    >
-                        {mode === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-                    </button>
-                </li>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+
+            {/* Subtle AI Banner */}
+            <div className="fixed top-20 left-0 right-0 z-40 flex justify-center pointer-events-none">
+                <div
+                    className="px-3 py-1.5 rounded-full text-[10px] tracking-wider opacity-40 hover:opacity-70 transition-opacity pointer-events-auto"
+                    style={{
+                        backgroundColor: 'var(--surface)',
+                        borderWidth: '1px',
+                        borderColor: 'var(--border)',
+                        color: 'var(--foreground)'
+                    }}
+                >
+                    💬 Live AI Agent
+                </div>
+            </div>
+        </>
     );
 }
