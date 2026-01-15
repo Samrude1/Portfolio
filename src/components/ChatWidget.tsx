@@ -15,7 +15,7 @@ export default function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
     const [showInfo, setShowInfo] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
-        { role: "assistant", content: "Hi! I'm Sami's AI Clone. Ask me anything about his skills, background, or AI Agents." }
+        { role: "assistant", content: "Hi! I'm Sami. Ask me anything about my skills, projects, or experience with AI agents." }
     ]);
     const [inputValue, setInputValue] = useState("");
     const [isLoading, setIsLoading] = useState(false);
