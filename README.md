@@ -42,25 +42,16 @@ src/
 └── ...
 ```
 
-## 🏃‍♂️ Running Locally
+## 📜 License & Usage
 
-1.  **Clone the repo:**
-    ```bash
-    git clone https://github.com/Samrude1/Portfolio.git
-    ```
+This repository is primarily a **Showcase** of my technical skills and architectural capability.
+While the code is public to demonstrate code quality:
 
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
+1.  **Strictly Personal:** The design, copy, and specific implementation details are tailored to my personal brand.
+2.  **No License for Reuse:** Please do not fork, copy, or deploy this site as your own portfolio.
+3.  **Inquiries:** For business inquiries or collaboration, please contact me via LinkedIn.
 
-3.  **Setup Environment Variables:**
-    Create a `.env.local` for the frontend and a `.env` for the backend (see `ai-agent-backend`).
-
-4.  **Run Development:**
-    ```bash
-    npm run dev
-    ```
+*Looking for the live site? Visit [portfolio-seven-rho-74yt50nw74.vercel.app](https://portfolio-seven-rho-74yt50nw74.vercel.app/)*
 
 ---
 *Created by Sami Rautanen as part of the "AI Architect 2026" Career Plan.*
