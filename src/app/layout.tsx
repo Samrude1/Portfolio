@@ -30,8 +30,22 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-  title: "Sami Rautanen | AI Developer & Technical Designer",
-  description: "Portfolio of Sami Rautanen - Specializing in Agentic AI, Technical Art, and Game Development.",
+  metadataBase: new URL('https://portfolio-seven-rho-74yt50nw74.vercel.app'),
+  title: "Sami Rautanen | AI Engineer & Technical Designer",
+  description: "Portfolio of Sami Rautanen. Specializing in High-Performance Agentic AI, Complex Systems, and 3D Visualization. Transforming logic into experience.",
+  openGraph: {
+    title: "Sami Rautanen | AI Engineer & Technical Designer",
+    description: "Building the next generation of autonomous web agents and immersive interfaces.",
+    url: 'https://portfolio-seven-rho-74yt50nw74.vercel.app',
+    siteName: 'Sami Rautanen Portfolio',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Sami Rautanen | AI Engineer",
+    description: "Building the next generation of autonomous web agents and immersive interfaces.",
+  },
 };
 
 export default function RootLayout({
