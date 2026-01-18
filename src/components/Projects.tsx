@@ -17,6 +17,15 @@ const projects = [
         linkDescription: "Advanced simulation engine"
     },
     {
+        title: "Agentic AI Platform",
+        description: "Professional multi-agent orchestration platform. Features concurrent 'Research Squads' and 'Sales Intelligence Teams' capable of autonomous complex workflows. Built with Python & FastAPI.",
+        tags: ["Python", "AI Agents", "LLM Orchestration"],
+        link: "https://github.com/Samrude1/Agentsquad",
+        cta: "View Architecture",
+        image: "/projects/agents.png",
+        linkDescription: "Autonomous Workflow Engine"
+    },
+    {
         title: "TreeniTrack Pro",
         description: "Intelligent workout tracking application with integrated AI coach. Features visual progress analytics, exercise logging, and personalized training recommendations.",
         tags: ["TypeScript", "Vite", "Tailwind", "Fitness Tech"],
@@ -51,15 +60,6 @@ const projects = [
         cta: "Try it below ↘️",
         image: "/projects/ai-assistant.png",
         linkDescription: "Live on this site"
-    },
-    {
-        title: "Autonomous Agents",
-        description: "Suite of Python-based automation agents designed for complex decision-making tasks and workflow optimization.",
-        tags: ["Python", "Automation", "LLMs"],
-        link: "https://github.com/Samrude1/Agentsquad",
-        cta: "View on GitHub",
-        image: "/projects/agents.png",
-        linkDescription: "Source code & documentation"
     },
     {
         title: "Bootcamp Finder",
