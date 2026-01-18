@@ -8,6 +8,33 @@ import Image from "next/image";
 
 const projects = [
     {
+        title: "Poker Analytics AI",
+        description: "Professional-grade 6-max No-Limit Hold'em training simulator with AI opponents. Features comprehensive dashboard, real-time stats (VPIP, PFR), and win probability analysis.",
+        tags: ["TypeScript", "React", "Data Viz", "Game Logic"],
+        link: "https://github.com/Samrude1/PokerAnalyzzer",
+        cta: "View Logic",
+        image: "/projects/poker-analytics.png",
+        linkDescription: "Advanced simulation engine"
+    },
+    {
+        title: "TreeniTrack Pro",
+        description: "Intelligent workout tracking application with integrated AI coach. Features visual progress analytics, exercise logging, and personalized training recommendations.",
+        tags: ["TypeScript", "Vite", "Tailwind", "Fitness Tech"],
+        link: "https://github.com/Samrude1/TreeniTracker",
+        cta: "View App",
+        image: "/projects/workout-tracker.png",
+        linkDescription: "Modern wellness platform"
+    },
+    {
+        title: "737 Performance Computer",
+        description: "High-precision flight performance calculator for B737-800. Handles complex aviation mathematics for takeoff, landing, and descent planning.",
+        tags: ["TypeScript", "Mathematics", "Aviation"],
+        link: "https://github.com/Samrude1/Boeing737Calculator",
+        cta: "Check Maths",
+        image: "/projects/flight-calc.png",
+        linkDescription: "Specialized simulation tool"
+    },
+    {
         title: "AI-Integrated Chess",
         description: "Interactive chess game with Stockfish AI engine and Gemini-powered commentary. Features real-time move analysis and an entertaining AI commentator.",
         tags: ["TypeScript", "React", "Stockfish WASM", "Gemini API"],
