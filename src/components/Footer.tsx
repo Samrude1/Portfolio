@@ -12,6 +12,15 @@ export default function Footer() {
 
                 <div className="flex gap-6 items-center">
                     <Link
+                        href="https://github.com/Samrude1"
+                        target="_blank"
+                        className="opacity-60 hover:opacity-100 hover:text-primary transition-all hover:scale-110"
+                        style={{ color: 'var(--foreground)' }}
+                        title="GitHub"
+                    >
+                        <Github size={20} />
+                    </Link>
+                    <Link
                         href="https://www.linkedin.com/in/sami-rautanen-022095325"
                         target="_blank"
                         className="opacity-60 hover:opacity-100 hover:text-primary transition-all hover:scale-110"
