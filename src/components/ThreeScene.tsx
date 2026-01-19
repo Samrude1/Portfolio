@@ -113,7 +113,7 @@ function NeuralNetwork() {
     });
 
     // Create line positions from connections
-    nodesList.forEach((node, idx) => {
+    nodesList.forEach((node) => {
       node.connections.forEach(targetIdx => {
         if (targetIdx < nodesList.length) {
           lines.push(...node.position);

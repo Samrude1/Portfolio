@@ -25,6 +25,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         // Load from localStorage
         const savedMode = localStorage.getItem('mode') as Mode;
 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         if (savedMode) setModeState(savedMode);
     }, []);
 
