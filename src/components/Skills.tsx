@@ -35,7 +35,7 @@ export default function Skills() {
                     viewport={{ once: true }}
                 >
                     <h2
-                        className="text-3xl md:text-4xl font-light tracking-widest mb-8"
+                        className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wider md:tracking-widest mb-8"
                         style={{ color: 'var(--foreground)' }}
                     >
                         FULL-SPECTRUM <br />

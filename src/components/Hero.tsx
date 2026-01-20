@@ -52,7 +52,7 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8, delay: 1.2 }}
-                        className="text-sm md:text-base lg:text-lg tracking-[0.3em] font-light opacity-70"
+                        className="text-[10px] sm:text-xs md:text-base lg:text-lg tracking-[0.15em] md:tracking-[0.3em] font-light opacity-70 px-4"
                         style={{
                             fontFamily: 'var(--font-body)',
                             color: 'var(--foreground)'

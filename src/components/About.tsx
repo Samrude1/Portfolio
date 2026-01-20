@@ -15,7 +15,7 @@ export default function About() {
                 className="mb-16"
             >
                 <h2
-                    className="text-3xl md:text-4xl font-light tracking-widest mb-4"
+                    className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wider md:tracking-widest mb-4"
                     style={{ color: 'var(--foreground)' }}
                 >
                     ABOUT ME

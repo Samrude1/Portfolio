@@ -8,13 +8,13 @@ import Image from "next/image";
 
 const projects = [
     {
-        title: "Poker Analytics AI",
-        description: "Professional-grade 6-max No-Limit Hold'em training simulator with AI opponents. Features comprehensive dashboard, real-time stats (VPIP, PFR), and win probability analysis.",
-        tags: ["TypeScript", "React", "Data Viz", "Game Logic"],
+        title: "Poker Analytics Engine",
+        description: "Professional-grade 6-max No-Limit Hold'em training simulator with programmable rule-based bots. Features comprehensive dashboard and real-time probability analysis.",
+        tags: ["TypeScript", "React", "Data Viz", "Game Theory"],
         link: "https://github.com/Samrude1/PokerAnalyzzer",
         cta: "View Logic",
         image: "/projects/poker-analytics.png",
-        linkDescription: "Advanced simulation engine"
+        linkDescription: "Algorithmic simulation"
     },
     {
         title: "Agentic AI Platform",
@@ -110,7 +110,7 @@ export default function Projects() {
                 className="mb-16"
             >
                 <h2
-                    className="text-3xl md:text-4xl font-light tracking-widest mb-4"
+                    className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wider md:tracking-widest mb-4"
                     style={{ color: 'var(--foreground)' }}
                 >
                     SELECTED WORK
