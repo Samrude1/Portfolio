@@ -90,7 +90,7 @@ const projects = [
     },
     {
         title: "Technical Art & 3D",
-        description: "3D art and game environment portfolio. Featuring character models, level design, and environment creation for games. Explore visualizations and artistic 3D work.",
+        description: "3D art and environment portfolio. Featuring vehicle models, architectural designs, and game environments. Explore detailed visualizations and artistic 3D work.",
         tags: ["3D Modeling", "Level Design", "CAD"],
         link: "https://www.artstation.com/samrude",
         cta: "View Gallery",
