@@ -44,7 +44,7 @@ export default function Skills() {
                         className="text-base leading-relaxed mb-6 opacity-80"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        I combine technical design thinking (from my background in engineering) with
+                        I combine technical design thinking (from my background in technical design) with
                         software development expertise. This unique blend helps me build applications
                         that are both technically robust and user-focused.
                     </p>

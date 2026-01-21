@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Default Theme: Professional Blue */
-  --background: #030303;
+  /* Default Theme: Professional Blue - Dark */
+  --background: #121212;
   --foreground: #ededed;
   --primary: #0066CC;
   --secondary: #005AA3;
@@ -21,42 +21,42 @@
 /* Monochrome Theme */
 /* Unified Dark Mode */
 [data-mode="dark"] {
-  --background: #030303;
+  --background: #121212;
   --foreground: #ededed;
 
-  /* Deep Blue for Effects/Accents */
-  --primary: #2563eb;
-  --secondary: #1e40af;
-  --accent: #3b82f6;
+  /* Professional Blue */
+  --primary: #0066CC;
+  --secondary: #005AA3;
+  --accent: #0088FF;
 
   --surface: rgba(255, 255, 255, 0.03);
   --surface-hover: rgba(255, 255, 255, 0.08);
   --border: rgba(255, 255, 255, 0.1);
 
   /* Neural Network Colors */
-  --node-primary: #2563eb;
-  --node-secondary: #1e40af;
-  --connection: #3b82f6;
+  --node-primary: #0066CC;
+  --node-secondary: #005AA3;
+  --connection: #0088FF;
 }
 
 /* Unified Light Mode */
 [data-mode="light"] {
-  --background: #F5F3EF;
-  --foreground: #0D4D2C;
+  --background: #FFFFFF;
+  --foreground: #1a1a1a;
 
-  /* Black for Effects/Accents as requested */
-  --primary: #000000;
-  --secondary: #333333;
-  --accent: #000000;
+  /* Professional Blue - Same as dark mode */
+  --primary: #0066CC;
+  --secondary: #005AA3;
+  --accent: #0088FF;
 
-  --surface: rgba(13, 77, 44, 0.04);
-  --surface-hover: rgba(13, 77, 44, 0.08);
-  --border: rgba(13, 77, 44, 0.12);
+  --surface: rgba(0, 102, 204, 0.04);
+  --surface-hover: rgba(0, 102, 204, 0.08);
+  --border: rgba(0, 102, 204, 0.12);
 
-  /* Neural Network Colors - Pure Black */
-  --node-primary: #000000;
-  --node-secondary: #333333;
-  --connection: #000000;
+  /* Neural Network Colors - Professional Blue */
+  --node-primary: #0066CC;
+  --node-secondary: #005AA3;
+  --connection: #0088FF;
 }
 
 @theme inline {
@@ -79,28 +79,9 @@
   /* Subtle but visible in dark mode */
 }
 
-/* Unified Light Mode */
-/* Unified Light Mode */
+/* Light Mode Pattern Opacity */
 [data-mode="light"] {
-  --background: #F5F3EF;
-  --foreground: #0D4D2C;
-
-  /* Black for Effects/Accents as requested */
-  --primary: #000000;
-  --secondary: #333333;
-  --accent: #000000;
-
-  --surface: rgba(13, 77, 44, 0.04);
-  --surface-hover: rgba(13, 77, 44, 0.08);
-  --border: rgba(13, 77, 44, 0.12);
-
-  /* Neural Network Colors - Pure Black */
-  --node-primary: #000000;
-  --node-secondary: #333333;
-  --connection: #000000;
-
-  --bg-pattern-opacity: 1.0;
-  /* Texture visible on cream */
+  --bg-pattern-opacity: 0.5;
 }
 
 @theme inline {

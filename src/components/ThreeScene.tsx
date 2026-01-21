@@ -34,7 +34,7 @@ function getThemeColors() {
   const mode = root.getAttribute('data-mode') || 'dark';
 
   // Get background color - cream for light mode, dark for dark mode
-  const background = mode === 'light' ? '#F5F3EF' : '#030303';
+  const background = mode === 'light' ? '#FFFFFF' : '#121212';
 
   return {
     nodePrimary: getComputedStyle(root).getPropertyValue('--node-primary').trim() || (mode === 'light' ? '#000000' : '#2563eb'),
@@ -204,7 +204,7 @@ export default function ThreeScene() {
   useEffect(() => {
     const updateBgColor = () => {
       const mode = document.documentElement.getAttribute('data-mode') || 'dark';
-      setBgColor(mode === 'light' ? '#F5F3EF' : '#030303');
+      setBgColor(mode === 'light' ? '#FFFFFF' : '#121212');
     };
 
     updateBgColor();
