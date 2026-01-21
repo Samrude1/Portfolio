@@ -9,8 +9,8 @@ export default function Home() {
         <main className="relative flex flex-col w-full min-h-screen">
             <Hero />
             <Projects />
-            <Skills />
-            <About />
+            <Skills alternating />
+            <About alternating />
             <Contact />
         </main>
     );

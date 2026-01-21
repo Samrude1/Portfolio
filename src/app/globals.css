@@ -153,3 +153,13 @@ h6 {
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out;
 }
+
+/* Light Mode Section Alternating Backgrounds */
+.light-alt {
+  background-color: transparent;
+}
+
+[data-mode="light"] .light-alt {
+  background-color: #f8f9fa;
+  /* Very subtle gray */
+}
