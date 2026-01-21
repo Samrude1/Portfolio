@@ -136,7 +136,7 @@ export default function Projects() {
 
                             {/* Header */}
                             <h3
-                                className="text-xl font-medium mb-3 group-hover:text-primary transition-colors"
+                                className="text-2xl font-medium mb-3 group-hover:text-primary transition-colors"
                                 style={{ color: 'var(--foreground)' }}
                             >
                                 {project.title}
@@ -144,7 +144,7 @@ export default function Projects() {
 
                             {/* Description */}
                             <p
-                                className="text-sm mb-4 leading-relaxed opacity-70 flex-grow"
+                                className="text-base mb-4 leading-relaxed opacity-70 flex-grow"
                                 style={{ color: 'var(--foreground)' }}
                             >
                                 {project.description}
@@ -155,7 +155,7 @@ export default function Projects() {
                                 {project.tags.map(tag => (
                                     <span
                                         key={tag}
-                                        className="text-xs px-2 py-1 rounded-full border opacity-60"
+                                        className="text-sm px-2 py-1 rounded-full border opacity-60"
                                         style={{
                                             backgroundColor: 'var(--surface)',
                                             color: 'var(--foreground)',
