@@ -91,6 +91,8 @@ const projects = [
     {
         title: "Technical Art & 3D",
         description: "3D visualization and level design portfolio. Featuring technical CAD drawings, game environment modeling, and structural design implementations.",
+        tags: ["3D Modeling", "Level Design", "CAD"],
+        link: "https://www.artstation.com/samrude",
         cta: "View Gallery",
         image: "/projects/3d-art.png",
         linkDescription: "Visual portfolio"
