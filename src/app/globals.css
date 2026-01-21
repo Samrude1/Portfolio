@@ -165,12 +165,20 @@ h6 {
 }
 
 /* Section-specific backgrounds - Simple approach */
+[data-mode="light"] #work {
+  background-color: #f8f9fa;
+}
+
 [data-mode="light"] #skills {
   background-color: #f8f9fa;
 }
 
 [data-mode="light"] #contact {
   background-color: #f8f9fa;
+}
+
+[data-mode="dark"] #work {
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 [data-mode="dark"] #skills {
