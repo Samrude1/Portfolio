@@ -10,8 +10,8 @@ export default function Home() {
             <Hero />
             <Projects />
             <Skills alternating />
-            <About alternating />
-            <Contact />
+            <About />
+            <Contact alternating />
         </main>
     );
 }

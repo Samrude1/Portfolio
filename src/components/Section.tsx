@@ -17,7 +17,7 @@ export default function Section({ id, className, children, containerClassName, a
             id={id}
             className={clsx(
                 "relative w-full pt-32 pb-24 md:pt-40 px-6 md:px-12 scroll-mt-32",
-                alternating && "light-alt",
+                alternating && "bg-gray-50 dark:bg-gray-900/30",
                 className
             )}
         >
