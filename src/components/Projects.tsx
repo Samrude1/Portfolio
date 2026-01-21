@@ -36,7 +36,7 @@ const projects = [
     },
     {
         title: "737 Performance Computer",
-        description: "High-precision flight performance calculator for B737-800. Handles complex aviation mathematics for takeoff, landing, and descent planning.",
+        description: "High-precision flight performance calculator for Microsoft Flight Simulator X (B737-800). Handles complex aviation mathematics for takeoff, landing, and descent planning.",
         tags: ["TypeScript", "Mathematics", "Aviation"],
         link: "https://github.com/Samrude1/Boeing737Calculator",
         cta: "Check Maths",
@@ -72,7 +72,7 @@ const projects = [
     },
     {
         title: "Activity Finder",
-        description: "Social activity discovery platform. Clean UI/UX focused on connecting users with local events.",
+        description: "Discover free local activities, cultural events, and hidden gems. Features interactive maps, smart filtering, and personalized favorites.",
         tags: ["Next.js", "Tailwind", "Vercel"],
         link: "https://activity-finder-nu.vercel.app/",
         cta: "Try Live Demo",
@@ -81,22 +81,22 @@ const projects = [
     },
     {
         title: "Indie Game Portfolio",
-        description: "Collection of published indie games on Itch.io. Showcase of C# Unity scripting and level design.",
-        tags: ["Unity", "C#", "Game Design"],
-        link: "https://sr3design.itch.io/",
-        cta: "Play Games",
-        image: "/projects/games.png",
-        linkDescription: "5+ playable games"
+        description: "Collection of published indie games on Itch.io. Includes Chess Terminal, Tanks, Snake, Vault of Shadows, and more. Built with Unity and C#.",,
+    tags: ["Unity", "C#", "Game Design"],
+    link: "https://sr3design.itch.io/",
+    cta: "Play Games",
+    image: "/projects/games.png",
+    linkDescription: "5+ playable games"
     },
-    {
-        title: "Technical Art & 3D",
+{
+    title: "Technical Art & 3D",
         description: "3D visualization and level design portfolio. Featuring technical CAD drawings, game environment modeling, and structural design implementations.",
-        tags: ["3D Modeling", "Level Design", "CAD"],
-        link: "https://www.artstation.com/samrude",
-        cta: "View Gallery",
-        image: "/projects/3d-art.png",
-        linkDescription: "Visual portfolio"
-    }
+            tags: ["3D Modeling", "Level Design", "CAD"],
+                link: "https://www.artstation.com/samrude",
+                    cta: "View Gallery",
+                        image: "/projects/3d-art.png",
+                            linkDescription: "Visual portfolio"
+}
 ];
 
 export default function Projects() {
