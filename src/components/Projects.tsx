@@ -81,22 +81,20 @@ const projects = [
     },
     {
         title: "Indie Game Portfolio",
-        description: "Collection of published indie games on Itch.io. Includes Chess Terminal, Tanks, Snake, Vault of Shadows, and more. Built with Unity and C#.",,
-    tags: ["Unity", "C#", "Game Design"],
-    link: "https://sr3design.itch.io/",
-    cta: "Play Games",
-    image: "/projects/games.png",
-    linkDescription: "5+ playable games"
+        description: "Collection of published indie games on Itch.io. Includes Chess Terminal, Tanks, Snake, Vault of Shadows, and more. Built with Unity and C#.",
+        tags: ["Unity", "C#", "Game Design"],
+        link: "https://sr3design.itch.io/",
+        cta: "Play Games",
+        image: "/projects/games.png",
+        linkDescription: "5+ playable games"
     },
-{
-    title: "Technical Art & 3D",
+    {
+        title: "Technical Art & 3D",
         description: "3D visualization and level design portfolio. Featuring technical CAD drawings, game environment modeling, and structural design implementations.",
-            tags: ["3D Modeling", "Level Design", "CAD"],
-                link: "https://www.artstation.com/samrude",
-                    cta: "View Gallery",
-                        image: "/projects/3d-art.png",
-                            linkDescription: "Visual portfolio"
-}
+        cta: "View Gallery",
+        image: "/projects/3d-art.png",
+        linkDescription: "Visual portfolio"
+    }
 ];
 
 export default function Projects() {
