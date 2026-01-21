@@ -65,17 +65,17 @@ export default function About() {
                         className="text-lg leading-relaxed opacity-80"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        An <strong>AI Developer</strong> specializing in Context Engineering, Agentic AI Architecture,
-                        and Production AI Systems. I work at the intersection of AI agent development, application
-                        architecture, and interactive experiences.
+                        I'm an <strong>AI Developer</strong> who builds intelligent applications. I specialize in
+                        creating systems where AI agents work together to solve complex problems — like automating
+                        research, analyzing data, and providing smart recommendations.
                     </p>
 
                     <p
                         className="text-base leading-relaxed opacity-70"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        My approach is high-level orchestration: designing how AI agents collaborate, communicate,
-                        and solve problems — rather than getting lost in low-level code. I build AI systems that ship.
+                        I focus on building AI tools that work in real-world applications. My background
+                        in technical design helps me create solutions that are both technically sound and user-friendly.
                     </p>
 
                     {/* Quick facts */}

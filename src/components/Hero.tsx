@@ -58,7 +58,7 @@ export default function Hero() {
                             color: 'var(--foreground)'
                         }}
                     >
-                        AI-FORWARD DEVELOPER & TECHNICAL DESIGNER
+                        AI DEVELOPER & SOFTWARE ENGINEER
                     </motion.p>
                 </div>
             </motion.div>

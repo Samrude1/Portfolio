@@ -9,7 +9,7 @@ import Image from "next/image";
 const projects = [
     {
         title: "Poker Analytics Engine",
-        description: "Professional-grade 6-max No-Limit Hold'em training simulator with programmable rule-based bots. Features comprehensive dashboard and real-time probability analysis.",
+        description: "A poker training app that helps players improve their game. Features AI opponents, real-time statistics, and probability calculations to analyze your decisions.",
         tags: ["TypeScript", "React", "Data Viz", "Game Theory"],
         link: "https://github.com/Samrude1/PokerAnalyzzer",
         cta: "View Logic",
@@ -17,8 +17,8 @@ const projects = [
         linkDescription: "Algorithmic simulation"
     },
     {
-        title: "Agentic AI Platform",
-        description: "Professional multi-agent orchestration platform. Features concurrent 'Research Squads' and 'Sales Intelligence Teams' capable of autonomous complex workflows. Built with Python & FastAPI.",
+        title: "AI Automation Platform",
+        description: "An AI automation platform where multiple AI agents work together on complex tasks. Can handle research projects, sales intelligence, and data analysis automatically. Built with Python.",
         tags: ["Python", "AI Agents", "LLM Orchestration"],
         link: "https://github.com/Samrude1/Agentsquad",
         cta: "View Architecture",
@@ -44,8 +44,8 @@ const projects = [
         linkDescription: "Specialized simulation tool"
     },
     {
-        title: "AI-Integrated Chess",
-        description: "Interactive chess game with Stockfish AI engine and Gemini-powered commentary. Features real-time move analysis and an entertaining AI commentator.",
+        title: "AI Chess with Commentary",
+        description: "A chess game where you play against AI. Features a fun AI commentator that explains moves and analyzes your strategy in real-time.",
         tags: ["TypeScript", "React", "Stockfish WASM", "Gemini API"],
         link: "https://github.com/Samrude1/ChessAI",
         cta: "View on GitHub",
@@ -54,7 +54,7 @@ const projects = [
     },
     {
         title: "AI Portfolio Assistant",
-        description: "Live AI agent running on this site. Built with Python, FastAPI, and Gemini. Features guardrails, email integration, lead capture, and push notifications.",
+        description: "The AI chatbot on this website. Answers questions about my work, can send emails, and notifies me when someone wants to get in touch. Built with Python.",
         tags: ["Python", "FastAPI", "Gemini API", "AI Agents"],
         link: null, // No external link - it's live on this site
         cta: "Try it below ↘️",

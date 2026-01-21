@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Default Theme: AI Purple Dark */
+  /* Default Theme: Professional Blue */
   --background: #030303;
   --foreground: #ededed;
-  --primary: #8b5cf6;
-  --secondary: #06b6d4;
-  --accent: #d946ef;
+  --primary: #0066CC;
+  --secondary: #005AA3;
+  --accent: #0088FF;
   --surface: rgba(255, 255, 255, 0.03);
   --surface-hover: rgba(255, 255, 255, 0.08);
   --border: rgba(255, 255, 255, 0.1);

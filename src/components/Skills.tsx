@@ -38,23 +38,15 @@ export default function Skills() {
                         className="text-2xl md:text-3xl lg:text-4xl font-light tracking-wider md:tracking-widest mb-8"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        FULL-SPECTRUM <br />
-                        <span className="opacity-60">CAPABILITIES</span>
+                        SKILLS & EXPERTISE
                     </h2>
                     <p
                         className="text-base leading-relaxed mb-6 opacity-80"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        Bridging the gap between creative vision and technical implementation.
-                        I offer a rare combination of **structural design thinking** (from my background in technical design)
-                        and **logic-driven development**.
-                    </p>
-                    <p
-                        className="text-base leading-relaxed opacity-80"
-                        style={{ color: 'var(--foreground)' }}
-                    >
-                        Whether building intelligent agents or immersive web experiences,
-                        I focus on performance, aesthetics, and user-centric functionality.
+                        I combine technical design thinking (from my background in engineering) with
+                        software development expertise. This unique blend helps me build applications
+                        that are both technically robust and user-focused.
                     </p>
                     <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
                         <p className="text-xs font-medium tracking-widest mb-2 opacity-60" style={{ color: 'var(--foreground)' }}>EDUCATION</p>
@@ -114,6 +106,6 @@ export default function Skills() {
                 </div>
 
             </div>
-        </Section>
+        </Section >
     );
 }
