@@ -9,7 +9,7 @@ import Image from "next/image";
 const projects = [
     {
         title: "Poker Analytics Engine",
-        description: "A poker training app that helps players improve their game. Features AI opponents, real-time statistics, and probability calculations to analyze your decisions.",
+        description: "A 6-max No-Limit Hold'em poker training simulator with intelligent AI opponents. Practice your game with real-time statistics and probability calculations.",
         tags: ["TypeScript", "React", "Data Viz", "Game Theory"],
         link: "https://github.com/Samrude1/PokerAnalyzzer",
         cta: "View Logic",
@@ -18,7 +18,7 @@ const projects = [
     },
     {
         title: "AI Automation Platform",
-        description: "An AI automation platform where multiple AI agents work together on complex tasks. Can handle research projects, sales intelligence, and data analysis automatically. Built with Python.",
+        description: "A professional AI agent platform for building and orchestrating intelligent agents. Features teams for research and sales intelligence that work together autonomously. Built with Python.",
         tags: ["Python", "AI Agents", "LLM Orchestration"],
         link: "https://github.com/Samrude1/Agentsquad",
         cta: "View Architecture",
@@ -45,7 +45,7 @@ const projects = [
     },
     {
         title: "AI Chess with Commentary",
-        description: "A chess game where you play against AI. Features a fun AI commentator that explains moves and analyzes your strategy in real-time.",
+        description: "A retro-futuristic chess game with AI-powered commentary. Features Stockfish chess engine, customizable themes, and authentic CRT monitor effects.",
         tags: ["TypeScript", "React", "Stockfish WASM", "Gemini API"],
         link: "https://github.com/Samrude1/ChessAI",
         cta: "View on GitHub",
