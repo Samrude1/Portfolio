@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const skills = [
     {
-        category: "AI & Logic",
-        items: ["Python Agents", "Game AI", "LLM Integration", "Algorithm Design"]
+        category: "AI Engineering",
+        items: ["CrewAI & LangGraph", "AutoGen Frameworks", "MCP Server Integration", "Multi-Agent Orchestration"]
     },
     {
         category: "Game Development",
@@ -44,9 +44,9 @@ export default function Skills() {
                         className="text-base leading-relaxed mb-6 opacity-80"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        I combine technical design thinking (from my background in technical design) with
-                        software development expertise. This unique blend helps me build applications
-                        that are both technically robust and user-focused.
+                        I bring a systems engineering mindset to AI development. My foundation in technical design
+                        informs how I architect scalable agent systems — balancing technical performance with
+                        practical usability. I specialize in taking AI projects from prototype to production.
                     </p>
                     <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
                         <p className="text-xs font-medium tracking-widest mb-2 opacity-60" style={{ color: 'var(--foreground)' }}>EDUCATION</p>

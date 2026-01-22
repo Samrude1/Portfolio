@@ -8,22 +8,49 @@ import Image from "next/image";
 
 const projects = [
     {
+        title: "AI Automation Platform",
+        description: "Production-grade multi-agent orchestration platform built with OpenAI Agents SDK (Gemini 2.0 Flash). Features a 6-agent Sales Intelligence Team with competitive email drafting and a 3-agent Deep Research Team with parallel web synthesis. Includes custom tool integration, memory management, and real-time process streaming.",
+        tags: ["Python", "OpenAI Agents SDK", "Gemini API", "Multi-Agent Systems", "FastAPI"],
+        link: "https://github.com/Samrude1/Agentsquad",
+        cta: "View Architecture",
+        image: "/projects/agents.png",
+        linkDescription: "Enterprise-ready agent framework"
+    },
+    {
+        title: "AI Portfolio Assistant",
+        description: "Autonomous agent deployed on this portfolio. Handles visitor inquiries, provides intelligent responses about my work, manages email workflows, and sends real-time notifications. Production deployment with FastAPI backend on Render.",
+        tags: ["Python", "FastAPI", "Gemini API", "Agent Deployment"],
+        link: null, // No external link - it's live on this site
+        cta: "Try it below ↘️",
+        image: "/projects/ai-assistant.png",
+        linkDescription: "Live production system"
+    },
+    {
+        title: "SkyGuide B737-800 Performance Computer",
+        description: "Professional flight performance calculator with live METAR integration, AI co-pilot, and SimBrief import. Computes V-speeds (V1/VR/V2), N1 thrust, VREF/VAPP with wind correction, and TOD using 3:1 glide path. Features AI safety briefings via Gemini and interactive checklists.",
+        tags: ["TypeScript", "Aviation Math", "Gemini API", "SimBrief"],
+        link: "https://github.com/Samrude1/Boeing737Calculator",
+        cta: "View System",
+        image: "/projects/flight-calc.png",
+        linkDescription: "Professional dispatch tool"
+    },
+    {
+        title: "Yes Man Chess Terminal",
+        description: "Retro chess game with personality-driven AI commentary powered by Gemini. Features Stockfish engine with 4 difficulty levels, dynamic mood system (6 emotional states), authentic CRT effects (scanlines, curvature, glitches), and context-aware responses to checks and captures.",
+        tags: ["TypeScript", "React", "Stockfish WASM", "Gemini API"],
+        link: "https://github.com/Samrude1/ChessAI",
+        cta: "View on GitHub",
+        image: "/projects/chess-ai.png",
+        linkDescription: "Interactive chess AI"
+    },
+    {
         title: "Poker Analytics Engine",
-        description: "A 6-max No-Limit Hold'em poker training simulator with intelligent AI opponents. Practice your game with real-time statistics and probability calculations.",
-        tags: ["TypeScript", "React", "Data Viz", "Game Theory"],
+        description: "6-max No-Limit Hold'em training simulator with position-based AI opponents. Features realistic betting mechanics (min-raise, all-in, side pots), live HUD with VPIP/PFR/3-Bet stats, aggression factor tracking, and session profit/loss analytics.",
+        tags: ["TypeScript", "React", "Game AI", "Data Visualization"],
         link: "https://github.com/Samrude1/PokerAnalyzzer",
         cta: "View Logic",
         image: "/projects/poker-analytics.png",
         linkDescription: "Algorithmic simulation"
-    },
-    {
-        title: "AI Automation Platform",
-        description: "A professional AI agent platform for building and orchestrating intelligent agents. Features teams for research and sales intelligence that work together autonomously. Built with Python.",
-        tags: ["Python", "AI Agents", "LLM Orchestration"],
-        link: "https://github.com/Samrude1/Agentsquad",
-        cta: "View Architecture",
-        image: "/projects/agents.png",
-        linkDescription: "Autonomous Workflow Engine"
     },
     {
         title: "TreeniTrack Pro",
@@ -35,40 +62,13 @@ const projects = [
         linkDescription: "Modern wellness platform"
     },
     {
-        title: "737 Performance Computer",
-        description: "High-precision flight performance calculator for Microsoft Flight Simulator X (B737-800). Handles complex aviation mathematics for takeoff, landing, and descent planning.",
-        tags: ["TypeScript", "Mathematics", "Aviation"],
-        link: "https://github.com/Samrude1/Boeing737Calculator",
-        cta: "Check Maths",
-        image: "/projects/flight-calc.png",
-        linkDescription: "Specialized simulation tool"
-    },
-    {
-        title: "AI Chess with Commentary",
-        description: "A retro-futuristic chess game with AI-powered commentary. Features Stockfish chess engine, customizable themes, and authentic CRT monitor effects.",
-        tags: ["TypeScript", "React", "Stockfish WASM", "Gemini API"],
-        link: "https://github.com/Samrude1/ChessAI",
-        cta: "View on GitHub",
-        image: "/projects/chess-ai.png",
-        linkDescription: "Source code & documentation"
-    },
-    {
-        title: "AI Portfolio Assistant",
-        description: "The AI chatbot on this website. Answers questions about my work, can send emails, and notifies me when someone wants to get in touch. Built with Python.",
-        tags: ["Python", "FastAPI", "Gemini API", "AI Agents"],
-        link: null, // No external link - it's live on this site
-        cta: "Try it below ↘️",
-        image: "/projects/ai-assistant.png",
-        linkDescription: "Live on this site"
-    },
-    {
-        title: "Bootcamp Finder",
-        description: "Full-stack web application for discovering and filtering coding bootcamps. Features robust search and filtering.",
-        tags: ["React", "Node.js", "API Integration"],
+        title: "NordicCode Bootcamp Finder",
+        description: "Full-stack REST API platform for discovering coding bootcamps and courses. Features user authentication, live backend data fetching, bootcamp reviews, and comprehensive API documentation. Built with Node.js backend and responsive frontend.",
+        tags: ["React", "Node.js", "REST API", "Authentication"],
         link: "https://bootcampfinder.onrender.com/",
         cta: "Try Live Demo",
         image: "/projects/bootcamp.png",
-        linkDescription: "Interactive web app"
+        linkDescription: "Full-stack web app"
     },
     {
         title: "Activity Finder",
@@ -81,12 +81,12 @@ const projects = [
     },
     {
         title: "Indie Game Portfolio",
-        description: "Collection of published indie games on Itch.io. Includes Chess Terminal, Tanks, Snake, Vault of Shadows, and more. Built with Unity and C#.",
-        tags: ["Unity", "C#", "Game Design"],
+        description: "8 published games on Itch.io including Chess Terminal, Tanks, Snake, Vault of Shadows, Pong, CellWars (simulation), Brain Damage, and Heaven&Hell. Built with Unity/C# and JavaScript/HTML/CSS showcasing game mechanics, AI, and level design.",
+        tags: ["Unity", "C#", "JavaScript", "Game Design"],
         link: "https://sr3design.itch.io/",
         cta: "Play Games",
         image: "/projects/games.png",
-        linkDescription: "5+ playable games"
+        linkDescription: "8 playable games"
     },
     {
         title: "Technical Art & 3D",

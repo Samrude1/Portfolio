@@ -188,3 +188,32 @@ h6 {
 [data-mode="dark"] #contact {
   background-color: rgba(255, 255, 255, 0.02);
 }
+
+/* Light Mode Text Contrast Improvements */
+[data-mode="light"] .opacity-80 {
+  opacity: 0.9 !important;
+}
+
+[data-mode="light"] .opacity-70 {
+  opacity: 0.85 !important;
+}
+
+[data-mode="light"] .opacity-60 {
+  opacity: 0.75 !important;
+}
+
+[data-mode="light"] .opacity-50 {
+  opacity: 0.65 !important;
+}
+
+/* Chat Widget Light Mode Enhancements */
+[data-mode="light"] {
+  --surface: rgba(0, 102, 204, 0.04);
+  --surface-hover: rgba(0, 102, 204, 0.08);
+  --border: rgba(0, 102, 204, 0.15);
+}
+
+/* Ensure chat widget has proper shadow in light mode */
+[data-mode="light"] .shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}

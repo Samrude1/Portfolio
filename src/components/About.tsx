@@ -23,28 +23,8 @@ export default function About() {
                 <div className="w-12 h-1" style={{ backgroundColor: 'var(--primary)' }} />
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                {/* Photo placeholder - user will add later */}
-                <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="relative aspect-square max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden border"
-                    style={{
-                        backgroundColor: 'var(--surface)',
-                        borderColor: 'var(--border)'
-                    }}
-                >
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <User size={80} className="opacity-20" style={{ color: 'var(--foreground)' }} />
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4 text-center">
-                        <p className="text-sm opacity-50" style={{ color: 'var(--foreground)' }}>
-                            Photo coming soon
-                        </p>
-                    </div>
-                </motion.div>
+            <div className="max-w-4xl mx-auto">
+                {/* Photo section removed - user will add later */}
 
                 {/* Bio content */}
                 <motion.div
@@ -65,17 +45,18 @@ export default function About() {
                         className="text-lg leading-relaxed opacity-80"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        I'm an <strong>AI Developer</strong> who builds intelligent applications. I specialize in
-                        creating systems where AI agents work together to solve complex problems — like automating
-                        research, analyzing data, and providing smart recommendations.
+                        I'm an <strong>AI Engineer</strong> specializing in autonomous multi-agent systems. I architect and deploy
+                        production-ready agentic platforms using CrewAI, LangGraph, AutoGen, and MCP servers — solving real
+                        business problems from intelligent research automation to autonomous trading systems and browser-based AI assistants.
                     </p>
 
                     <p
                         className="text-base leading-relaxed opacity-70"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        I focus on building AI tools that work in real-world applications. My background
-                        in technical design helps me create solutions that are both technically sound and user-friendly.
+                        My approach combines systems engineering thinking with cutting-edge AI orchestration frameworks.
+                        I build scalable, production-grade solutions with custom tool integration, memory management, and
+                        cross-agent collaboration patterns.
                     </p>
 
                     {/* Quick facts */}
@@ -135,7 +116,7 @@ export default function About() {
                             {[
                                 { year: "2020-2023", role: "Coder", desc: "Learning syntax, building foundations" },
                                 { year: "2023-2024", role: "Programmer", desc: "Building full applications, shipping projects" },
-                                { year: "2024-2026", role: "AI Developer", desc: "Orchestrating AI systems, high-level architecture" },
+                                { year: "2024-2026", role: "AI Engineer", desc: "Multi-agent orchestration, MCP integration, production systems" },
                             ].map((item, i) => (
                                 <div
                                     key={i}

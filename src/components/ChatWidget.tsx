@@ -75,24 +75,29 @@ export default function ChatWidget() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="w-[350px] sm:w-[400px] h-[500px] bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl flex flex-col pointer-events-auto overflow-hidden mb-4"
+                        className="w-[350px] sm:w-[400px] h-[500px] backdrop-blur-xl border rounded-2xl shadow-2xl flex flex-col pointer-events-auto overflow-hidden mb-4"
+                        style={{
+                            backgroundColor: 'var(--surface)',
+                            borderColor: 'var(--border)'
+                        }}
                     >
                         {/* Header */}
-                        <div className="p-4 border-b border-white/10 bg-white/5 flex items-center justify-between relative">
+                        <div className="p-4 border-b flex items-center justify-between relative" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--surface-hover)' }}>
                             <div className="flex items-center gap-3">
                                 <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center border border-primary/50">
                                     <Bot size={18} className="text-primary" />
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-medium text-white">Sami AI Clone</h3>
-                                    <p className="text-xs text-white/50">Built by me • Python + Gemini</p>
+                                    <h3 className="text-sm font-medium" style={{ color: 'var(--foreground)' }}>Sami AI Clone</h3>
+                                    <p className="text-xs opacity-60" style={{ color: 'var(--foreground)' }}>Built by me • Python + Gemini</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-2">
                                 <div className="relative">
                                     <button
                                         onClick={() => setShowInfo(!showInfo)}
-                                        className="p-1.5 hover:bg-white/20 rounded-full transition-colors text-white/70 hover:text-white"
+                                        className="p-1.5 rounded-full transition-colors opacity-70 hover:opacity-100"
+                                        style={{ color: 'var(--foreground)' }}
                                         aria-label="Bot Info"
                                     >
                                         <Info size={20} />
@@ -103,9 +108,10 @@ export default function ChatWidget() {
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{ opacity: 1, y: 0 }}
                                                 exit={{ opacity: 0, y: 10 }}
-                                                className="absolute right-0 top-8 w-72 p-4 bg-black/95 border border-white/20 rounded-xl text-xs text-white/80 shadow-xl z-50 backdrop-blur-md"
+                                                className="absolute right-0 top-8 w-72 p-4 border rounded-xl text-xs shadow-xl z-50 backdrop-blur-md"
+                                                style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)', color: 'var(--foreground)' }}
                                             >
-                                                <h4 className="font-bold text-white mb-2 text-sm">About This AI Agent</h4>
+                                                <h4 className="font-bold mb-2 text-sm" style={{ color: 'var(--foreground)' }}>About This AI Agent</h4>
                                                 <ul className="space-y-1.5 mb-3">
                                                     <li className="flex items-start gap-2">
                                                         <span className="text-primary mt-0.5">✨</span>
@@ -132,8 +138,8 @@ export default function ChatWidget() {
                                                         <span>Python, FastAPI, Gemini</span>
                                                     </li>
                                                 </ul>
-                                                <div className="pt-2 border-t border-white/10 text-xs text-white/50">
-                                                    Rate Limit: <span className="text-primary">5 msg/min</span>
+                                                <div className="pt-2 border-t text-xs opacity-60" style={{ borderColor: 'var(--border)', color: 'var(--foreground)' }}>
+                                                    Rate Limit: <span style={{ color: 'var(--primary)' }}>5 msg/min</span>
                                                 </div>
                                             </motion.div>
                                         )}
@@ -141,16 +147,17 @@ export default function ChatWidget() {
                                 </div>
                                 <button
                                     onClick={() => setIsOpen(false)}
-                                    className="p-1 hover:bg-white/10 rounded-full transition-colors"
+                                    className="p-1 rounded-full transition-colors opacity-70 hover:opacity-100"
+                                    style={{ color: 'var(--foreground)' }}
                                     aria-label="Close chat"
                                 >
-                                    <X size={18} className="text-white/70" />
+                                    <X size={18} />
                                 </button>
                             </div>
                         </div>
 
                         {/* Messages */}
-                        <div className="flex-1 overflow-y-auto p-4 space-y-4 font-mono text-sm scrollbar-thin scrollbar-thumb-white/10">
+                        <div className="flex-1 overflow-y-auto p-4 space-y-4 font-mono text-sm scrollbar-thin" style={{ color: 'var(--foreground)' }}>
                             {messages.map((msg, i) => (
                                 <div
                                     key={i}
@@ -165,10 +172,11 @@ export default function ChatWidget() {
                                         {msg.role === "assistant" ? <Bot size={14} /> : <User size={14} />}
                                     </div>
                                     <div
-                                        className={`p-3 rounded-lg max-w-[80%] leading-relaxed ${msg.role === "user"
-                                            ? "bg-primary text-black font-medium"
-                                            : "bg-white/5 text-white/90 border border-white/10"
-                                            }`}
+                                        className={`p-3 rounded-lg max-w-[80%] leading-relaxed ${msg.role === "user" ? "font-medium" : "border"}`}
+                                        style={msg.role === "user"
+                                            ? { backgroundColor: 'var(--primary)', color: '#000' }
+                                            : { backgroundColor: 'var(--surface-hover)', color: 'var(--foreground)', borderColor: 'var(--border)' }
+                                        }
                                     >
                                         <ReactMarkdown
                                             remarkPlugins={[remarkGfm]}
@@ -191,7 +199,7 @@ export default function ChatWidget() {
                                     <div className="w-8 h-8 rounded-full bg-primary/20 border border-primary/50 flex items-center justify-center">
                                         <Bot size={14} className="text-primary animate-pulse" />
                                     </div>
-                                    <div className="bg-white/5 border border-white/10 p-3 rounded-lg">
+                                    <div className="border p-3 rounded-lg" style={{ backgroundColor: 'var(--surface-hover)', borderColor: 'var(--border)' }}>
                                         {isFirstRequest ? (
                                             <div className="flex flex-col gap-2">
                                                 <div className="flex gap-1 items-center">
@@ -199,13 +207,13 @@ export default function ChatWidget() {
                                                     <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce [animation-delay:-0.15s]"></span>
                                                     <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce"></span>
                                                 </div>
-                                                <span className="text-xs text-white/50 italic">Waking up my neural networks...</span>
+                                                <span className="text-xs opacity-60 italic" style={{ color: 'var(--foreground)' }}>Waking up my neural networks...</span>
                                             </div>
                                         ) : (
                                             <div className="flex gap-1 items-center">
-                                                <span className="w-1.5 h-1.5 bg-white/40 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-                                                <span className="w-1.5 h-1.5 bg-white/40 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-                                                <span className="w-1.5 h-1.5 bg-white/40 rounded-full animate-bounce"></span>
+                                                <span className="w-1.5 h-1.5 rounded-full animate-bounce [animation-delay:-0.3s]" style={{ backgroundColor: 'var(--primary)', opacity: 0.6 }}></span>
+                                                <span className="w-1.5 h-1.5 rounded-full animate-bounce [animation-delay:-0.15s]" style={{ backgroundColor: 'var(--primary)', opacity: 0.6 }}></span>
+                                                <span className="w-1.5 h-1.5 rounded-full animate-bounce" style={{ backgroundColor: 'var(--primary)', opacity: 0.6 }}></span>
                                             </div>
                                         )}
                                     </div>
@@ -215,14 +223,19 @@ export default function ChatWidget() {
                         </div>
 
                         {/* Input */}
-                        <form onSubmit={handleSubmit} className="p-4 border-t border-white/10 bg-white/5">
+                        <form onSubmit={handleSubmit} className="p-4 border-t" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--surface-hover)' }}>
                             <div className="relative">
                                 <input
                                     type="text"
                                     value={inputValue}
                                     onChange={(e) => setInputValue(e.target.value)}
                                     placeholder="Ask about my projects..."
-                                    className="w-full bg-black/50 border border-white/10 rounded-xl py-3 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all placeholder:text-white/20"
+                                    className="w-full border rounded-xl py-3 pl-4 pr-12 text-sm focus:outline-none focus:ring-1 transition-all"
+                                    style={{
+                                        backgroundColor: 'var(--surface)',
+                                        borderColor: 'var(--border)',
+                                        color: 'var(--foreground)'
+                                    }}
                                 />
                                 <button
                                     type="submit"

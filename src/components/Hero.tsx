@@ -52,13 +52,13 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8, delay: 1.2 }}
-                        className="text-[10px] sm:text-xs md:text-base lg:text-lg tracking-[0.15em] md:tracking-[0.3em] font-medium opacity-80 px-4"
+                        className="text-xs sm:text-sm md:text-base lg:text-lg tracking-[0.15em] md:tracking-[0.3em] font-medium opacity-80 px-4"
                         style={{
                             fontFamily: 'var(--font-body)',
                             color: 'var(--foreground)'
                         }}
                     >
-                        AI DEVELOPER & FULL-STACK DEVELOPER
+                        AI ENGINEER & FULL-STACK DEVELOPER
                     </motion.p>
                 </div>
             </motion.div>
