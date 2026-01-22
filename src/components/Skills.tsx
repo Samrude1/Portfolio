@@ -10,7 +10,7 @@ const skills = [
     },
     {
         category: "Game Development",
-        items: ["Unity Engine", "C# Scripting", "Level Design", "Itch.io Publishing"]
+        items: ["Unity Engine", "C# Scripting", "JavaScript Games", "Itch.io Publishing"]
     },
     {
         category: "Full-Stack Web",
@@ -18,7 +18,7 @@ const skills = [
     },
     {
         category: "Technical Design",
-        items: ["3D Modeling", "Visualization", "Technical Drawing", "UI/UX Design"]
+        items: ["3D Modeling", "CAD Design", "Technical Drawing", "UI/UX Design"]
     }
 ];
 
