@@ -59,6 +59,15 @@ export default function About() {
                         cross-agent collaboration patterns.
                     </p>
 
+                    <p
+                        className="text-base leading-relaxed opacity-70"
+                        style={{ color: 'var(--foreground)' }}
+                    >
+                        My background includes working as a 3D/2D artist and coder at an indie game studio, plus completing
+                        a one-year C# gaming code course at Taitotalo Helsinki (2023). This combination of creative and technical
+                        experience gives me a unique perspective on building AI systems that are both powerful and user-friendly.
+                    </p>
+
                     {/* Quick facts */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                         <div
