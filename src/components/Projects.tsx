@@ -193,7 +193,7 @@ export default function Projects() {
                     );
 
                     const cardClasses = `group relative p-4 rounded-2xl border transition-all duration-300 flex flex-col h-full
-                        hover:shadow-xl hover:shadow-primary/10 hover:border-primary/50 hover:scale-[1.02]
+                        hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/50 hover:scale-105 hover:-translate-y-1
                         ${project.link ? 'cursor-pointer' : 'cursor-default opacity-80'}`;
 
                     const cardStyle = {
