@@ -174,7 +174,7 @@ export default function ChatWidget() {
                                     <div
                                         className={`p-3 rounded-lg max-w-[80%] leading-relaxed ${msg.role === "user" ? "font-medium" : "border"}`}
                                         style={msg.role === "user"
-                                            ? { backgroundColor: 'var(--primary)', color: '#000' }
+                                            ? { backgroundColor: 'var(--primary)', color: '#ffffff' }
                                             : { backgroundColor: 'var(--surface-hover)', color: 'var(--foreground)', borderColor: 'var(--border)' }
                                         }
                                     >
