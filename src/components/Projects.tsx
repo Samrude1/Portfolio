@@ -8,8 +8,8 @@ import Image from "next/image";
 
 const projects = [
     {
-        title: "AI Automation Platform",
-        description: "Production-grade multi-agent orchestration platform built with OpenAI Agents SDK (Gemini 2.0 Flash). Features a 6-agent Sales Intelligence Team with competitive email drafting and a 3-agent Deep Research Team with parallel web synthesis. Includes custom tool integration, memory management, and real-time process streaming.",
+        title: "Agentic Business Intelligence",
+        description: "Enterprise-grade multi-agent orchestration platform built with OpenAI Agents SDK (Gemini 2.0 Flash). Features a 6-agent Sales Intelligence Team with competitive email drafting and a 3-agent Deep Research Team with parallel web synthesis. Includes custom tool integration, memory management, and real-time process streaming.",
         tags: ["Python", "OpenAI Agents SDK", "Gemini API", "Multi-Agent Systems", "FastAPI"],
         link: "https://github.com/Samrude1/Agentsquad",
         cta: "View Architecture",
@@ -17,7 +17,7 @@ const projects = [
         linkDescription: "Enterprise-ready agent framework"
     },
     {
-        title: "AI Portfolio Assistant",
+        title: "Autonomous Career Digital Twin",
         description: "Autonomous agent deployed on this portfolio. Handles visitor inquiries, provides intelligent responses about my work, manages email workflows, and sends real-time notifications. Production deployment with FastAPI backend on Render.",
         tags: ["Python", "FastAPI", "Gemini API", "Agent Deployment"],
         link: null, // No external link - it's live on this site

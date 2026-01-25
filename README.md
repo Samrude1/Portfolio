@@ -1,16 +1,17 @@
 # Portfolio 2026: Sami Rautanen
+## AI Engineer & Agentic Systems Architect
 
-The technical portfolio of **Sami Rautanen**, an AI Developer & Technical Designer focusing on **Agentic AI** and **3D Orchestration Systems**.
+The technical portfolio of **Sami Rautanen**, a Senior AI Engineer specializing in **Autonomous Multi-Agent Systems**, **Enterprise Orchestration**, and **Production AI Architecture**.
 
 *   **Live Demo:** [portfolio-seven-rho-74yt50nw74.vercel.app](https://portfolio-seven-rho-74yt50nw74.vercel.app/)
-*   **Tech Stack:** Next.js 15, Three.js (R3F), Tailwind CSS v4, Framer Motion.
+*   **Core Systems:** Next.js 15, FastAPI, OpenAI Agents SDK, Gemini 2.0 Flash, Docker, Render.
 
 ## 🚀 Key Features
 
-*   **Custom AI Clone (Full-Stack):** An integrated chat widget powered by a custom Python backend (FastAPI) and Google Gemini.
-*   **Interactive 3D Background:** A neural-network inspired particle system using `react-three-fiber` that responds to scroll and mouse movement.
-*   **Agentic AI Showcase:** Dedicated project cards highlighting autonomous agent development.
-*   **Aesthetic UI:** Premium "AI Dark Mode" & "Cream Light Mode" using specialized HSL color tokens and glassmorphism.
+*   **Autonomous Digital Twin:** A fully autonomous agent backend (FastAPI + Gemini) that handles inquiries, manages email workflows, and operates as a 24/7 professional representative.
+*   **Agentic Business Intelligence:** Showcase of an enterprise-grade multi-agent orchestration platform with specialized teams for Sales and Deep Research.
+*   **Immersive 3D Experience:** Neural-network inspired particle system (Three.js/R3F) representing the complexity of agent cognition.
+*   **Premium Engineering Design:** "AI Dark Mode" aesthetics with distinct HSL token architecture and glassmorphism.
 
 ## 🛠️ Tech Architecture
 

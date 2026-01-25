@@ -63,9 +63,9 @@ export default function About() {
                         className="text-base leading-relaxed opacity-70"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        My background includes working as a 3D/2D artist and coder at an indie game studio, plus completing
-                        a one-year C# gaming code course at Taitotalo Helsinki (2023). This combination of creative and technical
-                        experience gives me a unique perspective on building AI systems that are both powerful and user-friendly.
+                        My background combines creative direction as a 3D/2D artist with rigorous software engineering training,
+                        including C# systems development at Taitotalo Helsinki (2023). This fusion of creative problem-solving
+                        and technical precision allows me to build AI systems that are both powerful and intuitive.
                     </p>
 
                     {/* Quick facts */}
