@@ -73,7 +73,7 @@ export default function Contact() {
                         Send an Email
                     </Link>
                     <Link
-                        href="/cv-sami-rautanen.pdf"
+                        href="/cv-sami-rautanen.html"
                         target="_blank"
                         className="px-8 py-4 border font-medium rounded-full transition-all hover:scale-105 active:scale-95 hover:bg-white/5 flex items-center gap-2"
                         style={{
@@ -83,7 +83,7 @@ export default function Contact() {
                         }}
                     >
                         <FileDown size={20} />
-                        Download CV
+                        View CV
                     </Link>
                 </div>
 
