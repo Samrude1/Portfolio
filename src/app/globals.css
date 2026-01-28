@@ -41,22 +41,23 @@
 
 /* Unified Light Mode */
 [data-mode="light"] {
-  --background: #FFFFFF;
+  --background: #F8FAFB;
   --foreground: #1a1a1a;
 
-  /* Professional Blue - Same as dark mode */
-  --primary: #0066CC;
-  --secondary: #005AA3;
-  --accent: #0088FF;
+  /* Darker Professional Blue for better contrast */
+  --primary: #0052A3;
+  --secondary: #003D7A;
+  --accent: #0066CC;
 
-  --surface: rgba(0, 102, 204, 0.04);
-  --surface-hover: rgba(0, 102, 204, 0.08);
-  --border: rgba(0, 102, 204, 0.12);
+  /* Enhanced surface effects */
+  --surface: rgba(0, 82, 163, 0.06);
+  --surface-hover: rgba(0, 82, 163, 0.12);
+  --border: rgba(0, 82, 163, 0.2);
 
-  /* Neural Network Colors - Professional Blue */
-  --node-primary: #0066CC;
-  --node-secondary: #005AA3;
-  --connection: #0088FF;
+  /* Neural Network Colors - Darker for visibility */
+  --node-primary: #0052A3;
+  --node-secondary: #003D7A;
+  --connection: #0066CC;
 }
 
 @theme inline {
@@ -82,6 +83,21 @@
 /* Light Mode Pattern Opacity */
 [data-mode="light"] {
   --bg-pattern-opacity: 0.5;
+}
+
+/* Light Mode Background Enhancement */
+[data-mode="light"] body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(0, 102, 204, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(0, 82, 163, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 @theme inline {
@@ -160,21 +176,21 @@ h6 {
 }
 
 [data-mode="light"] .light-alt {
-  background-color: #f8f9fa;
-  /* Very subtle gray */
+  background-color: #EEEFF1;
+  /* Subtle gray for alternation */
 }
 
 /* Section-specific backgrounds - Simple approach */
 [data-mode="light"] #work {
-  background-color: #f8f9fa;
+  background-color: #EEEFF1;
 }
 
 [data-mode="light"] #skills {
-  background-color: #f8f9fa;
+  background-color: #EEEFF1;
 }
 
 [data-mode="light"] #contact {
-  background-color: #f8f9fa;
+  background-color: #EEEFF1;
 }
 
 [data-mode="dark"] #work {
@@ -216,4 +232,18 @@ h6 {
 /* Ensure chat widget has proper shadow in light mode */
 [data-mode="light"] .shadow-2xl {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Enhanced Glassmorphism for Light Mode */
+[data-mode="light"] .glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1.5px solid rgba(0, 82, 163, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 82, 163, 0.08);
+}
+
+[data-mode="light"] .glass-hover:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: var(--primary);
+  box-shadow: 0 12px 48px rgba(0, 82, 163, 0.15);
 }

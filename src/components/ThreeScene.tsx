@@ -37,9 +37,9 @@ function getThemeColors() {
   const background = mode === 'light' ? '#FFFFFF' : '#121212';
 
   return {
-    nodePrimary: getComputedStyle(root).getPropertyValue('--node-primary').trim() || (mode === 'light' ? '#000000' : '#2563eb'),
-    nodeSecondary: getComputedStyle(root).getPropertyValue('--node-secondary').trim() || (mode === 'light' ? '#333333' : '#1e40af'),
-    connection: getComputedStyle(root).getPropertyValue('--connection').trim() || (mode === 'light' ? '#000000' : '#3b82f6'),
+    nodePrimary: getComputedStyle(root).getPropertyValue('--node-primary').trim() || (mode === 'light' ? '#0052A3' : '#2563eb'),
+    nodeSecondary: getComputedStyle(root).getPropertyValue('--node-secondary').trim() || (mode === 'light' ? '#003D7A' : '#1e40af'),
+    connection: getComputedStyle(root).getPropertyValue('--connection').trim() || (mode === 'light' ? '#0066CC' : '#3b82f6'),
     background
   };
 }
@@ -48,13 +48,20 @@ function NeuralNetwork() {
   const nodesRef = useRef<THREE.InstancedMesh>(null);
   const linesRef = useRef<THREE.LineSegments>(null);
   const [colors, setColors] = useState(getThemeColors());
+  const [mode, setMode] = useState<'light' | 'dark'>('dark');
 
-  // Update colors when theme changes
+  // Update colors and mode when theme changes
   useEffect(() => {
-    const updateColors = () => setColors(getThemeColors());
+    const updateTheme = () => {
+      setColors(getThemeColors());
+      const currentMode = document.documentElement.getAttribute('data-mode') || 'dark';
+      setMode(currentMode as 'light' | 'dark');
+    };
+
+    updateTheme();
 
     // Watch for theme changes
-    const observer = new MutationObserver(updateColors);
+    const observer = new MutationObserver(updateTheme);
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['data-mode']
@@ -173,7 +180,7 @@ function NeuralNetwork() {
         <meshStandardMaterial
           color={colors.nodePrimary}
           emissive={colors.nodePrimary}
-          emissiveIntensity={0.6}
+          emissiveIntensity={mode === 'light' ? 0.2 : 0.6}
           roughness={0.2}
           metalness={0.8}
         />
@@ -189,7 +196,7 @@ function NeuralNetwork() {
         </bufferGeometry>
         <lineBasicMaterial
           color={colors.connection}
-          opacity={0.25}
+          opacity={mode === 'light' ? 0.4 : 0.25}
           transparent
           linewidth={1}
         />
@@ -204,7 +211,7 @@ export default function ThreeScene() {
   useEffect(() => {
     const updateBgColor = () => {
       const mode = document.documentElement.getAttribute('data-mode') || 'dark';
-      setBgColor(mode === 'light' ? '#FFFFFF' : '#121212');
+      setBgColor(mode === 'light' ? '#F8FAFB' : '#121212');
     };
 
     updateBgColor();
