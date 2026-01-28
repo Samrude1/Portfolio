@@ -99,7 +99,7 @@ export default function About() {
                         </div>
 
                         <div
-                            className="flex items-center gap-3 p-4 rounded-xl border sm:col-span-2"
+                            className="flex items-center gap-3 p-4 rounded-xl border"
                             style={{
                                 backgroundColor: 'var(--surface)',
                                 borderColor: 'var(--border)'
@@ -109,6 +109,19 @@ export default function About() {
                             <div>
                                 <p className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>Education</p>
                                 <p className="font-medium" style={{ color: 'var(--foreground)' }}>Technical Design - Hyria Ammattiopisto</p>
+                            </div>
+                        </div>
+                        <div
+                            className="flex items-center gap-3 p-4 rounded-xl border"
+                            style={{
+                                backgroundColor: 'var(--surface)',
+                                borderColor: 'var(--border)'
+                            }}
+                        >
+                            <GraduationCap size={20} style={{ color: 'var(--primary)' }} />
+                            <div>
+                                <p className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>Training</p>
+                                <p className="font-medium" style={{ color: 'var(--foreground)' }}>C# Systems Development - Taitotalo Helsinki 2023</p>
                             </div>
                         </div>
                     </div>

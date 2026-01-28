@@ -2,7 +2,7 @@
 
 import Section from "./Section";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Gamepad2, Palette } from "lucide-react";
+import { Github, Linkedin, Mail, Gamepad2, Palette, FileDown } from "lucide-react";
 import Link from "next/link";
 
 export default function Contact() {
@@ -19,7 +19,7 @@ export default function Contact() {
                     className="tracking-widest text-sm font-medium mb-4 block"
                     style={{ color: 'var(--primary)' }}
                 >
-                    AVAILABLE FOR 2026
+                    SEEKING AI ENGINEER ROLES • Q1 2026
                 </span>
                 <h2
                     className="text-4xl md:text-6xl font-light mb-8"
@@ -34,7 +34,7 @@ export default function Contact() {
                     I am currently open to discussing roles in Technical Architecture, AI Integration, and Full-Stack Development.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center flex-wrap">
                     <Link
                         href="https://www.linkedin.com/in/sami-rautanen-022095325"
                         target="_blank"
@@ -48,6 +48,19 @@ export default function Contact() {
                         Connect on LinkedIn
                     </Link>
                     <Link
+                        href="https://github.com/Samrude1"
+                        target="_blank"
+                        className="px-8 py-4 border font-medium rounded-full transition-all hover:scale-105 active:scale-95 hover:bg-white/5 flex items-center gap-2"
+                        style={{
+                            backgroundColor: 'var(--surface)',
+                            color: 'var(--foreground)',
+                            borderColor: 'var(--border)'
+                        }}
+                    >
+                        <Github size={20} />
+                        View GitHub
+                    </Link>
+                    <Link
                         href="mailto:samrude1@outlook.com"
                         className="px-8 py-4 border font-medium rounded-full transition-all hover:scale-105 active:scale-95 hover:bg-white/5 flex items-center gap-2"
                         style={{
@@ -58,6 +71,19 @@ export default function Contact() {
                     >
                         <Mail size={20} />
                         Send an Email
+                    </Link>
+                    <Link
+                        href="/cv-sami-rautanen.pdf"
+                        target="_blank"
+                        className="px-8 py-4 border font-medium rounded-full transition-all hover:scale-105 active:scale-95 hover:bg-white/5 flex items-center gap-2"
+                        style={{
+                            backgroundColor: 'var(--surface)',
+                            color: 'var(--foreground)',
+                            borderColor: 'var(--border)'
+                        }}
+                    >
+                        <FileDown size={20} />
+                        Download CV
                     </Link>
                 </div>
 
