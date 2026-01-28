@@ -35,6 +35,15 @@ const projects = [
         linkDescription: "Professional dispatch tool"
     },
     {
+        title: "NordicCode Bootcamp Finder",
+        description: "Full-stack REST API platform for discovering coding bootcamps and courses. Features user authentication, live backend data fetching, bootcamp reviews, and comprehensive API documentation. Built with Node.js backend and responsive frontend.",
+        tags: ["React", "Node.js", "REST API", "Authentication"],
+        link: "https://bootcampfinder.onrender.com/",
+        cta: "Try Live Demo",
+        image: "/projects/bootcamp.png",
+        linkDescription: "Full-stack web app"
+    },
+    {
         title: "Yes Man Chess Terminal",
         description: "Retro chess game with personality-driven AI commentary powered by Gemini. Features Stockfish engine with 4 difficulty levels, dynamic mood system (6 emotional states), authentic CRT effects (scanlines, curvature, glitches), and context-aware responses to checks and captures.",
         tags: ["TypeScript", "React", "Stockfish WASM", "Gemini API"],
@@ -42,15 +51,6 @@ const projects = [
         cta: "View on GitHub",
         image: "/projects/chess-ai.png",
         linkDescription: "Interactive chess AI"
-    },
-    {
-        title: "Poker Analytics Engine",
-        description: "6-max No-Limit Hold'em training simulator with position-based AI opponents. Features realistic betting mechanics (min-raise, all-in, side pots), live HUD with VPIP/PFR/3-Bet stats, aggression factor tracking, and session profit/loss analytics.",
-        tags: ["TypeScript", "React", "Game AI", "Data Visualization"],
-        link: "https://github.com/Samrude1/PokerAnalyzzer",
-        cta: "View Logic",
-        image: "/projects/poker-analytics.png",
-        linkDescription: "Algorithmic simulation"
     },
     {
         title: "TreeniTrack Pro",
@@ -62,13 +62,13 @@ const projects = [
         linkDescription: "Modern wellness platform"
     },
     {
-        title: "NordicCode Bootcamp Finder",
-        description: "Full-stack REST API platform for discovering coding bootcamps and courses. Features user authentication, live backend data fetching, bootcamp reviews, and comprehensive API documentation. Built with Node.js backend and responsive frontend.",
-        tags: ["React", "Node.js", "REST API", "Authentication"],
-        link: "https://bootcampfinder.onrender.com/",
-        cta: "Try Live Demo",
-        image: "/projects/bootcamp.png",
-        linkDescription: "Full-stack web app"
+        title: "Poker Analytics Engine",
+        description: "6-max No-Limit Hold'em training simulator with position-based AI opponents. Features realistic betting mechanics (min-raise, all-in, side pots), live HUD with VPIP/PFR/3-Bet stats, aggression factor tracking, and session profit/loss analytics.",
+        tags: ["TypeScript", "React", "Game AI", "Data Visualization"],
+        link: "https://github.com/Samrude1/PokerAnalyzzer",
+        cta: "View Logic",
+        image: "/projects/poker-analytics.png",
+        linkDescription: "Algorithmic simulation"
     },
     {
         title: "Activity Finder",
@@ -230,4 +230,3 @@ export default function Projects() {
         </Section>
     );
 }
-
