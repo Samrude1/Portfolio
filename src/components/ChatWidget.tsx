@@ -75,7 +75,7 @@ export default function ChatWidget() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="w-[350px] sm:w-[400px] h-[500px] backdrop-blur-xl border rounded-2xl shadow-2xl flex flex-col pointer-events-auto overflow-hidden mb-4"
+                        className="w-[350px] sm:w-[400px] h-[500px] backdrop-blur-xl border rounded-2xl shadow-2xl flex flex-col pointer-events-auto overflow-hidden mb-4 antialiased"
                         style={{
                             backgroundColor: 'var(--surface)',
                             borderColor: 'var(--border)'

@@ -17,7 +17,7 @@ export default function Navbar() {
     return (
         <>
             <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center py-4 md:py-6 pointer-events-none">
-                <ul className="flex gap-2 sm:gap-4 md:gap-8 px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-full glass pointer-events-auto items-center">
+                <ul className="flex gap-2 sm:gap-4 md:gap-8 px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-full glass pointer-events-auto items-center antialiased">
                     {navLinks.map((link) => (
                         <li key={link.name}>
                             <Link
