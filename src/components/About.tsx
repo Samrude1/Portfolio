@@ -63,7 +63,7 @@ export default function About() {
                         className="text-base leading-relaxed opacity-70"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        My background is unique and grounded in 25 years of experience at <strong>Murata Electronics Oy</strong> (formerly VTI Technologies). Starting in 1999, I worked in the production of high-precision <strong>MEMS accelerometers and pressure sensors</strong>. Operating in ISO 4/5 cleanrooms meant adhering to an extreme level of personal and environmental discipline—where strict protocols like zero-cosmetics and specialized gear were mandatory to ensure the reliability of life-saving components. This career taught me the value of <strong>unwavering reliability, strict protocol adherence, and mission-critical precision</strong>—qualities I now apply to architecting AI agents and systems.
+                        My background is unique and grounded in 25 years of experience at <strong>Murata Electronics Oy</strong> (formerly VTI Technologies). Since 1999, I worked across the entire production lifecycle of high-precision <strong>MEMS accelerometers and pressure sensors</strong>—from wafer-level fabrication in ISO 4/5 cleanrooms to final PCB assembly and testing. Handling micro-components the size of a fingernail taught me the value of <strong>unwavering reliability, strict protocol adherence, and mission-critical precision</strong>—qualities I now apply to architecting AI agents and complex systems.
                     </p>
 
                     {/* Quick facts */}
