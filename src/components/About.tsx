@@ -60,10 +60,10 @@ export default function About() {
                     </p>
 
                     <p
-                        className="text-base leading-relaxed opacity-70"
-                        style={{ color: 'var(--foreground)' }}
+                        className="text-base leading-relaxed opacity-70 italic border-l-2 pl-4"
+                        style={{ color: 'var(--foreground)', borderColor: 'var(--primary)' }}
                     >
-                        My background is unique and grounded in 25 years of experience at <strong>Murata Electronics Oy</strong> (formerly VTI Technologies). Since 1999, I worked across the entire production lifecycle of high-precision <strong>MEMS accelerometers and pressure sensors</strong>—from wafer-level fabrication in ISO 4/5 cleanrooms to final PCB assembly and testing. Handling micro-components the size of a fingernail taught me the value of <strong>unwavering reliability, strict protocol adherence, and mission-critical precision</strong>—qualities I now apply to architecting AI agents and complex systems.
+                        My work is informed by a 25-year foundation at <strong>Murata Electronics Oy</strong> (formerly VTI Technologies) in high-precision manufacturing. This background instilled in me a "mission-critical" mindset and a level of <strong>unwavering reliability</strong> that I now bring to every AI system I architect.
                     </p>
 
                     {/* Quick facts */}
