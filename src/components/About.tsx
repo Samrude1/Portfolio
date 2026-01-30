@@ -60,10 +60,10 @@ export default function About() {
                     </p>
 
                     <p
-                        className="text-base leading-relaxed opacity-70 italic border-l-2 pl-4"
-                        style={{ color: 'var(--foreground)', borderColor: 'var(--primary)' }}
+                        className="text-base leading-relaxed opacity-70"
+                        style={{ color: 'var(--foreground)' }}
                     >
-                        My work is built on a 25-year foundation at <strong>Murata Electronics Oy</strong> (formerly VTI Technologies) in high-precision MEMS manufacturing. Years of working in <strong>extreme cleanroom environments (ISO 4/5)</strong> instilled in me a "zero-error" discipline and a level of <strong>unwavering reliability</strong> that I now bring to every AI system I architect.
+                        I focus on bridging the gap between complex logic and user-centric design. Whether it's architecting parallel research agents or developing autonomous trading workflows, I ensure that every system is robust, scalable, and built with a focus on technical excellence.
                     </p>
 
                     {/* Quick facts */}
