@@ -63,9 +63,7 @@ export default function About() {
                         className="text-base leading-relaxed opacity-70"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        My background combines creative direction as a 3D/2D artist with rigorous software engineering training,
-                        including C# systems development at Taitotalo Helsinki (2023). This fusion of creative problem-solving
-                        and technical precision allows me to build AI systems that are both powerful and intuitive.
+                        My background is unique and grounded in 25 years of experience at <strong>Murata Electronics</strong> (formerly VTI Technologies). As a Senior Production Operator in ISO 4/5 cleanrooms, my work centered on the precise operation of manufacturing equipment and meticulous quality inspections for MEMS sensors. This career taught me the extreme importance of <strong>unwavering reliability, strict protocol adherence, and attention to detail</strong>—qualities I now apply to architecting AI agents and systems where logic and precision are mission-critical.
                     </p>
 
                     {/* Quick facts */}
@@ -136,9 +134,9 @@ export default function About() {
                         </h4>
                         <div className="space-y-3">
                             {[
-                                { year: "2020-2023", role: "Coder", desc: "Learning syntax, building foundations" },
-                                { year: "2023-2024", role: "Programmer", desc: "Building full applications, shipping projects" },
-                                { year: "2024-2026", role: "AI Engineer", desc: "Multi-agent orchestration, MCP integration, production systems" },
+                                { year: "1999-2024", role: "Specialist", desc: "Digital/Industrial Precision at Murata Finland (MEMS Tech)" },
+                                { year: "2023-2024", role: "Programmer", desc: "C# Systems Development & Full-Stack Apps" },
+                                { year: "2024-2026", role: "AI Engineer", desc: "Multi-agent orchestration, Gemini 2.0, production agentic systems" },
                             ].map((item, i) => (
                                 <div
                                     key={i}
