@@ -63,7 +63,7 @@ export default function About() {
                         className="text-base leading-relaxed opacity-70"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        My background is unique and grounded in 25 years of experience at <strong>Murata Electronics</strong> (formerly VTI Technologies). As a Senior Production Operator in ISO 4/5 cleanrooms, my work centered on the precise operation of manufacturing equipment and meticulous quality inspections for MEMS sensors. This career taught me the extreme importance of <strong>unwavering reliability, strict protocol adherence, and attention to detail</strong>—qualities I now apply to architecting AI agents and systems where logic and precision are mission-critical.
+                        My background is unique and grounded in 25 years of experience at <strong>Murata Electronics Oy</strong> (formerly VTI Technologies). Starting in 1999 at VTI, I continued through its 2012 acquisition by the Japanese Murata Manufacturing. As a Senior Production Operator in ISO 4/5 cleanrooms, my work centered on the precise operation of manufacturing equipment and meticulous quality inspections for MEMS sensors. This career taught me the extreme importance of <strong>unwavering reliability, strict protocol adherence, and attention to detail</strong>—qualities I now apply to architecting AI agents and systems where logic and precision are mission-critical.
                     </p>
 
                     {/* Quick facts */}
