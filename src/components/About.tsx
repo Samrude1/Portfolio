@@ -63,7 +63,7 @@ export default function About() {
                         className="text-base leading-relaxed opacity-70 italic border-l-2 pl-4"
                         style={{ color: 'var(--foreground)', borderColor: 'var(--primary)' }}
                     >
-                        My work is informed by a 25-year foundation at <strong>Murata Electronics Oy</strong> (formerly VTI Technologies) in high-precision manufacturing. This background instilled in me a "mission-critical" mindset and a level of <strong>unwavering reliability</strong> that I now bring to every AI system I architect.
+                        My work is built on a 25-year foundation at <strong>Murata Electronics Oy</strong> (formerly VTI Technologies) in high-precision MEMS manufacturing. Years of working in <strong>extreme cleanroom environments (ISO 4/5)</strong> instilled in me a "zero-error" discipline and a level of <strong>unwavering reliability</strong> that I now bring to every AI system I architect.
                     </p>
 
                     {/* Quick facts */}
