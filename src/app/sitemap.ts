@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://samiraulainen.fi';
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://samirautanen.fi';
     const currentDate = new Date();
 
     return [

@@ -29,7 +29,7 @@ const bebasNeue = Bebas_Neue({
   weight: ["400"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://samiraulainen.fi';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://samirautanen.fi';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -69,6 +69,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: siteUrl,
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 };
 
