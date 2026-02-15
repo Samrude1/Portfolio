@@ -29,14 +29,35 @@ const bebasNeue = Bebas_Neue({
   weight: ["400"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://samiraulainen.fi';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://portfolio-seven-rho-74yt50nw74.vercel.app'),
+  metadataBase: new URL(siteUrl),
   title: "Sami Rautanen | AI Engineer & Technical Designer",
   description: "Portfolio of Sami Rautanen. Specializing in High-Performance Agentic AI, Complex Systems, and 3D Visualization. Transforming logic into experience.",
+  keywords: [
+    'AI Engineer',
+    'Agentic AI',
+    'Machine Learning',
+    'Full-Stack Developer',
+    'React',
+    'Next.js',
+    'TypeScript',
+    'Python',
+    'FastAPI',
+    '3D Visualization',
+    'Three.js',
+    'Technical Designer',
+    'RAG',
+    'LLM',
+    'Web Development',
+  ],
+  authors: [{ name: 'Sami Rautanen' }],
+  creator: 'Sami Rautanen',
   openGraph: {
     title: "Sami Rautanen | AI Engineer & Technical Designer",
     description: "Building the next generation of autonomous web agents and immersive interfaces.",
-    url: 'https://portfolio-seven-rho-74yt50nw74.vercel.app',
+    url: siteUrl,
     siteName: 'Sami Rautanen Portfolio',
     locale: 'en_US',
     type: 'website',
@@ -46,6 +67,9 @@ export const metadata: Metadata = {
     title: "Sami Rautanen | AI Engineer",
     description: "Building the next generation of autonomous web agents and immersive interfaces.",
   },
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 export default function RootLayout({
@@ -53,8 +77,37 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Sami Rautanen',
+    jobTitle: 'AI Engineer & Technical Designer',
+    url: siteUrl,
+    sameAs: [
+      'https://github.com/samiruai',
+      'https://linkedin.com/in/sami-rautanen',
+    ],
+    knowsAbout: [
+      'Artificial Intelligence',
+      'Machine Learning',
+      'Agentic AI',
+      'Full-Stack Development',
+      'React',
+      'Next.js',
+      'Python',
+      'FastAPI',
+      '3D Visualization',
+    ],
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body
         className={`${syne.variable} ${inter.variable} ${spaceGrotesk.variable} ${bebasNeue.variable} antialiased`}
       >

@@ -20,6 +20,7 @@ export default function ChatWidget() {
     const [inputValue, setInputValue] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [isFirstRequest, setIsFirstRequest] = useState(true);
+    const [backendStatus, setBackendStatus] = useState<'unknown' | 'awake' | 'sleeping' | 'waking'>('unknown');
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
     const scrollToBottom = () => {
@@ -29,6 +30,38 @@ export default function ChatWidget() {
     useEffect(() => {
         scrollToBottom();
     }, [messages, isOpen]);
+
+    // Health check to detect if backend is sleeping
+    const checkBackendHealth = async (retries = 3): Promise<boolean> => {
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
+        for (let i = 0; i < retries; i++) {
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 5000); // 5s timeout
+
+                const res = await fetch(`${apiUrl}/health`, {
+                    signal: controller.signal,
+                });
+                clearTimeout(timeoutId);
+
+                if (res.ok) {
+                    setBackendStatus('awake');
+                    return true;
+                }
+            } catch (error) {
+                console.log(`Health check attempt ${i + 1}/${retries} failed`);
+                if (i === 0) {
+                    setBackendStatus('waking');
+                }
+                // Wait before retry (exponential backoff)
+                await new Promise(resolve => setTimeout(resolve, Math.min(1000 * Math.pow(2, i), 10000)));
+            }
+        }
+
+        setBackendStatus('sleeping');
+        return false;
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -40,8 +73,14 @@ export default function ChatWidget() {
         setIsLoading(true);
 
         try {
-            // In production, replace with your Render backend URL
-            // For local dev, use localhost:8000
+            // Check backend health on first request
+            if (isFirstRequest && backendStatus !== 'awake') {
+                const isHealthy = await checkBackendHealth(5); // More retries for first request
+                if (!isHealthy) {
+                    throw new Error("Backend is not responding. It might be sleeping.");
+                }
+            }
+
             const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
             const res = await fetch(`${apiUrl}/chat`, {
@@ -60,7 +99,15 @@ export default function ChatWidget() {
             setIsFirstRequest(false);
         } catch (error) {
             console.error(error);
-            setMessages((prev) => [...prev, { role: "assistant", content: "I'm having trouble connecting to my brain right now. Please try again later!" }]);
+            let errorMessage = "I'm having trouble connecting to my brain right now. Please try again later!";
+
+            if (backendStatus === 'waking') {
+                errorMessage = "⏳ My backend is waking up from sleep (Render free tier). This takes ~30-60 seconds. Please try again in a moment!";
+            } else if (backendStatus === 'sleeping') {
+                errorMessage = "😴 My backend is sleeping (Render free tier). I'm trying to wake it up... Please wait 30-60 seconds and try again!";
+            }
+
+            setMessages((prev) => [...prev, { role: "assistant", content: errorMessage }]);
         } finally {
             setIsLoading(false);
         }
@@ -102,48 +149,7 @@ export default function ChatWidget() {
                                     >
                                         <Info size={20} />
                                     </button>
-                                    <AnimatePresence>
-                                        {showInfo && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: 10 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                exit={{ opacity: 0, y: 10 }}
-                                                className="absolute right-0 top-8 w-72 p-4 border rounded-xl text-xs shadow-xl z-50 backdrop-blur-md"
-                                                style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)', color: 'var(--foreground)' }}
-                                            >
-                                                <h4 className="font-bold mb-2 text-sm" style={{ color: 'var(--foreground)' }}>About This AI Agent</h4>
-                                                <ul className="space-y-1.5 mb-3">
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="text-primary mt-0.5">✨</span>
-                                                        <span>Built by Sami Rautanen</span>
-                                                    </li>
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="text-primary mt-0.5">🛡️</span>
-                                                        <span>Guardrails: Stays on-topic</span>
-                                                    </li>
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="text-primary mt-0.5">📧</span>
-                                                        <span>Email integration for leads</span>
-                                                    </li>
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="text-primary mt-0.5">💾</span>
-                                                        <span>Lead capture system</span>
-                                                    </li>
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="text-primary mt-0.5">🔔</span>
-                                                        <span>Push notifications (Pushover)</span>
-                                                    </li>
-                                                    <li className="flex items-start gap-2">
-                                                        <span className="text-primary mt-0.5">⚡</span>
-                                                        <span>Python, FastAPI, Gemini</span>
-                                                    </li>
-                                                </ul>
-                                                <div className="pt-2 border-t text-xs opacity-60" style={{ borderColor: 'var(--border)', color: 'var(--foreground)' }}>
-                                                    Rate Limit: <span style={{ color: 'var(--primary)' }}>5 msg/min</span>
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
+                                    {/* Info Panel will be rendered as an overlay for better readability */}
                                 </div>
                                 <button
                                     onClick={() => setIsOpen(false)}
@@ -200,7 +206,16 @@ export default function ChatWidget() {
                                         <Bot size={14} className="text-primary animate-pulse" />
                                     </div>
                                     <div className="border p-3 rounded-lg" style={{ backgroundColor: 'var(--surface-hover)', borderColor: 'var(--border)' }}>
-                                        {isFirstRequest ? (
+                                        {backendStatus === 'waking' ? (
+                                            <div className="flex flex-col gap-2">
+                                                <div className="flex gap-1 items-center">
+                                                    <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                                                    <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                                                    <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce"></span>
+                                                </div>
+                                                <span className="text-xs opacity-60 italic" style={{ color: 'var(--foreground)' }}>Waking up backend from sleep... (~30-60s)</span>
+                                            </div>
+                                        ) : isFirstRequest ? (
                                             <div className="flex flex-col gap-2">
                                                 <div className="flex gap-1 items-center">
                                                     <span className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce [animation-delay:-0.3s]"></span>
@@ -246,6 +261,82 @@ export default function ChatWidget() {
                                 </button>
                             </div>
                         </form>
+
+                        {/* Info Modal Overlay */}
+                        <AnimatePresence>
+                            {showInfo && (
+                                <motion.div
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    className="absolute inset-0 z-[60] flex items-center justify-center p-4"
+                                >
+                                    <div
+                                        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+                                        onClick={() => setShowInfo(false)}
+                                    />
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                                        exit={{ opacity: 0, scale: 0.95, y: 10 }}
+                                        className="relative w-full max-w-[300px] p-6 border rounded-2xl shadow-2xl z-10"
+                                        style={{
+                                            backgroundColor: 'var(--background)',
+                                            borderColor: 'var(--border)',
+                                            color: 'var(--foreground)',
+                                            backgroundImage: 'linear-gradient(to bottom right, rgba(255,255,255,0.05), transparent)'
+                                        }}
+                                    >
+                                        <button
+                                            onClick={() => setShowInfo(false)}
+                                            className="absolute top-4 right-4 p-1 rounded-full opacity-60 hover:opacity-100 transition-opacity"
+                                            style={{ color: 'var(--foreground)' }}
+                                        >
+                                            <X size={16} />
+                                        </button>
+
+                                        <h4 className="font-bold mb-4 text-base flex items-center gap-2" style={{ color: 'var(--foreground)' }}>
+                                            <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center border border-primary/50">
+                                                <Bot size={14} className="text-primary" />
+                                            </div>
+                                            About This AI Agent
+                                        </h4>
+
+                                        <ul className="space-y-3 mb-6">
+                                            <li className="flex items-start gap-3 text-sm">
+                                                <span className="text-primary mt-0.5">✨</span>
+                                                <span>Built by Sami Rautanen</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-sm">
+                                                <span className="text-primary mt-0.5">🛡️</span>
+                                                <span>Guardrails: Stays on-topic</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-sm">
+                                                <span className="text-primary mt-0.5">📧</span>
+                                                <span>Email integration for leads</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-sm">
+                                                <span className="text-primary mt-0.5">💾</span>
+                                                <span>Lead capture system</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-sm">
+                                                <span className="text-primary mt-0.5">🔔</span>
+                                                <span>Push notifications (Pushover)</span>
+                                            </li>
+                                            <li className="flex items-start gap-3 text-sm">
+                                                <span className="text-primary mt-0.5">⚡</span>
+                                                <span>Python, FastAPI, Gemini</span>
+                                            </li>
+                                        </ul>
+
+                                        <div className="pt-4 border-t text-xs flex justify-between items-center" style={{ borderColor: 'var(--border)' }}>
+                                            <span className="opacity-60">Status: <span className="text-green-500 font-medium">Online</span></span>
+                                            <span className="opacity-60">Limit: <span style={{ color: 'var(--primary)' }}>5 msg/min</span></span>
+                                        </div>
+                                    </motion.div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </motion.div>
                 )}
             </AnimatePresence>
