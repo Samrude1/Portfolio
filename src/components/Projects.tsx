@@ -8,8 +8,17 @@ import Image from "next/image";
 
 const projects = [
     {
+        title: "Sidekick AI",
+        description: "Autonomous tool-using assistant. Features a LangGraph worker-evaluator pattern for self-correction. Capable of web browsing with Playwright and dynamic code execution via Python REPL. Professional 'Electric Blue' Gradio interface.",
+        tags: ["LangGraph", "Python", "Playwright", "Gradio", "AI Agent"],
+        link: "https://huggingface.co/spaces/samrude1/Sidekick",
+        cta: "Launch Sidekick",
+        image: "/projects/sidekick.png",
+        linkDescription: "Live on Hugging Face"
+    },
+    {
         title: "Agentic Business Intelligence",
-        description: "Enterprise-grade multi-agent orchestration platform built with OpenAI Agents SDK (Gemini 2.0 Flash). Features a 6-agent Sales Intelligence Team with competitive email drafting and a 3-agent Deep Research Team with parallel web synthesis. Includes custom tool integration, memory management, and real-time process streaming.",
+        description: "Enterprise-grade multi-agent orchestration platform built with OpenAI Agents SDK (Gemini 2.0 Flash). Features a 6-agent Sales Intelligence Team with competitive email drafting and a 3-agent Deep Research Team with parallel web synthesis.",
         tags: ["Python", "OpenAI Agents SDK", "Gemini API", "Multi-Agent Systems", "FastAPI"],
         link: "https://github.com/Samrude1/Agentsquad",
         cta: "View Architecture",
@@ -18,18 +27,16 @@ const projects = [
     },
     {
         title: "Digital Twin (Prod)",
-        description: "Autonomous production-grade AI representation of Sami Rautanen. Deployed as a standalone architecture. Handles intelligent visitor inquiries, email workflows, and real-time interactions, demonstrating AWS Serverless delivery and cloud infrastructure.",
+        description: "Autonomous production-grade AI representation of Sami Rautanen. Handles intelligent visitor inquiries, email workflows, and real-time interactions, demonstrating AWS Serverless delivery.",
         tags: ["AWS S3", "CloudFront", "AWS Lambda", "AI Agent"],
         link: "https://d6x3ucjiv33it.cloudfront.net/",
         cta: "Talk to Digital Twin",
         image: "/projects/ai-assistant.png",
         linkDescription: "Live AWS Deployment"
     },
-
-
     {
         title: "Yes Man Chess Terminal",
-        description: "Retro chess game with personality-driven AI commentary powered by Gemini. Features Stockfish engine with 4 difficulty levels, dynamic mood system (6 emotional states), authentic CRT effects (scanlines, curvature, glitches), and context-aware responses to checks and captures.",
+        description: "Retro chess game with personality-driven AI commentary powered by Gemini. Features Stockfish engine, dynamic mood system, and authentic CRT effects.",
         tags: ["TypeScript", "React", "Stockfish WASM", "Gemini API"],
         link: "https://github.com/Samrude1/ChessAI",
         cta: "View on GitHub",
@@ -37,17 +44,8 @@ const projects = [
         linkDescription: "Interactive chess AI"
     },
     {
-        title: "TreeniTrack Pro",
-        description: "Intelligent workout tracking application with integrated AI coach. Features visual progress analytics, exercise logging, and personalized training recommendations.",
-        tags: ["TypeScript", "Vite", "Tailwind", "Fitness Tech"],
-        link: "https://github.com/Samrude1/TreeniTracker",
-        cta: "View App",
-        image: "/projects/workout-tracker.png",
-        linkDescription: "Modern wellness platform"
-    },
-    {
         title: "Poker Analytics Engine",
-        description: "6-max No-Limit Hold'em training simulator with position-based AI opponents. Features realistic betting mechanics (min-raise, all-in, side pots), live HUD with VPIP/PFR/3-Bet stats, aggression factor tracking, and session profit/loss analytics.",
+        description: "6-max No-Limit Hold'em training simulator with position-based AI opponents. Features realistic betting mechanics, live HUD, and session analytics.",
         tags: ["TypeScript", "React", "Game AI", "Data Visualization"],
         link: "https://github.com/Samrude1/PokerAnalyzzer",
         cta: "View Logic",
@@ -55,17 +53,8 @@ const projects = [
         linkDescription: "Algorithmic simulation"
     },
     {
-        title: "Activity Finder",
-        description: "Discover free local activities, cultural events, and hidden gems. Features interactive maps, smart filtering, and personalized favorites.",
-        tags: ["Next.js", "Tailwind", "Vercel"],
-        link: "https://activity-finder-nu.vercel.app/",
-        cta: "Try Live Demo",
-        image: "/projects/activity.png",
-        linkDescription: "Interactive web app"
-    },
-    {
         title: "Indie Game Portfolio",
-        description: "8 published games on Itch.io including Chess Terminal, Tanks, Snake, Vault of Shadows, Pong, CellWars (simulation), Brain Damage, and Heaven&Hell. Built with Unity/C# and JavaScript/HTML/CSS showcasing game mechanics, AI, and level design.",
+        description: "8 published games on Itch.io showcasing game mechanics, AI, and level design. Built with Unity/C# and JavaScript.",
         tags: ["Unity", "C#", "JavaScript", "Game Design"],
         link: "https://sr3design.itch.io/",
         cta: "Play Games",
@@ -74,7 +63,7 @@ const projects = [
     },
     {
         title: "Technical Art & 3D",
-        description: "3D art and environment portfolio. Featuring vehicle models, architectural designs, and game environments. Explore detailed visualizations and artistic 3D work.",
+        description: "3D art and environment portfolio featuring vehicle models and architectural designs. Explore detailed visualizations and artistic 3D work.",
         tags: ["3D Modeling", "Level Design", "CAD"],
         link: "https://www.artstation.com/samrude",
         cta: "View Gallery",
