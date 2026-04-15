@@ -17,32 +17,16 @@ const projects = [
         linkDescription: "Enterprise-ready agent framework"
     },
     {
-        title: "Autonomous Career Digital Twin",
-        description: "Autonomous agent deployed on this portfolio. Handles visitor inquiries, provides intelligent responses about my work, manages email workflows, and sends real-time notifications. Production deployment with FastAPI backend on Render.",
-        tags: ["Python", "FastAPI", "Gemini API", "Agent Deployment"],
-        link: null, // No external link - it's live on this site
-        cta: "Try it below ↘️",
+        title: "Digital Twin (Prod)",
+        description: "Autonomous production-grade AI representation of Sami Rautanen. Deployed as a standalone architecture. Handles intelligent visitor inquiries, email workflows, and real-time interactions, demonstrating AWS Serverless delivery and cloud infrastructure.",
+        tags: ["AWS S3", "CloudFront", "AWS Lambda", "AI Agent"],
+        link: "https://d6x3ucjiv33it.cloudfront.net/",
+        cta: "Talk to Digital Twin",
         image: "/projects/ai-assistant.png",
-        linkDescription: "Live production system"
+        linkDescription: "Live AWS Deployment"
     },
-    {
-        title: "SkyGuide B737-800 Performance Computer",
-        description: "Professional flight performance calculator with live METAR integration, AI co-pilot, and SimBrief import. Computes V-speeds (V1/VR/V2), N1 thrust, VREF/VAPP with wind correction, and TOD using 3:1 glide path. Features AI safety briefings via Gemini and interactive checklists.",
-        tags: ["TypeScript", "Aviation Math", "Gemini API", "SimBrief"],
-        link: "https://github.com/Samrude1/Boeing737Calculator",
-        cta: "View System",
-        image: "/projects/flight-calc.png",
-        linkDescription: "Professional dispatch tool"
-    },
-    {
-        title: "NordicCode Bootcamp Finder",
-        description: "Full-stack REST API platform for discovering coding bootcamps and courses. Features user authentication, live backend data fetching, bootcamp reviews, and comprehensive API documentation. Built with Node.js backend and responsive frontend.",
-        tags: ["React", "Node.js", "REST API", "Authentication"],
-        link: "https://bootcampfinder.onrender.com/",
-        cta: "Try Live Demo",
-        image: "/projects/bootcamp.png",
-        linkDescription: "Full-stack web app"
-    },
+
+
     {
         title: "Yes Man Chess Terminal",
         description: "Retro chess game with personality-driven AI commentary powered by Gemini. Features Stockfish engine with 4 difficulty levels, dynamic mood system (6 emotional states), authentic CRT effects (scanlines, curvature, glitches), and context-aware responses to checks and captures.",

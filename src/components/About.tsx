@@ -45,9 +45,9 @@ export default function About() {
                         className="text-lg leading-relaxed opacity-80"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        I'm an <strong>AI Engineer</strong> specializing in autonomous multi-agent systems. I architect and deploy
+                        I am an <strong>AI Engineer</strong> specializing in autonomous multi-agent systems. I architect and deploy
                         production-ready agentic platforms using CrewAI, LangGraph, AutoGen, and MCP servers — solving real
-                        business problems from intelligent research automation to autonomous trading systems and browser-based AI assistants.
+                        business problems from intelligent research automation to autonomous engineering teams and browser-based AI assistants.
                     </p>
 
                     <p
@@ -59,12 +59,7 @@ export default function About() {
                         cross-agent collaboration patterns.
                     </p>
 
-                    <p
-                        className="text-base leading-relaxed opacity-70"
-                        style={{ color: 'var(--foreground)' }}
-                    >
-                        I focus on bridging the gap between complex logic and user-centric design. Whether it's architecting parallel research agents or developing autonomous trading workflows, I ensure that every system is robust, scalable, and built with a focus on technical excellence.
-                    </p>
+                        I focus on bridging the gap between complex logic and user-centric design. Whether it's architecting parallel research agents or developing autonomous multi-agent workflows, I ensure that every system is robust, scalable, and built with a focus on technical excellence.
 
                     {/* Quick facts */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
