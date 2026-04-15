@@ -45,21 +45,28 @@ export default function About() {
                         className="text-lg leading-relaxed opacity-80"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        I am an <strong>AI Engineer</strong> specializing in autonomous multi-agent systems. I architect and deploy
-                        production-ready agentic platforms using CrewAI, LangGraph, AutoGen, and MCP servers — solving real
-                        business problems from intelligent research automation to autonomous engineering teams and browser-based AI assistants.
+                        I am an <strong>AI Engineer</strong> specializing in the bridge between intelligent agents and production deployments. 
+                        I architect autonomous multi-agent systems that don't just work in a lab, but thrive in the cloud — 
+                        utilizing AWS, Terraform, and modern DevOps to deliver scalable, enterprise-ready solutions.
+                    </p>
+ 
+                    <p
+                        className="text-base leading-relaxed opacity-70"
+                        style={{ color: 'var(--foreground)' }}
+                    >
+                        My background in industrial MEMS technology and systems engineering informs my disciplined approach 
+                        to AI orchestration. I build AI platforms with custom tool integration, long-term memory, 
+                        and robust error-handling, ensuring that agents are both capable and reliable.
                     </p>
 
                     <p
                         className="text-base leading-relaxed opacity-70"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        My approach combines systems engineering thinking with cutting-edge AI orchestration frameworks.
-                        I build scalable, production-grade solutions with custom tool integration, memory management, and
-                        cross-agent collaboration patterns.
+                        I focus on the entire lifecycle of an AI product: from the first prompt to the final CI/CD pipeline. 
+                        Whether it's Parallel Research or Autonomous Engineering Teams, my goal is to turn AI research into 
+                        tangible, production-hardened business value.
                     </p>
-
-                        I focus on bridging the gap between complex logic and user-centric design. Whether it's architecting parallel research agents or developing autonomous multi-agent workflows, I ensure that every system is robust, scalable, and built with a focus on technical excellence.
 
                     {/* Quick facts */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">

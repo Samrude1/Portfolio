@@ -17,8 +17,8 @@ const skills = [
         items: ["React / Next.js", "TypeScript", "Tailwind CSS", "Node.js"]
     },
     {
-        category: "Technical Design",
-        items: ["3D Modeling", "CAD Design", "Technical Drawing", "UI/UX Design"]
+        category: "Cloud & Deployment",
+        items: ["AWS Ecosystem", "Azure & Google Cloud", "Terraform (IaC)", "GitHub Actions / CI/CD"]
     }
 ];
 
@@ -44,9 +44,9 @@ export default function Skills() {
                         className="text-base leading-relaxed mb-6 opacity-80"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        I bring a systems engineering mindset to AI development. My foundation in technical design
-                        informs how I architect scalable agent systems — balancing technical performance with
-                        practical usability. I specialize in taking AI projects from prototype to production.
+                        I bring a systems engineering mindset to AI development. My focus on cloud infrastructure
+                        and scalable architecture informs how I build robust agent systems — balancing technical 
+                        performance with production-grade stability. I specialize in taking AI projects from prototype to deployment.
                     </p>
                     <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
                         <p className="text-xs font-medium tracking-widest mb-2 opacity-60" style={{ color: 'var(--foreground)' }}>EDUCATION</p>

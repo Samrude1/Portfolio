@@ -9,6 +9,7 @@ import Image from "next/image";
 const projects = [
     {
         title: "Sidekick AI",
+        status: "Live",
         description: "Autonomous tool-using assistant. Features a LangGraph worker-evaluator pattern for self-correction. Capable of web browsing with Playwright and dynamic code execution via Python REPL. Professional 'Electric Blue' Gradio interface.",
         tags: ["LangGraph", "Python", "Playwright", "Gradio", "AI Agent"],
         link: "https://huggingface.co/spaces/samrude1/Sidekick",
@@ -17,16 +18,18 @@ const projects = [
         linkDescription: "Live on Hugging Face"
     },
     {
-        title: "Agentic Business Intelligence",
-        description: "Enterprise-grade multi-agent orchestration platform built with OpenAI Agents SDK (Gemini 2.0 Flash). Features a 6-agent Sales Intelligence Team with competitive email drafting and a 3-agent Deep Research Team with parallel web synthesis.",
-        tags: ["Python", "OpenAI Agents SDK", "Gemini API", "Multi-Agent Systems", "FastAPI"],
-        link: "https://github.com/Samrude1/Agentsquad",
-        cta: "View Architecture",
-        image: "/projects/agents.png",
-        linkDescription: "Enterprise-ready agent framework"
+        title: "EngineeringTeam Crew",
+        status: "Live",
+        description: "Full autonomous software team drafting, coding, and testing Python apps. Utilizing CrewAI orchestration with Claude 3.7 and GPT-4o for end-to-end development automation.",
+        tags: ["CrewAI", "Claude 3.7", "GPT-4o", "Automated Dev"],
+        link: "https://huggingface.co/spaces/samrude1/EngineeringTeam",
+        cta: "Launch Crew",
+        image: "/projects/engineering-team.png",
+        linkDescription: "Live on Hugging Face"
     },
     {
         title: "Digital Twin (Prod)",
+        status: "Live",
         description: "Autonomous production-grade AI representation of Sami Rautanen. Handles intelligent visitor inquiries, email workflows, and real-time interactions, demonstrating AWS Serverless delivery.",
         tags: ["AWS S3", "CloudFront", "AWS Lambda", "AI Agent"],
         link: "https://d6x3ucjiv33it.cloudfront.net/",
@@ -35,7 +38,28 @@ const projects = [
         linkDescription: "Live AWS Deployment"
     },
     {
+        title: "CareAssist AI",
+        status: "In Development",
+        description: "HealthTech solution for autonomous patient note structuring and triage. Built with AWS Event-driven architecture to transform unstructured sote-data into structured formats.",
+        tags: ["AWS SQS", "Lambda", "Aurora v2", "PII-Anonymization"],
+        link: "",
+        cta: "Architecture Only",
+        image: "/projects/agents.png",
+        linkDescription: "Enterprise Sote-AI"
+    },
+    {
+        title: "ContractSense AI",
+        status: "In Development",
+        description: "Legal-grade contract risk analysis platform. Features PII-masking, CoT-visualization of legal risks, and a zero-login demo philosophy for immediate business value.",
+        tags: ["FastAPI", "Claude 3.7", "PDF-Parsing", "RegTech"],
+        link: "",
+        cta: "In Development",
+        image: "/projects/agents.png",
+        linkDescription: "SaaS AI Solution"
+    },
+    {
         title: "Yes Man Chess Terminal",
+        status: "Live",
         description: "Retro chess game with personality-driven AI commentary powered by Gemini. Features Stockfish engine, dynamic mood system, and authentic CRT effects.",
         tags: ["TypeScript", "React", "Stockfish WASM", "Gemini API"],
         link: "https://github.com/Samrude1/ChessAI",
@@ -43,32 +67,16 @@ const projects = [
         image: "/projects/chess-ai.png",
         linkDescription: "Interactive chess AI"
     },
-    {
-        title: "Poker Analytics Engine",
-        description: "6-max No-Limit Hold'em training simulator with position-based AI opponents. Features realistic betting mechanics, live HUD, and session analytics.",
-        tags: ["TypeScript", "React", "Game AI", "Data Visualization"],
-        link: "https://github.com/Samrude1/PokerAnalyzzer",
-        cta: "View Logic",
-        image: "/projects/poker-analytics.png",
-        linkDescription: "Algorithmic simulation"
-    },
+
     {
         title: "Indie Game Portfolio",
+        status: "Live",
         description: "8 published games on Itch.io showcasing game mechanics, AI, and level design. Built with Unity/C# and JavaScript.",
         tags: ["Unity", "C#", "JavaScript", "Game Design"],
         link: "https://sr3design.itch.io/",
         cta: "Play Games",
         image: "/projects/games.png",
         linkDescription: "8 playable games"
-    },
-    {
-        title: "Technical Art & 3D",
-        description: "3D art and environment portfolio featuring vehicle models and architectural designs. Explore detailed visualizations and artistic 3D work.",
-        tags: ["3D Modeling", "Level Design", "CAD"],
-        link: "https://www.artstation.com/samrude",
-        cta: "View Gallery",
-        image: "/projects/3d-art.png",
-        linkDescription: "Visual portfolio"
     }
 ];
 
@@ -105,6 +113,18 @@ export default function Projects() {
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                
+                                {/* Status Badge */}
+                                <div className="absolute top-3 right-3 z-10">
+                                    <span 
+                                        className={`text-[10px] font-bold tracking-widest px-2 py-1 rounded-full border backdrop-blur-md
+                                            ${project.status === 'Live' 
+                                                ? 'bg-primary/20 border-primary text-primary shadow-[0_0_10px_rgba(0,102,204,0.3)]' 
+                                                : 'bg-white/5 border-white/20 text-white/60'}`}
+                                    >
+                                        {project.status?.toUpperCase()}
+                                    </span>
+                                </div>
                             </div>
 
                             {/* Header */}
