@@ -64,7 +64,7 @@ const projects = [
         tags: ["React", "FastAPI", "OpenAI SDK", "Gemini 2.5"],
         link: "https://agent-squad-psru8ot5b-sami-rautanens-projects.vercel.app/",
         cta: "Launch Platform",
-        image: "/projects/agents.png",
+        image: "/projects/agentsquad.png",
         linkDescription: "Live on Vercel"
     },
     {
