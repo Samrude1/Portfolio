@@ -321,7 +321,7 @@
                 <h2>Expertise</h2>
 
                 <div class="skill-item">
-                    <span class="skill-name">AI Agents (CrewAI/OpenAI)</span>
+                    <span class="skill-name">AI Agents (CrewAI / LangGraph)</span>
                     <div class="skill-dots">
                         <div class="dot filled"></div>
                         <div class="dot filled"></div>
@@ -332,13 +332,24 @@
                 </div>
 
                 <div class="skill-item">
-                    <span class="skill-name">Agentic Patterns (RAG/Tools)</span>
+                    <span class="skill-name">AWS Serverless (Lambda / Bedrock)</span>
                     <div class="skill-dots">
                         <div class="dot filled"></div>
                         <div class="dot filled"></div>
                         <div class="dot filled"></div>
                         <div class="dot filled"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <span class="skill-name">Terraform / IaC / CI/CD</span>
+                    <div class="skill-dots">
                         <div class="dot filled"></div>
+                        <div class="dot filled"></div>
+                        <div class="dot filled"></div>
+                        <div class="dot filled"></div>
+                        <div class="dot"></div>
                     </div>
                 </div>
 
@@ -354,7 +365,7 @@
                 </div>
 
                 <div class="skill-item">
-                    <span class="skill-name">Full-Stack (React / Node.js)</span>
+                    <span class="skill-name">React / Next.js / TypeScript</span>
                     <div class="skill-dots">
                         <div class="dot filled"></div>
                         <div class="dot filled"></div>
@@ -365,24 +376,13 @@
                 </div>
 
                 <div class="skill-item">
-                    <span class="skill-name">Databases (SQL / NoSQL)</span>
+                    <span class="skill-name">LLM Integration (GPT / Claude / Gemini)</span>
                     <div class="skill-dots">
                         <div class="dot filled"></div>
                         <div class="dot filled"></div>
                         <div class="dot filled"></div>
                         <div class="dot filled"></div>
-                        <div class="dot"></div>
-                    </div>
-                </div>
-
-                <div class="skill-item">
-                    <span class="skill-name">Game Dev (Unity / C#)</span>
-                    <div class="skill-dots">
                         <div class="dot filled"></div>
-                        <div class="dot filled"></div>
-                        <div class="dot filled"></div>
-                        <div class="dot filled"></div>
-                        <div class="dot"></div>
                     </div>
                 </div>
             </div>
@@ -465,62 +465,56 @@
                 <!-- Project 1 -->
                 <div class="project-item">
                     <div class="project-top">
-                        <span class="project-title">Agentic Business Intelligence Platform</span>
-                        <span class="project-tech">Python, OpenAI SDK, FastAPI</span>
+                        <span class="project-title">AgentSquad Platform</span>
+                        <span class="project-tech">React · FastAPI · OpenAI SDK · Resend</span>
                     </div>
-                    <p class="project-desc">Enterprise-grade orchestration platform managing 9 specialized AI agents.
-                    </p>
+                    <p class="project-desc">Full-stack multi-agent platform — <a href="https://agent-squad-psru8ot5b-sami-rautanens-projects.vercel.app/" style="color:#1e2633">Live on Vercel</a></p>
                     <ul class="project-bullets">
-                        <li>Developed a <strong>6-agent Sales Intelligence Team</strong> capable of drafting competitive
-                            emails and selecting the best output.</li>
-                        <li>Built a <strong>3-agent Deep Research Team</strong> performing parallel web synthesis and
-                            <strong>RAG-based</strong> citation generation.
-                        </li>
-                        <li>Implemented flow-based orchestration with custom tool integration and real-time process
-                            streaming via FastAPI.</li>
+                        <li>Built a <strong>6-agent Sales Intelligence pipeline</strong> that drafts, evaluates, and sends real emails via Resend with domain authentication (SPF/DKIM).</li>
+                        <li>Developed a <strong>parallel Deep Research team</strong> executing 3 simultaneous searches and synthesizing cited executive reports.</li>
+                        <li>Deployed React frontend on Vercel, FastAPI backend on Hugging Face Spaces with rate limiting and PIN authentication.</li>
                     </ul>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-item">
                     <div class="project-top">
-                        <span class="project-title">Autonomous Career Digital Twin</span>
-                        <span class="project-tech">FastAPI, Gemini 2.0, Render</span>
+                        <span class="project-title">Digital Twin — AWS Production</span>
+                        <span class="project-tech">AWS Lambda · Terraform · Bedrock · FastAPI</span>
                     </div>
-                    <p class="project-desc">Live autonomous agent deployed on personal portfolio handling real-time
-                        interaction.</p>
+                    <p class="project-desc">Serverless AI deployment on AWS — <a href="https://d6x3ucjiv33it.cloudfront.net/" style="color:#1e2633">Live on CloudFront</a></p>
                     <ul class="project-bullets">
-                        <li>Architected a context-aware dialog system using Google Gemini 2.0 Flash.</li>
-                        <li>Created an autonomous email workflow that drafts, formats, and sends notifications.</li>
-                        <li>Secured production API with SlowAPI rate-limiting and encrypted environment variables.</li>
+                        <li>Deployed FastAPI backend as AWS Lambda function via Mangum adapter with API Gateway and CloudFront CDN.</li>
+                        <li>Managed full AWS infrastructure with <strong>Terraform IaC</strong> (multi-environment: dev/test/prod) and GitHub Actions CI/CD using OIDC keyless authentication.</li>
+                        <li>Integrated Amazon Bedrock (Nova) models replacing OpenAI, with S3-based conversation memory.</li>
                     </ul>
                 </div>
 
                 <!-- Project 3 -->
                 <div class="project-item">
                     <div class="project-top">
-                        <span class="project-title">SkyGuide B737-800 Performance Computer</span>
-                        <span class="project-tech">TypeScript, SimBrief API, AI</span>
+                        <span class="project-title">EngineeringTeam Crew</span>
+                        <span class="project-tech">CrewAI · Claude 3.7 · GPT-4o · Gradio</span>
                     </div>
-                    <p class="project-desc">Professional flight performance calculator developed for <strong>Microsoft
-                            FSX Simulator</strong>.</p>
+                    <p class="project-desc">Autonomous 5-agent software team — <a href="https://huggingface.co/spaces/samrude1/EngineeringTeam" style="color:#1e2633">Live on Hugging Face</a></p>
                     <ul class="project-bullets">
-                        <li>Integrated live METAR weather data and SimBrief flight plans for real-time calculation.</li>
-                        <li>Programmed accurate V-speed (V1/VR/V2) and N1 thrust logic based on Boeing performance
-                            tables.</li>
+                        <li>Orchestrated a sequential crew: Lead Architect → Backend Engineer → Frontend Engineer → QA Engineer → Technical Writer.</li>
+                        <li>Delivers complete Python applications (design doc, backend code, Gradio UI, Pytest suite, README) in under 10 minutes.</li>
+                        <li>Implemented rate limiting (15 runs/IP), input validation, and concurrency queuing for production safety.</li>
                     </ul>
                 </div>
 
                 <!-- Project 4 -->
                 <div class="project-item">
                     <div class="project-top">
-                        <span class="project-title">NordicCode Bootcamp Finder</span>
-                        <span class="project-tech">MERN Stack, JWT, Maps</span>
+                        <span class="project-title">Sidekick AI Agent</span>
+                        <span class="project-tech">LangGraph · Gemini 2.5 Flash · Playwright</span>
                     </div>
-                    <p class="project-desc">Full-stack platform with advanced geospatial features.</p>
+                    <p class="project-desc">Autonomous tool-using agent — <a href="https://huggingface.co/spaces/samrude1/Sidekick" style="color:#1e2633">Live on Hugging Face</a></p>
                     <ul class="project-bullets">
-                        <li>Implemented Role-Based Access Control (RBAC) and JWT authentication security.</li>
-                        <li>Developed geospatial filtering to find bootcamps within specific radius.</li>
+                        <li>Implemented <strong>Worker-Evaluator pattern</strong> in LangGraph: agent executes tasks, evaluator assesses output and triggers self-correction loops.</li>
+                        <li>Integrated real browser control via Playwright and dynamic code execution via Python REPL as agent tools.</li>
+                        <li>Anti-abuse measures: Gradio concurrency limits, LangGraph recursion cap (8), protecting API budget in public deployment.</li>
                     </ul>
                 </div>
             </div>
