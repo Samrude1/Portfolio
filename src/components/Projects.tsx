@@ -116,10 +116,10 @@ export default function Projects() {
                                 {/* Status Badge */}
                                 <div className="absolute top-3 right-3 z-10">
                                     <span 
-                                        className={`text-[10px] font-bold tracking-widest px-2 py-1 rounded-full border backdrop-blur-md
+                                        className={`text-[10px] font-bold tracking-widest px-2.5 py-1 rounded-full border backdrop-blur-md
                                             ${project.status === 'Live' 
-                                                ? 'bg-primary/20 border-primary text-primary shadow-[0_0_10px_rgba(0,102,204,0.3)]' 
-                                                : 'bg-white/5 border-white/20 text-white/60'}`}
+                                                ? 'bg-primary border-primary text-white shadow-[0_0_12px_rgba(0,102,204,0.6)]' 
+                                                : 'bg-amber-500/90 border-amber-400 text-white shadow-[0_0_10px_rgba(245,158,11,0.4)]'}`}
                                     >
                                         {project.status?.toUpperCase()}
                                     </span>
