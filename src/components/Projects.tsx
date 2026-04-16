@@ -60,8 +60,8 @@ const projects = [
     {
         title: "AgentSquad Platform",
         status: "Live",
-        description: "Professional-grade multi-agent orchestration platform. Features a 6-agent Sales Intelligence pipeline and a parallel Deep Research team with rendering and HTML report generation.",
-        tags: ["React", "FastAPI", "OpenAI SDK", "Gemini 2.5"],
+        description: "Full-stack multi-agent platform: Sales team drafts and sends real emails via Resend, Deep Research team delivers cited executive reports, and Meeting Prep generates strategic briefings. React frontend on Vercel, FastAPI backend on Hugging Face.",
+        tags: ["React", "OpenAI SDK", "Gemini 2.5", "Resend", "FastAPI"],
         link: "https://agent-squad-psru8ot5b-sami-rautanens-projects.vercel.app/",
         cta: "Launch Platform",
         image: "/projects/agentsquad.png",
