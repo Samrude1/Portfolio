@@ -58,16 +58,15 @@ const projects = [
         linkDescription: "SaaS AI Solution"
     },
     {
-        title: "Yes Man Chess Terminal",
+        title: "AgentSquad Platform",
         status: "Live",
-        description: "Retro chess game with personality-driven AI commentary powered by Gemini. Features Stockfish engine, dynamic mood system, and authentic CRT effects.",
-        tags: ["TypeScript", "React", "Stockfish WASM", "Gemini API"],
-        link: "https://github.com/Samrude1/ChessAI",
-        cta: "View on GitHub",
-        image: "/projects/chess-ai.png",
-        linkDescription: "Interactive chess AI"
+        description: "Professional-grade multi-agent orchestration platform. Features a 6-agent Sales Intelligence pipeline and a parallel Deep Research team with rendering and HTML report generation.",
+        tags: ["React", "FastAPI", "OpenAI SDK", "Gemini 2.5"],
+        link: "https://agent-squad-psru8ot5b-sami-rautanens-projects.vercel.app/",
+        cta: "Launch Platform",
+        image: "/projects/agents.png",
+        linkDescription: "Live on Vercel"
     },
-
     {
         title: "Indie Game Portfolio",
         status: "Live",
