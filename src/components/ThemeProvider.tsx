@@ -22,11 +22,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         setMounted(true);
-        // Load from localStorage
+        // Load from localStorage but default to dark
         const savedMode = localStorage.getItem('mode') as Mode;
-
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        if (savedMode) setModeState(savedMode);
+        if (savedMode && savedMode === 'dark') setModeState('dark');
+        else setModeState('dark'); // Always default to dark
     }, []);
 
     useEffect(() => {
