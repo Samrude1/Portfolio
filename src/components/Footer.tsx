@@ -45,7 +45,7 @@ export default function Footer() {
                         tabIndex={-1}
                     >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src="/robco.png" alt="" width={16} height={16} style={{ imageRendering: 'pixelated' }} />
+                        <img src="/robco.png" alt="" width={22} height={22} style={{ imageRendering: 'pixelated', filter: 'sepia(1) hue-rotate(80deg) saturate(2)' }} />
                     </Link>
                 </div>
 
