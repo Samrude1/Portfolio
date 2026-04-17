@@ -8,8 +8,8 @@ export default function Footer() {
         <footer className="w-full py-8 pb-24 mt-20 border-t backdrop-blur-sm" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--surface)' }}>
             <style>{`
                 @keyframes blink {
-                    0%, 100% { opacity: 0.08; }
-                    50% { opacity: 0.18; }
+                    0%, 100% { opacity: 0.20; }
+                    50% { opacity: 0.35; }
                 }
                 @keyframes glitch {
                     0%   { transform: translate(0); }
@@ -37,15 +37,15 @@ export default function Footer() {
 
                 <div className="text-sm opacity-60 flex items-center gap-1" style={{ color: 'var(--foreground)' }}>
                     &copy; {new Date().getFullYear()} Sami Rautanen.
-                    <Link
+                <Link
                         href="https://mr-house-umber.vercel.app/"
                         target="_blank"
-                        className="easter-egg ml-1 font-mono text-xs"
-                        style={{ color: 'var(--foreground)' }}
+                        className="easter-egg ml-2 inline-block"
                         aria-hidden="true"
                         tabIndex={-1}
                     >
-                        _
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src="/robco.png" alt="" width={16} height={16} style={{ imageRendering: 'pixelated' }} />
                     </Link>
                 </div>
 
