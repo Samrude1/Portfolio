@@ -1,13 +1,52 @@
-import { Github, Linkedin, Mail, Gamepad2, Palette } from "lucide-react";
+"use client";
+
+import { Github, Linkedin, Gamepad2, Palette } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
     return (
         <footer className="w-full py-8 pb-24 mt-20 border-t backdrop-blur-sm" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--surface)' }}>
+            <style>{`
+                @keyframes blink {
+                    0%, 100% { opacity: 0.08; }
+                    50% { opacity: 0.18; }
+                }
+                @keyframes glitch {
+                    0%   { transform: translate(0); }
+                    15%  { transform: translate(-2px, 1px) skewX(-2deg); }
+                    30%  { transform: translate(2px, -1px) skewX(2deg); }
+                    45%  { transform: translate(-1px, 2px); }
+                    60%  { transform: translate(1px, -2px) skewX(-1deg); }
+                    75%  { transform: translate(-2px, 1px); }
+                    90%  { transform: translate(2px, 0px); }
+                    100% { transform: translate(0); }
+                }
+                .easter-egg {
+                    animation: blink 2.8s ease-in-out infinite;
+                    cursor: pointer;
+                    display: inline-block;
+                }
+                .easter-egg:hover {
+                    animation: glitch 0.3s linear infinite;
+                    opacity: 1 !important;
+                    text-shadow: 0 0 8px #00ff41, 0 0 16px #00ff41;
+                    color: #00ff41 !important;
+                }
+            `}</style>
             <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
 
-                <div className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>
+                <div className="text-sm opacity-60 flex items-center gap-1" style={{ color: 'var(--foreground)' }}>
                     &copy; {new Date().getFullYear()} Sami Rautanen.
+                    <Link
+                        href="https://mr-house-umber.vercel.app/"
+                        target="_blank"
+                        className="easter-egg ml-1 font-mono text-xs"
+                        style={{ color: 'var(--foreground)' }}
+                        aria-hidden="true"
+                        tabIndex={-1}
+                    >
+                        _
+                    </Link>
                 </div>
 
                 <div className="flex gap-6 items-center">
