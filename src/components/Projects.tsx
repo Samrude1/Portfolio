@@ -2,7 +2,7 @@
 
 import Section from "./Section";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Github } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,7 +15,8 @@ const projects = [
         link: "https://huggingface.co/spaces/samrude1/Sidekick",
         cta: "Launch Sidekick",
         image: "/projects/sidekick.png",
-        linkDescription: "Live on Hugging Face"
+        linkDescription: "Live on Hugging Face",
+        github: "https://github.com/Samrude1/sidekick-ai-agent"
     },
     {
         title: "EngineeringTeam Crew",
@@ -25,7 +26,8 @@ const projects = [
         link: "https://huggingface.co/spaces/samrude1/EngineeringTeam",
         cta: "Launch Crew",
         image: "/projects/engineering-team.png",
-        linkDescription: "Live on Hugging Face"
+        linkDescription: "Live on Hugging Face",
+        github: "https://github.com/Samrude1/ai-engineering-team"
     },
     {
         title: "Digital Twin (Prod)",
@@ -35,7 +37,8 @@ const projects = [
         link: "https://d6x3ucjiv33it.cloudfront.net/",
         cta: "Talk to Digital Twin",
         image: "/projects/ai-assistant.png",
-        linkDescription: "Live AWS Deployment"
+        linkDescription: "Live AWS Deployment",
+        github: "https://github.com/Samrude1/Digital-Twin-AWS"
     },
     {
         title: "CareAssist AI",
@@ -45,7 +48,8 @@ const projects = [
         link: "",
         cta: "Architecture Only",
         image: "/projects/agents.png",
-        linkDescription: "Enterprise Sote-AI"
+        linkDescription: "Enterprise Sote-AI",
+        github: ""
     },
     {
         title: "ContractSense AI",
@@ -55,7 +59,8 @@ const projects = [
         link: "",
         cta: "In Development",
         image: "/projects/agents.png",
-        linkDescription: "SaaS AI Solution"
+        linkDescription: "SaaS AI Solution",
+        github: ""
     },
     {
         title: "AgentSquad Platform",
@@ -65,7 +70,8 @@ const projects = [
         link: "https://agent-squad-sigma.vercel.app",
         cta: "Launch Platform",
         image: "/projects/agentsquad.png",
-        linkDescription: "Live on Vercel"
+        linkDescription: "Live on Vercel",
+        github: "https://github.com/Samrude1/Agentsquad"
     },
     {
         title: "Indie Game Portfolio",
@@ -75,7 +81,8 @@ const projects = [
         link: "https://sr3design.itch.io/",
         cta: "Play Games",
         image: "/projects/games.png",
-        linkDescription: "8 playable games"
+        linkDescription: "8 playable games",
+        github: ""
     }
 ];
 
@@ -112,6 +119,20 @@ export default function Projects() {
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                                
+                                {project.github && (
+                                    <div className="absolute top-3 left-3 z-20">
+                                        <a 
+                                            href={project.github} 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="pointer-events-auto flex items-center justify-center w-8 h-8 rounded-full border border-white/60 bg-black/60 backdrop-blur-md hover:bg-primary hover:border-primary hover:scale-110 transition-all duration-300 group/repo shadow-lg"
+                                            aria-label="View Source Code"
+                                        >
+                                            <Github size={16} className="text-white/80 group-hover/repo:text-white group-hover/repo:scale-110 transition-all" />
+                                        </a>
+                                    </div>
+                                )}
                                 
                                 {/* Status Badge */}
                                 <div className="absolute top-3 right-3 z-10">
@@ -201,20 +222,19 @@ export default function Projects() {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
                         >
-                            {project.link ? (
-                                <Link
-                                    href={project.link}
-                                    target="_blank"
-                                    className={cardClasses}
-                                    style={cardStyle}
-                                >
-                                    {cardContent}
-                                </Link>
-                            ) : (
-                                <div className={cardClasses} style={cardStyle}>
+                            <div className={cardClasses} style={cardStyle}>
+                                {project.link && (
+                                    <Link
+                                        href={project.link}
+                                        target="_blank"
+                                        className="absolute inset-0 z-0 rounded-2xl"
+                                        aria-label={`View ${project.title}`}
+                                    />
+                                )}
+                                <div className="relative z-10 flex flex-col h-full pointer-events-none">
                                     {cardContent}
                                 </div>
-                            )}
+                            </div>
                         </motion.div>
                     );
                 })}
