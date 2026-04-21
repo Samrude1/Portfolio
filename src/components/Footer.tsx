@@ -52,14 +52,10 @@ export default function Footer() {
                                 width: 22, 
                                 height: 22, 
                                 backgroundColor: '#00ff41', 
-                                WebkitMaskImage: 'url(/robco.png)', 
-                                maskImage: 'url(/robco.png)', 
-                                WebkitMaskSize: 'contain', 
-                                maskSize: 'contain',
-                                maskRepeat: 'no-repeat',
-                                WebkitMaskRepeat: 'no-repeat',
-                                maskMode: 'luminance',
-                                WebkitMaskMode: 'luminance',
+                                backgroundImage: 'url(/robco.png)', 
+                                backgroundSize: 'contain',
+                                backgroundRepeat: 'no-repeat',
+                                backgroundBlendMode: 'screen',
                                 imageRendering: 'pixelated'
                             }} 
                         />
