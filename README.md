@@ -32,18 +32,19 @@ AI Platform Engineer specializing in the design and implementation of autonomous
 
 ---
 
-## 📊 System Architecture
+## 📊 Integrated Portfolio Architecture
+
+The main portfolio site (samirautanen.fi) operates on a highly optimized Vercel/Render stack for performance and cost-efficiency:
 
 ```mermaid
 graph TD
     User((User)) -->|HTTPS| Frontend[Next.js 15 Frontend - Vercel]
-    Frontend -->|POST /chat| BackendAPI[FastAPI Gateway - Render]
+    Frontend -->|POST /chat| BackendAPI[FastAPI Backend - Render]
     
-    subgraph "AWS AI Infrastructure (Terraform Managed)"
-        BackendAPI -->|Invoke| Agent[Gemini 2.0 Flash Agent]
-        Agent -->|Memory| Memory[(DynamoDB)]
-        Agent -->|Compute| Lambda[AWS Lambda]
-        Agent -->|Inference| Bedrock[AWS Bedrock]
+    subgraph "AI Logic Layer (Render Hosted)"
+        BackendAPI -->|Orchestration| Agent[Gemini 2.0 Flash / LangGraph]
+        Agent -->|Memory| Memory[(Persistent JSON/SQL)]
+        Agent -->|Inference| AI[Google AI / OpenAI API]
     end
 ```
 
@@ -54,7 +55,7 @@ graph TD
 - **AgentSquad BI**: Multi-agent Sales Intelligence and Deep Research platform.
 - **EngineeringTeam Crew**: Autonomous 5-agent software development team building Python applications.
 - **Sidekick AI Agent**: LangGraph-powered autonomous assistant with self-correction and tool use.
-- **Autonomous Digital Twin**: Live AI agent system (AWS/Terraform) with persistent memory.
+- **Digital Twin (AWS Showcase)**: Standalone serverless AI system built with AWS Bedrock, Lambda, and Terraform. [View Demo](https://d6x3ucjiv33it.cloudfront.net/)
 
 ---
 
