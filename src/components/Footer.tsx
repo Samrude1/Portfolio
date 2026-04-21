@@ -8,8 +8,8 @@ export default function Footer() {
         <footer className="w-full py-8 pb-24 mt-20 border-t backdrop-blur-sm" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--surface)' }}>
             <style>{`
                 @keyframes blink {
-                    0%, 100% { opacity: 0.25; }
-                    50% { opacity: 0.8; }
+                    0%, 100% { opacity: 0.4; }
+                    50% { opacity: 0.9; }
                 }
                 @keyframes glitch {
                     0%   { transform: translate(0); }
@@ -45,18 +45,15 @@ export default function Footer() {
                         tabIndex={-1}
                     >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <div 
-                            role="img"
-                            aria-label="RobCo Logo"
+                        <img 
+                            src="/robco.png" 
+                            alt="" 
+                            width={22} 
+                            height={22} 
                             style={{ 
-                                width: 22, 
-                                height: 22, 
-                                backgroundColor: '#00ff41', 
-                                backgroundImage: 'url(/robco.png)', 
-                                backgroundSize: 'contain',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundBlendMode: 'screen',
-                                imageRendering: 'pixelated'
+                                imageRendering: 'pixelated', 
+                                mixBlendMode: 'screen',
+                                filter: 'brightness(1.5) contrast(1.2)'
                             }} 
                         />
                     </Link>
