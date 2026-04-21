@@ -45,15 +45,22 @@ export default function Footer() {
                         tabIndex={-1}
                     >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img 
-                            src="/robco.png" 
-                            alt="" 
-                            width={22} 
-                            height={22} 
+                        <div 
+                            role="img"
+                            aria-label="RobCo Logo"
                             style={{ 
-                                imageRendering: 'pixelated', 
-                                mixBlendMode: 'screen',
-                                filter: 'brightness(1.5) contrast(1.2)'
+                                width: 22, 
+                                height: 22, 
+                                backgroundColor: '#00ff41', 
+                                WebkitMaskImage: 'url(/robco.png)', 
+                                maskImage: 'url(/robco.png)', 
+                                WebkitMaskSize: 'contain', 
+                                maskSize: 'contain',
+                                WebkitMaskRepeat: 'no-repeat',
+                                maskRepeat: 'no-repeat',
+                                WebkitMaskMode: 'luminance',
+                                maskMode: 'luminance',
+                                imageRendering: 'pixelated'
                             }} 
                         />
                     </Link>
