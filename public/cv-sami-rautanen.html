@@ -41,10 +41,9 @@
             max-width: 210mm;
             min-height: 297mm;
             margin: 40px auto;
-            background: var(--main-bg);
+            background: var(--sidebar-bg); /* Sidebar color as base */
             display: grid;
             grid-template-columns: 75mm 1fr;
-            /* 30% - 70% split roughly */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
@@ -150,7 +149,8 @@
 
         /* MAIN CONTENT */
         .main-content {
-            padding: 50px 40px;
+            padding: 45px 40px;
+            background: var(--main-bg); /* White background for text area */
         }
 
         .header-name {
@@ -167,19 +167,19 @@
             text-transform: uppercase;
             letter-spacing: 3px;
             color: var(--muted);
-            margin-bottom: 40px;
+            margin-bottom: 25px; /* Tiivistetty 40px -> 25px */
             font-weight: 400;
         }
 
         .main-section {
-            margin-bottom: 35px;
+            margin-bottom: 20px; /* Tiivistetty 30px -> 20px */
         }
 
         .section-header {
             display: flex;
             align-items: center;
             gap: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 15px; /* Tiivistetty 25px -> 15px */
         }
 
         .section-icon {
@@ -309,7 +309,7 @@
                     <span>🔗</span> <a href="https://linkedin.com/in/sami-rautanen-022095325">LinkedIn Profile</a>
                 </div>
                 <div class="contact-item">
-                    <span>💻</span> <a href="https://github.com/Samrude1">GitHub (27 Repos)</a>
+                    <span>💻</span> <a href="https://github.com/Samrude1">GitHub (39 Repos)</a>
                 </div>
                 <div class="contact-item">
                     <span>🌐</span> <a href="https://samirautanen.fi">samirautanen.fi</a>
@@ -523,7 +523,7 @@
                 <div class="project-item">
                     <div class="project-top">
                         <span class="project-title">Sidekick AI Agent</span>
-                        <span class="project-tech">LangGraph · Gemini 2.5 Flash · Playwright</span>
+                        <span class="project-tech">LangGraph · Gemini 2.0 Flash · Playwright</span>
                     </div>
                     <p class="project-desc">Autonomous tool-using agent — <a
                             href="https://huggingface.co/spaces/samrude1/Sidekick" style="color:#1e2633">Live on Hugging
@@ -557,8 +557,7 @@
                     </li>
                     <li><strong>3D & Technical Art:</strong> Background in 3D visualization and CAD design, bringing
                         strong spatial reasoning to system architecture.</li>
-                    <li><strong>Full-Stack Web Apps:</strong> <em>TreeniTrack</em> (AI Coach integration) and
-                        <em>Activity Finder</em> (Geospatial React App).
+                    <li><strong>Full-Stack Web Apps:</strong> Professional experience building production grade applications including <em>AgentSquad</em> (Sales Intel) and <em>Digital Twin</em> (AWS Infrastructure).
                     </li>
                 </ul>
             </div>

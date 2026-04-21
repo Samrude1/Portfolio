@@ -51,9 +51,17 @@ graph TD
 
 ## 🎯 Featured Projects
 
-- **Autonomous Digital Twin**: Live AI agent system with persistent memory and tool use.
-- **Guardian Cloud Platform**: Automated AWS infrastructure for secure AI deployments.
-- **3D Neural Visualization**: Real-time web visualization of neural network activity.
+- **AgentSquad BI**: Multi-agent Sales Intelligence and Deep Research platform.
+- **EngineeringTeam Crew**: Autonomous 5-agent software development team building Python applications.
+- **Sidekick AI Agent**: LangGraph-powered autonomous assistant with self-correction and tool use.
+- **Autonomous Digital Twin**: Live AI agent system (AWS/Terraform) with persistent memory.
+
+---
+
+## 🚀 Future Roadmap (In Planning)
+
+- **CareAssist AI**: Enterprise-grade healthcare agentic system for parsing notes and triage.
+- **ContractSense AI**: SaaS platform for legal risk analysis and PII protection.
 
 ---
 

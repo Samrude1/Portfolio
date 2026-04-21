@@ -8,8 +8,8 @@ export default function Footer() {
         <footer className="w-full py-8 pb-24 mt-20 border-t backdrop-blur-sm" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--surface)' }}>
             <style>{`
                 @keyframes blink {
-                    0%, 100% { opacity: 0.20; }
-                    50% { opacity: 0.35; }
+                    0%, 100% { opacity: 0.25; }
+                    50% { opacity: 0.8; }
                 }
                 @keyframes glitch {
                     0%   { transform: translate(0); }
@@ -22,7 +22,7 @@ export default function Footer() {
                     100% { transform: translate(0); }
                 }
                 .easter-egg {
-                    animation: blink 2.8s ease-in-out infinite;
+                    animation: blink 2.0s ease-in-out infinite;
                     cursor: pointer;
                     display: inline-block;
                 }
@@ -45,7 +45,24 @@ export default function Footer() {
                         tabIndex={-1}
                     >
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src="/robco.png" alt="" width={22} height={22} style={{ imageRendering: 'pixelated', filter: 'sepia(1) hue-rotate(80deg) saturate(2)' }} />
+                        <div 
+                            role="img"
+                            aria-label="RobCo Logo"
+                            style={{ 
+                                width: 22, 
+                                height: 22, 
+                                backgroundColor: '#00ff41', 
+                                WebkitMaskImage: 'url(/robco.png)', 
+                                maskImage: 'url(/robco.png)', 
+                                WebkitMaskSize: 'contain', 
+                                maskSize: 'contain',
+                                maskRepeat: 'no-repeat',
+                                WebkitMaskRepeat: 'no-repeat',
+                                maskMode: 'luminance',
+                                WebkitMaskMode: 'luminance',
+                                imageRendering: 'pixelated'
+                            }} 
+                        />
                     </Link>
                 </div>
 
