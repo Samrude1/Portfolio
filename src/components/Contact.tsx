@@ -19,7 +19,7 @@ export default function Contact() {
                     className="tracking-widest text-sm font-medium mb-4 block"
                     style={{ color: 'var(--primary)' }}
                 >
-                    SEEKING AI ENGINEER ROLES • Q1 2026
+                    SEEKING AI ENGINEER ROLES • 2026
                 </span>
                 <h2
                     className="text-4xl md:text-6xl font-light mb-8"
