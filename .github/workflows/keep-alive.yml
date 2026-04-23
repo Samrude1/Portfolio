@@ -1,0 +1,33 @@
+name: Keep AI Projects Awake
+
+on:
+  schedule:
+    # Ajetaan 50 minuutin välein (pysyy alle tunnin rajan)
+    - cron: '*/50 * * * *'
+  workflow_dispatch: # Mahdollistaa manuaalisen ajon testausta varten
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Vercel & Hugging Face Spaces
+        run: |
+          urls=(
+            "https://samirautanen.fi"
+            "https://agent-squad-sigma.vercel.app"
+            "https://huggingface.co/spaces/samrude1/Sidekick"
+            "https://huggingface.co/spaces/samrude1/EngineeringTeam"
+            "https://samrude1-sidekick.hf.space"
+            "https://samrude1-engineeringteam.hf.space"
+            "https://ai-bot-backend-dx68.onrender.com/health"
+          )
+          
+          for url in "${urls[@]}"; do
+            echo "Pinging $url..."
+            curl -sL --connect-timeout 10 --max-time 20 "$url" > /dev/null
+            if [ $? -eq 0 ]; then
+              echo "✅ Success"
+            else
+              echo "❌ Failed"
+            fi
+          done
