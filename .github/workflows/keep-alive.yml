@@ -1,4 +1,5 @@
 name: Keep AI Projects Awake
+# Last updated: 2026-04-29
 
 on:
   schedule:
@@ -17,8 +18,12 @@ jobs:
             "https://agent-squad-sigma.vercel.app"
             "https://huggingface.co/spaces/samrude1/Sidekick"
             "https://huggingface.co/spaces/samrude1/EngineeringTeam"
+            # Agent Squad backend & UI
+            "https://huggingface.co/spaces/samrude1/Agent-team"
             "https://samrude1-sidekick.hf.space"
             "https://samrude1-engineeringteam.hf.space"
+            # Agent Squad direct API
+            "https://samrude1-agent-team.hf.space"
             "https://ai-bot-backend-dx68.onrender.com/health"
           )
           
