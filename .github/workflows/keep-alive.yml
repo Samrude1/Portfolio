@@ -20,11 +20,15 @@ jobs:
             "https://huggingface.co/spaces/samrude1/EngineeringTeam"
             # Agent Squad backend & UI
             "https://huggingface.co/spaces/samrude1/Agent-team"
+            "https://huggingface.co/spaces/samrude1/careerbot"
             "https://samrude1-sidekick.hf.space"
             "https://samrude1-engineeringteam.hf.space"
             # Agent Squad direct API
             "https://samrude1-agent-team.hf.space"
+            "https://samrude1-careerbot.hf.space"
+            # Portfolio & AWS Showcase
             "https://ai-bot-backend-dx68.onrender.com/health"
+            "https://d6x3ucjiv33it.cloudfront.net/"
           )
           
           for url in "${urls[@]}"; do
