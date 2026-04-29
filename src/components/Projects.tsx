@@ -67,7 +67,7 @@ const projects = [
         status: "Live",
         description: "Full-stack multi-agent platform: Sales team drafts and sends real emails via Resend, Deep Research team delivers cited executive reports, and Meeting Prep generates strategic briefings. React frontend on Vercel, FastAPI backend on Hugging Face.",
         tags: ["React", "OpenAI SDK", "Gemini 2.5", "Resend", "FastAPI"],
-        link: "https://agent-squad-sigma.vercel.app",
+        link: "https://agent-squad-sigma.vercel.app/?access=portfolio_access",
         cta: "Launch Platform",
         image: "/projects/agentsquad.png",
         linkDescription: "Live on Vercel",
