@@ -34,7 +34,7 @@ const projects = [
         status: "Live",
         description: "Autonomous production-grade AI representation of Sami Rautanen. Built on AWS Serverless architecture with FastAPI and Amazon Nova models. Features Terraform IaC, CI/CD automation, and S3-based conversation memory.",
         tags: ["AWS Lambda", "Terraform", "Amazon Nova", "FastAPI"],
-        link: "https://d6x3ucjiv33it.cloudfront.net/",
+        link: "https://d15k7n9dhqyy0d.cloudfront.net/",
         cta: "Talk to Digital Twin",
         image: "/projects/ai-assistant.png",
         linkDescription: "Live AWS Deployment",
