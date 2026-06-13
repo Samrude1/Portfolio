@@ -38,7 +38,7 @@ export default function Footer() {
                 <div className="text-sm opacity-60 flex items-center gap-1" style={{ color: 'var(--foreground)' }}>
                     &copy; {new Date().getFullYear()} Sami Rautanen.
                 <Link
-                        href="https://mr-house-umber.vercel.app/"
+                        href="https://robco-termlink.vercel.app/"
                         target="_blank"
                         className="easter-egg ml-2 inline-block"
                         aria-hidden="true"
