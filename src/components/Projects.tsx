@@ -6,6 +6,7 @@ import { ArrowRight, Github } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
+// Project data — models verified from source repos June 2026
 const projects = [
     {
         title: "Sidekick AI",
