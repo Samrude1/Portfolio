@@ -33,8 +33,7 @@ jobs:
           
           for url in "${urls[@]}"; do
             echo "Pinging $url..."
-            curl -sL --connect-timeout 10 --max-time 20 "$url" > /dev/null
-            if [ $? -eq 0 ]; then
+            if curl -sL --connect-timeout 10 --max-time 20 "$url" > /dev/null; then
               echo "✅ Success"
             else
               echo "❌ Failed"
