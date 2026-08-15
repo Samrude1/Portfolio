@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Syne, Bebas_Neue, Outfit } from "next/font/google";
+import { Inter, Space_Grotesk, Syne } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,12 +11,6 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
-
-
 const syne = Syne({
   variable: "--font-syne",
   subsets: ["latin"],
@@ -27,14 +21,6 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space",
   subsets: ["latin"],
 });
-
-const bebasNeue = Bebas_Neue({
-  variable: "--font-bebas",
-  subsets: ["latin"],
-  weight: ["400"],
-});
-
-
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://samirautanen.fi';
 
 export const metadata: Metadata = {
@@ -118,7 +104,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${syne.variable} ${inter.variable} ${outfit.variable} ${spaceGrotesk.variable} ${bebasNeue.variable} antialiased`}
+        className={`${syne.variable} ${inter.variable} ${spaceGrotesk.variable} antialiased`}
       >
 
         <ThemeProvider>

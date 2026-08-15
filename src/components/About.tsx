@@ -42,7 +42,7 @@ export default function About() {
                     </h3>
 
                     <p
-                        className="text-lg leading-relaxed opacity-80"
+                        className="text-xl leading-relaxed"
                         style={{ color: 'var(--foreground)' }}
                     >
                         I am an <strong>AI Engineer</strong> specializing in the bridge between intelligent agents and production deployments. 
@@ -51,7 +51,7 @@ export default function About() {
                     </p>
  
                     <p
-                        className="text-base leading-relaxed opacity-70"
+                        className="text-lg leading-relaxed opacity-90"
                         style={{ color: 'var(--foreground)' }}
                     >
                         My background in industrial MEMS technology and systems engineering informs my disciplined approach 
@@ -60,7 +60,7 @@ export default function About() {
                     </p>
 
                     <p
-                        className="text-base leading-relaxed opacity-70"
+                        className="text-lg leading-relaxed opacity-90"
                         style={{ color: 'var(--foreground)' }}
                     >
                         I focus on the entire lifecycle of an AI product: from the first prompt to the final CI/CD pipeline. 
@@ -80,8 +80,8 @@ export default function About() {
                         >
                             <MapPin size={20} style={{ color: 'var(--primary)' }} />
                             <div>
-                                <p className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>Location</p>
-                                <p className="font-medium" style={{ color: 'var(--foreground)' }}>Finland</p>
+                                <p className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>Location</p>
+                                <p className="font-medium text-lg" style={{ color: 'var(--foreground)' }}>Finland</p>
                             </div>
                         </div>
 
@@ -94,8 +94,8 @@ export default function About() {
                         >
                             <Briefcase size={20} style={{ color: 'var(--primary)' }} />
                             <div>
-                                <p className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>Focus</p>
-                                <p className="font-medium" style={{ color: 'var(--foreground)' }}>AI Agent Development</p>
+                                <p className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>Focus</p>
+                                <p className="font-medium text-lg" style={{ color: 'var(--foreground)' }}>AI Agent Development</p>
                             </div>
                         </div>
 
@@ -108,8 +108,8 @@ export default function About() {
                         >
                             <GraduationCap size={20} style={{ color: 'var(--primary)' }} />
                             <div>
-                                <p className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>Education</p>
-                                <p className="font-medium" style={{ color: 'var(--foreground)' }}>Technical Design - Hyria Ammattiopisto</p>
+                                <p className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>Education</p>
+                                <p className="font-medium text-lg" style={{ color: 'var(--foreground)' }}>Technical Design - Hyria Ammattiopisto</p>
                             </div>
                         </div>
                         <div
@@ -121,8 +121,8 @@ export default function About() {
                         >
                             <GraduationCap size={20} style={{ color: 'var(--primary)' }} />
                             <div>
-                                <p className="text-xs opacity-50" style={{ color: 'var(--foreground)' }}>Training</p>
-                                <p className="font-medium" style={{ color: 'var(--foreground)' }}>C# Systems Development - Taitotalo Helsinki 2023</p>
+                                <p className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>Training</p>
+                                <p className="font-medium text-lg" style={{ color: 'var(--foreground)' }}>C# Systems Development - Taitotalo Helsinki 2023</p>
                             </div>
                         </div>
                     </div>
@@ -153,10 +153,10 @@ export default function About() {
                                         {item.year}
                                     </span>
                                     <div>
-                                        <p className="font-medium" style={{ color: 'var(--foreground)' }}>
+                                        <p className="font-medium text-lg" style={{ color: 'var(--foreground)' }}>
                                             {item.role}
                                         </p>
-                                        <p className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>
+                                        <p className="text-base opacity-80" style={{ color: 'var(--foreground)' }}>
                                             {item.desc}
                                         </p>
                                     </div>

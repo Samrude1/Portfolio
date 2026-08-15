@@ -41,7 +41,7 @@ export default function Skills() {
                         SKILLS & EXPERTISE
                     </h2>
                     <p
-                        className="text-base leading-relaxed mb-6 opacity-80"
+                        className="text-lg leading-relaxed mb-6 opacity-90"
                         style={{ color: 'var(--foreground)' }}
                     >
                         I bring a systems engineering mindset to AI development. My focus on cloud infrastructure
@@ -50,13 +50,13 @@ export default function Skills() {
                     </p>
                     <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
                         <p className="text-xs font-medium tracking-widest mb-2 opacity-60" style={{ color: 'var(--foreground)' }}>EDUCATION</p>
-                        <h4 className="text-lg font-medium" style={{ color: 'var(--foreground)' }}>
+                        <h4 className="text-xl font-medium" style={{ color: 'var(--foreground)' }}>
                             Vocational Qualification in Technical Design
                         </h4>
-                        <p className="opacity-60" style={{ color: 'var(--foreground)' }}>
+                        <p className="opacity-80 text-lg" style={{ color: 'var(--foreground)' }}>
                             Hyria Ammattiopisto • Tekninen suunnittelija
                         </p>
-                        <p className="text-sm mt-1 opacity-50" style={{ color: 'var(--foreground)' }}>
+                        <p className="text-base mt-1 opacity-70" style={{ color: 'var(--foreground)' }}>
                             3D Visualization & Structural Design
                         </p>
                     </div>
@@ -90,7 +90,7 @@ export default function Skills() {
                                 {skillGroup.items.map(item => (
                                     <li
                                         key={item}
-                                        className="text-base flex items-center gap-2 opacity-80"
+                                        className="text-lg flex items-center gap-2 opacity-90"
                                         style={{ color: 'var(--foreground)' }}
                                     >
                                         <span

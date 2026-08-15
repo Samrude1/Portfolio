@@ -15,7 +15,7 @@ const projects = [
         tags: ["LangGraph", "Claude Sonnet 4.5", "GPT-4o", "Playwright", "Gradio"],
         link: "https://huggingface.co/spaces/samrude1/Sidekick",
         cta: "Launch Sidekick",
-        image: "/projects/sidekick.png",
+        image: "/projects/sidekick-v3.jpg",
         linkDescription: "Live on Hugging Face",
         github: "https://github.com/Samrude1/sidekick-ai-agent"
     },
@@ -26,7 +26,7 @@ const projects = [
         tags: ["CrewAI", "Claude Opus 4.5", "OpenRouter", "Gradio"],
         link: "https://huggingface.co/spaces/samrude1/EngineeringTeam",
         cta: "Launch Crew",
-        image: "/projects/engineering-team.png",
+        image: "/projects/engineering-team-v2.jpg",
         linkDescription: "Live on Hugging Face",
         github: "https://github.com/Samrude1/ai-engineering-team"
     },
@@ -37,7 +37,7 @@ const projects = [
         tags: ["AWS Lambda", "Terraform", "Amazon Nova", "FastAPI"],
         link: "https://d15k7n9dhqyy0d.cloudfront.net/",
         cta: "Talk to Digital Twin",
-        image: "/projects/ai-assistant.png",
+        image: "/projects/ai-assistant-v2.jpg",
         linkDescription: "Live AWS Deployment",
         github: "https://github.com/Samrude1/Digital-Twin-AWS"
     },
@@ -47,9 +47,9 @@ const projects = [
         description: "HealthTech solution for autonomous patient note structuring and triage. Built with AWS Event-driven architecture to transform unstructured sote-data into structured formats.",
         tags: ["AWS SQS", "Lambda", "Aurora v2", "PII-Anonymization"],
         link: "",
-        cta: "Architecture Only",
-        image: "/projects/agents.png",
-        linkDescription: "Enterprise Sote-AI",
+        cta: "Request Demo",
+        image: "/projects/careassist-v2.jpg",
+        linkDescription: "Internal Development",
         github: ""
     },
     {
@@ -58,9 +58,9 @@ const projects = [
         description: "Legal-grade contract risk analysis platform. Features PII-masking, CoT-visualization of legal risks, and a zero-login demo philosophy for immediate business value.",
         tags: ["FastAPI", "Claude 3.7", "PDF-Parsing", "RegTech"],
         link: "",
-        cta: "In Development",
-        image: "/projects/agents.png",
-        linkDescription: "SaaS AI Solution",
+        cta: "Request Demo",
+        image: "/projects/contractsense-v2.jpg",
+        linkDescription: "Private Repository",
         github: ""
     },
     {
@@ -70,7 +70,7 @@ const projects = [
         tags: ["React", "OpenAI SDK", "Claude 3.5 Sonnet", "GPT-4o", "FastAPI"],
         link: "https://agent-squad-sigma.vercel.app/?access=portfolio_access",
         cta: "Launch Platform",
-        image: "/projects/agentsquad.png",
+        image: "/projects/agentsquad-v2.jpg",
         linkDescription: "Live on Vercel",
         github: "https://github.com/Samrude1/Agentsquad"
     },
@@ -81,8 +81,8 @@ const projects = [
         tags: ["Unity", "C#", "JavaScript", "Game Design"],
         link: "https://sr3design.itch.io/",
         cta: "Play Games",
-        image: "/projects/games.png",
-        linkDescription: "8 playable games",
+        image: "/projects/games-v2.jpg",
+        linkDescription: "Play on Steam / Web",
         github: ""
     }
 ];
@@ -158,7 +158,7 @@ export default function Projects() {
 
                             {/* Description */}
                             <p
-                                className="text-base mb-4 leading-relaxed opacity-70 flex-grow"
+                                className="text-lg mb-4 leading-relaxed opacity-90 flex-grow"
                                 style={{ color: 'var(--foreground)' }}
                             >
                                 {project.description}
@@ -169,9 +169,10 @@ export default function Projects() {
                                 {project.tags.map(tag => (
                                     <span
                                         key={tag}
-                                        className="text-sm px-2 py-1 rounded-full border opacity-60"
+                                        className="text-xs px-2.5 py-1 rounded-md border font-medium opacity-80"
                                         style={{
-                                            backgroundColor: 'var(--surface)',
+                                            fontFamily: 'var(--font-mono)',
+                                            backgroundColor: 'var(--surface-hover)',
                                             color: 'var(--foreground)',
                                             borderColor: 'var(--border)'
                                         }}
@@ -207,7 +208,7 @@ export default function Projects() {
                     );
 
                     const cardClasses = `group relative p-4 rounded-2xl border transition-all duration-300 flex flex-col h-full
-                        hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/50 hover:scale-105 hover:-translate-y-1
+                        hover:shadow-lg hover:border-primary/50
                         ${project.link ? 'cursor-pointer' : 'cursor-default opacity-80'}`;
 
                     const cardStyle = {

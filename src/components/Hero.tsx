@@ -1,6 +1,5 @@
 "use client";
 
-import ThreeScene from './ThreeScene';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
@@ -15,10 +14,13 @@ export default function Hero() {
     const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
 
     return (
-        <section ref={containerRef} className="relative w-full h-screen overflow-hidden">
-            {/* 3D Background */}
-            <div className="absolute inset-0 z-0">
-                <ThreeScene />
+        <section ref={containerRef} className="relative w-full h-screen overflow-hidden bg-background">
+            {/* Subtle Technical Grid Background */}
+            <div className="absolute inset-0 z-0 opacity-[0.08] dark:opacity-[0.05]" 
+                 style={{ 
+                     backgroundImage: 'linear-gradient(var(--foreground) 1px, transparent 1px), linear-gradient(90deg, var(--foreground) 1px, transparent 1px)', 
+                     backgroundSize: '40px 40px' 
+                 }}>
             </div>
 
             {/* Content Overlay */}
@@ -31,9 +33,9 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-[0.05em]"
+                        className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
                         style={{
-                            fontFamily: 'var(--font-syne)',
+                            fontFamily: 'var(--font-heading)',
                             color: 'var(--foreground)'
                         }}
                     >
@@ -52,9 +54,9 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8, delay: 1.2 }}
-                        className="text-xs sm:text-sm md:text-base lg:text-lg tracking-[0.15em] md:tracking-[0.3em] font-medium opacity-80 px-4"
+                        className="text-xs sm:text-sm md:text-base lg:text-lg tracking-widest md:tracking-[0.15em] font-medium opacity-80 px-4"
                         style={{
-                            fontFamily: 'var(--font-body)',
+                            fontFamily: 'var(--font-mono)',
                             color: 'var(--foreground)'
                         }}
                     >
