@@ -2,15 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Default Theme: Professional Blue - Dark */
-  --background: #121212;
-  --foreground: #ededed;
-  --primary: #0066CC;
-  --secondary: #005AA3;
-  --accent: #0088FF;
-  --surface: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 255, 255, 0.08);
-  --border: rgba(255, 255, 255, 0.1);
+  /* Default Theme: Professional Blue - Light */
+  --background: #F8FAFB;
+  --foreground: #1a1a1a;
+
+  /* Darker Professional Blue for better contrast */
+  --primary: #0052A3;
+  --secondary: #003D7A;
+  --accent: #0066CC;
+
+  /* Enhanced surface effects */
+  --surface: rgba(0, 82, 163, 0.06);
+  --surface-hover: rgba(0, 82, 163, 0.12);
+  --border: rgba(0, 82, 163, 0.2);
 
   /* Fonts */
   --font-heading: 'Outfit', var(--font-geist-sans), sans-serif;

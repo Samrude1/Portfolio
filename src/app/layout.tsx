@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import ThemeToggle from "@/components/ThemeToggle";
 import ChatWidget from "@/components/ChatWidget";
 
 const inter = Inter({
@@ -104,7 +103,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-mode="light" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

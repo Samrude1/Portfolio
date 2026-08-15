@@ -17,16 +17,19 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
     const [theme, setThemeState] = useState<ColorTheme>('ai-purple');
-    const [mode, setModeState] = useState<Mode>('dark');
+    const [mode, setModeState] = useState<Mode>('light');
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true);
-        // Load from localStorage but default to dark
-        const savedMode = localStorage.getItem('mode') as Mode;
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        if (savedMode && savedMode === 'dark') setModeState('dark');
-        else setModeState('dark'); // Always default to dark
+        // Load from localStorage but default to light
+        const savedMode = localStorage.getItem('portfolio-mode') as Mode;
+        if (savedMode === 'dark' || savedMode === 'light') {
+            setModeState(savedMode);
+        } else {
+            setModeState('light'); // Default to light
+        }
     }, []);
 
     useEffect(() => {
@@ -36,7 +39,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         document.documentElement.setAttribute('data-mode', mode);
 
         // Save to localStorage
-        localStorage.setItem('mode', mode);
+        localStorage.setItem('portfolio-mode', mode);
     }, [mode, mounted]);
 
     const setTheme = (newTheme: ColorTheme) => {
