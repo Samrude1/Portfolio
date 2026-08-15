@@ -15,7 +15,8 @@ export default function AmbientBackground() {
         // Initialize Audio Context on first interaction
         const initAudio = () => {
             if (!audioContextRef.current) {
-                const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+                const AudioContextClass = window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+                if (!AudioContextClass) return;
                 const ctx = new AudioContextClass();
                 audioContextRef.current = ctx;
 
@@ -30,9 +31,10 @@ export default function AmbientBackground() {
                 // Using frequencies around 100-300Hz for subtle background pad
                 const freqs = [110.00, 164.81, 196.00, 220.00]; // Am9 chordish (A2, E3, G3, A3)
 
-                freqs.forEach((f, i) => {
+                freqs.forEach((f) => {
                     const osc = ctx.createOscillator();
                     const oscGain = ctx.createGain();
+
 
                     osc.type = 'sine';
                     osc.frequency.value = f;
@@ -80,8 +82,11 @@ export default function AmbientBackground() {
         }
 
         return () => {
-            // Cleanup if unmounting (optional, usually we want this persistent)
-        }
+            if (audioContextRef.current && audioContextRef.current.state !== 'closed') {
+                audioContextRef.current.close().catch(() => {});
+            }
+        };
+
     }, [hasInteracted, isMuted]);
 
     const toggleSound = () => {

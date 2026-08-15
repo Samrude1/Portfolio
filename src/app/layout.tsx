@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Syne, Bebas_Neue } from "next/font/google";
+import { Inter, Space_Grotesk, Syne, Bebas_Neue, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,6 +10,12 @@ const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+});
+
 
 const syne = Syne({
   variable: "--font-syne",
@@ -27,6 +33,7 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   weight: ["400"],
 });
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://samirautanen.fi';
 
@@ -111,8 +118,9 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${syne.variable} ${inter.variable} ${spaceGrotesk.variable} ${bebasNeue.variable} antialiased`}
+        className={`${syne.variable} ${inter.variable} ${outfit.variable} ${spaceGrotesk.variable} ${bebasNeue.variable} antialiased`}
       >
+
         <ThemeProvider>
           <Navbar />
           {children}

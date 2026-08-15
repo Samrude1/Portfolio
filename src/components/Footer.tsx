@@ -44,7 +44,6 @@ export default function Footer() {
                         aria-hidden="true"
                         tabIndex={-1}
                     >
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <div 
                             role="img"
                             aria-label="RobCo Logo"
@@ -62,10 +61,11 @@ export default function Footer() {
                                 ...({
                                     WebkitMaskMode: 'luminance',
                                     maskMode: 'luminance'
-                                } as any)
+                                } as React.CSSProperties)
                             }} 
                         />
                     </Link>
+
                 </div>
 
                 <div className="flex gap-6 items-center">

@@ -132,45 +132,52 @@ function NeuralNetwork() {
     return { nodes: nodesList, linePositions: new Float32Array(lines) };
   }, []);
 
+  // Reusable objects to avoid GC allocation overhead in frame loop
+  const tempMatrix = useMemo(() => new THREE.Matrix4(), []);
+  const tempPos = useMemo(() => new THREE.Vector3(), []);
+  const tempScale = useMemo(() => new THREE.Vector3(), []);
+
   // Much more lively animations
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
 
     if (nodesRef.current) {
       nodes.forEach((node, i) => {
-        const matrix = new THREE.Matrix4();
-
         // More dramatic pulsing (faster and more pronounced)
         const pulse = 1 + Math.sin(time * 3 * node.speed + i * 0.3) * 0.3;
+        const currentScale = node.size * pulse;
 
         // Floating movement
         const floatY = Math.sin(time * 0.8 * node.speed + i) * 0.15;
         const floatZ = Math.cos(time * 0.6 * node.speed + i * 0.5) * 0.1;
 
-        const pos = new THREE.Vector3(
+        tempPos.set(
           node.position[0],
           node.position[1] + floatY,
           node.position[2] + floatZ
         );
+        tempScale.set(currentScale, currentScale, currentScale);
 
-        matrix.setPosition(pos);
-        matrix.scale(new THREE.Vector3(node.size * pulse, node.size * pulse, node.size * pulse));
-        nodesRef.current!.setMatrixAt(i, matrix);
+        tempMatrix.makeScale(currentScale, currentScale, currentScale);
+        tempMatrix.setPosition(tempPos);
+
+        nodesRef.current!.setMatrixAt(i, tempMatrix);
       });
       nodesRef.current.instanceMatrix.needsUpdate = true;
     }
 
     // Continuous rotation (more noticeable)
     if (nodesRef.current && linesRef.current) {
-      const rotation = time * 0.08; // Faster rotation
+      const rotation = time * 0.08;
       nodesRef.current.rotation.y = rotation;
       linesRef.current.rotation.y = rotation;
 
-      // Slight tilt for more dynamic feel
-      nodesRef.current.rotation.x = Math.sin(time * 0.2) * 0.1;
-      linesRef.current.rotation.x = Math.sin(time * 0.2) * 0.1;
+      const tilt = Math.sin(time * 0.2) * 0.1;
+      nodesRef.current.rotation.x = tilt;
+      linesRef.current.rotation.x = tilt;
     }
   });
+
 
   return (
     <group>

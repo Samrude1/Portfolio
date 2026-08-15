@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquare, X, Send, Bot, User, Info } from "lucide-react";
+import { X, Send, Bot, User, Info } from "lucide-react";
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
@@ -49,7 +49,7 @@ export default function ChatWidget() {
                     setBackendStatus('awake');
                     return true;
                 }
-            } catch (error) {
+            } catch {
                 console.log(`Health check attempt ${i + 1}/${retries} failed`);
                 if (i === 0) {
                     setBackendStatus('waking');
@@ -58,6 +58,7 @@ export default function ChatWidget() {
                 await new Promise(resolve => setTimeout(resolve, Math.min(1000 * Math.pow(2, i), 10000)));
             }
         }
+
 
         setBackendStatus('sleeping');
         return false;
@@ -187,16 +188,18 @@ export default function ChatWidget() {
                                         <ReactMarkdown
                                             remarkPlugins={[remarkGfm]}
                                             components={{
-                                                a: ({ node, ...props }) => (
+                                                a: (props) => (
                                                     <a {...props} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline" />
                                                 ),
-                                                ul: ({ node, ...props }) => <ul {...props} className="list-disc list-inside my-1" />,
-                                                ol: ({ node, ...props }) => <ol {...props} className="list-decimal list-inside my-1" />,
-                                                p: ({ node, ...props }) => <p {...props} className="mb-1 last:mb-0" />,
+                                                ul: (props) => <ul {...props} className="list-disc list-inside my-1" />,
+                                                ol: (props) => <ol {...props} className="list-decimal list-inside my-1" />,
+                                                p: (props) => <p {...props} className="mb-1 last:mb-0" />,
                                             }}
                                         >
                                             {msg.content}
                                         </ReactMarkdown>
+
+
                                     </div>
                                 </div>
                             ))}

@@ -1,9 +1,9 @@
 "use client";
 
-import { useTheme, ColorTheme } from './ThemeProvider';
-import { Sun, Moon, Palette } from 'lucide-react';
-import { useState } from 'react';
+import { useTheme } from './ThemeProvider';
+import { Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 
 export default function ThemeToggle() {
     const { mode, toggleMode } = useTheme();

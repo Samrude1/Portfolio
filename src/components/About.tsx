@@ -2,7 +2,7 @@
 
 import Section from "./Section";
 import { motion } from "framer-motion";
-import { User, MapPin, Briefcase, GraduationCap } from "lucide-react";
+import { MapPin, Briefcase, GraduationCap } from "lucide-react";
 
 export default function About() {
     return (
@@ -46,7 +46,7 @@ export default function About() {
                         style={{ color: 'var(--foreground)' }}
                     >
                         I am an <strong>AI Engineer</strong> specializing in the bridge between intelligent agents and production deployments. 
-                        I architect autonomous multi-agent systems that don't just work in a lab, but thrive in the cloud — 
+                        I architect autonomous multi-agent systems that don&apos;t just work in a lab, but thrive in the cloud — 
                         utilizing AWS, Terraform, and modern DevOps to deliver scalable, enterprise-ready solutions.
                     </p>
  
@@ -64,9 +64,10 @@ export default function About() {
                         style={{ color: 'var(--foreground)' }}
                     >
                         I focus on the entire lifecycle of an AI product: from the first prompt to the final CI/CD pipeline. 
-                        Whether it's Parallel Research or Autonomous Engineering Teams, my goal is to turn AI research into 
+                        Whether it&apos;s Parallel Research or Autonomous Engineering Teams, my goal is to turn AI research into 
                         tangible, production-hardened business value.
                     </p>
+
 
                     {/* Quick facts */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
