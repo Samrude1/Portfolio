@@ -43,9 +43,11 @@ next-env.d.ts
 # Private Interview Prep
 interview-prep/
 
-# Career Docs
+# Career Docs & Internal Notes
 docs/
 documents/
 *.pdf
 profiili*.txt
+REPORT*.md
+*report*.md
 
