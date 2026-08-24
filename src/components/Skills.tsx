@@ -5,27 +5,27 @@ import { motion } from "framer-motion";
 
 const skills = [
     {
-        category: "AI Engineering",
-        items: ["CrewAI & LangGraph", "AutoGen Frameworks", "MCP Server Integration", "Multi-Agent Orchestration"]
+        category: "AI & Multi-Agent Systems",
+        items: ["CrewAI & LangGraph", "Multi-Agent Orchestration", "MCP Server Integration", "LLM Tool Use & Automation"]
     },
     {
-        category: "Game Development",
-        items: ["Unity Engine", "C# Scripting", "JavaScript Games", "Itch.io Publishing"]
+        category: "Cloud & DevSecOps",
+        items: ["AWS Ecosystem (Lambda, S3, Aurora)", "Terraform (IaC)", "CI/CD & GitHub Actions", "Security Automation & DevSecOps"]
     },
     {
-        category: "Full-Stack Web",
-        items: ["React / Next.js", "TypeScript", "Tailwind CSS", "Node.js"]
+        category: "Full-Stack & Languages",
+        items: ["Python", "TypeScript / React / Next.js", "C# & .NET", "FastAPI & RESTful APIs"]
     },
     {
-        category: "Cloud & Deployment",
-        items: ["AWS Ecosystem", "Azure & Google Cloud", "Terraform (IaC)", "GitHub Actions / CI/CD"]
+        category: "Game Dev & 3D Design",
+        items: ["Unity Engine & C#", "JavaScript Web Games", "8 Published itch.io Games", "3D Modeling & Visualization"]
     }
 ];
 
 export default function Skills() {
     return (
         <Section id="skills">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
                 {/* Text / Context */}
                 <motion.div
@@ -44,21 +44,43 @@ export default function Skills() {
                         className="text-lg leading-relaxed mb-6 opacity-90"
                         style={{ color: 'var(--foreground)' }}
                     >
-                        I bring a systems engineering mindset to AI development. My focus on cloud infrastructure
-                        and scalable architecture informs how I build robust agent systems — balancing technical 
-                        performance with production-grade stability. I specialize in taking AI projects from prototype to deployment.
+                        I bring a rigorous systems engineering mindset to software and AI development. With 25 years of high-tech precision experience combined with modern full-stack development, I architect reliable AI systems — taking intelligent agent workflows from experimental prototype to hardened cloud deployments (AWS, Terraform, CI/CD).
                     </p>
-                    <div className="mt-8 pt-6 border-t" style={{ borderColor: 'var(--border)' }}>
-                        <p className="text-xs font-medium tracking-widest mb-2 opacity-60" style={{ color: 'var(--foreground)' }}>EDUCATION</p>
-                        <h4 className="text-xl font-medium" style={{ color: 'var(--foreground)' }}>
-                            Vocational Qualification in Technical Design
-                        </h4>
-                        <p className="opacity-80 text-lg" style={{ color: 'var(--foreground)' }}>
-                            Hyria Ammattiopisto • Tekninen suunnittelija
+                    <p
+                        className="text-base leading-relaxed mb-8 opacity-80"
+                        style={{ color: 'var(--foreground)' }}
+                    >
+                        My focus covers the full development lifecycle in Python, TypeScript/React, and C#, with an active focus on DevSecOps and AI-driven security & penetration testing.
+                    </p>
+
+                    <div className="pt-6 border-t space-y-6" style={{ borderColor: 'var(--border)' }}>
+                        <p className="text-xs font-semibold tracking-widest uppercase opacity-60" style={{ color: 'var(--foreground)' }}>
+                            Education & Specialized Training
                         </p>
-                        <p className="text-base mt-1 opacity-70" style={{ color: 'var(--foreground)' }}>
-                            3D Visualization & Structural Design
-                        </p>
+                        
+                        <div>
+                            <h4 className="text-lg font-medium" style={{ color: 'var(--foreground)' }}>
+                                C# Systems Development
+                            </h4>
+                            <p className="opacity-80 text-base" style={{ color: 'var(--foreground)' }}>
+                                Taitotalo Helsinki • 2023
+                            </p>
+                            <p className="text-sm mt-0.5 opacity-70" style={{ color: 'var(--foreground)' }}>
+                                Enterprise application architecture, C#, and object-oriented systems design
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 className="text-lg font-medium" style={{ color: 'var(--foreground)' }}>
+                                Vocational Qualification in Technical Design
+                            </h4>
+                            <p className="opacity-80 text-base" style={{ color: 'var(--foreground)' }}>
+                                Hyria Ammattiopisto • 2016–2018
+                            </p>
+                            <p className="text-sm mt-0.5 opacity-70" style={{ color: 'var(--foreground)' }}>
+                                3D Modeling, structural design & technical visualization
+                            </p>
+                        </div>
                     </div>
                 </motion.div>
 
@@ -86,16 +108,16 @@ export default function Skills() {
                             >
                                 {skillGroup.category}
                             </h3>
-                            <ul className="space-y-2">
+                            <ul className="space-y-2.5">
                                 {skillGroup.items.map(item => (
                                     <li
                                         key={item}
-                                        className="text-lg flex items-center gap-2 opacity-90"
+                                        className="text-base flex items-center gap-2 opacity-90"
                                         style={{ color: 'var(--foreground)' }}
                                     >
                                         <span
-                                            className="w-1 h-1 rounded-full"
-                                            style={{ backgroundColor: 'var(--secondary)' }}
+                                            className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                                            style={{ backgroundColor: 'var(--primary)' }}
                                         />
                                         {item}
                                     </li>
@@ -106,6 +128,6 @@ export default function Skills() {
                 </div>
 
             </div>
-        </Section >
+        </Section>
     );
 }
