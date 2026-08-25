@@ -137,7 +137,7 @@ export default function About() {
                         </h4>
                         <div className="space-y-3">
                             {[
-                                { year: "1999-2024", role: "Specialist", desc: "Digital/Industrial Precision at Murata Finland (MEMS Tech)" },
+                                { year: "1999-2024", role: "Operator", desc: "Digital/Industrial Precision at Murata Finland (MEMS Tech)" },
                                 { year: "2023-2024", role: "Programmer", desc: "C# Systems Development & Full-Stack Apps" },
                                 { year: "2024-2026", role: "AI Engineer", desc: "Multi-agent orchestration, Gemini 2.0, production agentic systems" },
                             ].map((item, i) => (
