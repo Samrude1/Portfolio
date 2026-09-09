@@ -15,7 +15,7 @@ I architect and implement **autonomous AI agent systems** end-to-end — from cl
 
 - 🤖 **Agentic Systems** — Multi-agent orchestration with CrewAI, LangGraph & MCP
 - ☁️ **AWS Serverless** — Lambda, SQS, DynamoDB, S3 Vectors, Bedrock (Terraform managed)
-- 🌐 **Full-Stack AI Apps** — Next.js 15 frontends backed by FastAPI agent pipelines
+- 🌐 **Full-Stack AI Apps** — Next.js 16 frontends backed by FastAPI agent pipelines
 
 ---
 
@@ -25,7 +25,7 @@ The main portfolio site (samirautanen.fi) operates on a highly optimized Vercel/
 
 ```mermaid
 graph TD
-    User((User)) -->|HTTPS| Frontend[Next.js 15 Frontend - Vercel]
+    User((User)) -->|HTTPS| Frontend[Next.js 16 Frontend - Vercel]
     Frontend -->|POST /chat| BackendAPI[FastAPI Backend - Render]
     
     subgraph "AI Logic Layer (Render Hosted)"
@@ -80,7 +80,7 @@ While my focus is on Enterprise AI, I have a deep history in systems thinking an
 
 **Frontend & Backend**
 
-![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 
