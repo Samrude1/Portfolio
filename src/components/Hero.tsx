@@ -46,7 +46,7 @@ export default function Hero() {
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
-                        className="w-32 h-[2px] mx-auto"
+                        className="w-28 sm:w-36 h-[2px] mx-auto"
                         style={{ backgroundColor: 'var(--primary)' }}
                     />
 
@@ -54,13 +54,13 @@ export default function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8, delay: 1.2 }}
-                        className="text-xs sm:text-sm md:text-base lg:text-lg tracking-widest md:tracking-[0.15em] font-medium opacity-80 px-4"
+                        className="text-base sm:text-lg md:text-xl lg:text-2xl tracking-[0.2em] md:tracking-[0.28em] font-bold opacity-95 px-4"
                         style={{
-                            fontFamily: 'var(--font-mono)',
+                            fontFamily: 'var(--font-space), sans-serif',
                             color: 'var(--foreground)'
                         }}
                     >
-                        AI ENGINEER & AGENTIC SYSTEMS ARCHITECT
+                        SOFTWARE ARCHITECT
                     </motion.p>
                 </div>
             </motion.div>
