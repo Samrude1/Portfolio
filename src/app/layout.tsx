@@ -25,10 +25,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://samirautanen.fi';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Sami Rautanen | Software Architect",
+  title: "Sami Rautanen | AI Engineer & Fullstack Developer",
   description: "Portfolio of Sami Rautanen. Specializing in High-Performance Agentic AI, Complex Systems, and 3D Visualization. Transforming logic into experience.",
   keywords: [
-    'Software Architect',
+    'AI Engineer & Fullstack Developer',
     'AI Engineer',
     'Agentic AI',
     'Full-Stack Developer',
