@@ -25,13 +25,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://samirautanen.fi';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Sami Rautanen | AI Engineer & Fullstack Developer",
+  title: "Sami Rautanen | AI Engineer",
   description: "Portfolio of Sami Rautanen. Specializing in High-Performance Agentic AI, Complex Systems, and 3D Visualization. Transforming logic into experience.",
   keywords: [
-    'AI Engineer & Fullstack Developer',
     'AI Engineer',
+    'Full-Stack AI Developer',
     'Agentic AI',
-    'Full-Stack Developer',
+    'Autonomous Agents',
     'React',
     'Next.js',
     'TypeScript',
@@ -39,7 +39,8 @@ export const metadata: Metadata = {
     'FastAPI',
     '3D Visualization',
     'Three.js',
-    'Technical Designer',
+    'LangGraph',
+    'CrewAI',
     'RAG',
     'LLM',
     'Web Development',
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Sami Rautanen' }],
   creator: 'Sami Rautanen',
   openGraph: {
-    title: "Sami Rautanen | AI Engineer & Technical Designer",
+    title: "Sami Rautanen | AI Engineer",
     description: "Building the next generation of autonomous web agents and immersive interfaces.",
     url: siteUrl,
     siteName: 'Sami Rautanen Portfolio',
@@ -76,7 +77,7 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Sami Rautanen',
-    jobTitle: 'AI Engineer & Technical Designer',
+    jobTitle: 'AI Engineer',
     url: siteUrl,
     sameAs: [
       'https://github.com/samiruai',

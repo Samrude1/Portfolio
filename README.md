@@ -1,6 +1,6 @@
-# Sami Rautanen - AI Platform Engineer
+# Sami Rautanen - AI Engineer
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=3B82F6&width=500&lines=AI+Platform+Engineer;AWS+Serverless+%7C+Terraform+%7C+IaC;Autonomous+Agent+Systems;Multi-Agent+Orchestration)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=3B82F6&width=500&lines=AI+Engineer;AWS+Serverless+%7C+Terraform+%7C+IaC;Autonomous+Agent+Systems;Multi-Agent+Orchestration)
 
 **Building production-grade AI systems and autonomous agent architectures.**
 
