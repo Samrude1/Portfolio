@@ -148,7 +148,7 @@ export default function About() {
                                     style={{ borderColor: 'var(--primary)' }}
                                 >
                                     <span
-                                        className="text-xs font-mono opacity-50 whitespace-nowrap"
+                                        className="text-sm sm:text-base font-mono font-medium opacity-85 whitespace-nowrap w-28 sm:w-32 shrink-0 pt-0.5"
                                         style={{ color: 'var(--foreground)' }}
                                     >
                                         {item.year}
