@@ -109,7 +109,7 @@ export default function About() {
                             <GraduationCap size={20} style={{ color: 'var(--primary)' }} />
                             <div>
                                 <p className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>Education</p>
-                                <p className="font-medium text-lg" style={{ color: 'var(--foreground)' }}>Technical Design - Hyria Ammattiopisto</p>
+                                <p className="font-medium text-lg" style={{ color: 'var(--foreground)' }}>Technical Design (3D) - Hyria (2016-2018)</p>
                             </div>
                         </div>
                         <div
@@ -122,7 +122,7 @@ export default function About() {
                             <GraduationCap size={20} style={{ color: 'var(--primary)' }} />
                             <div>
                                 <p className="text-sm opacity-60" style={{ color: 'var(--foreground)' }}>Training</p>
-                                <p className="font-medium text-lg" style={{ color: 'var(--foreground)' }}>C# Systems Development - Taitotalo Helsinki 2023</p>
+                                <p className="font-medium text-lg" style={{ color: 'var(--foreground)' }}>C# Systems Development - Taitotalo (2023)</p>
                             </div>
                         </div>
                     </div>
@@ -137,9 +137,10 @@ export default function About() {
                         </h4>
                         <div className="space-y-3">
                             {[
-                                { year: "1999-2024", role: "Operator", desc: "Digital/Industrial Precision at Murata Finland (MEMS Tech)" },
-                                { year: "2018-2024", role: "Programmer", desc: "C# Systems Development & Full-Stack Apps" },
-                                { year: "2024-2026", role: "AI Engineer", desc: "Multi-agent orchestration, Gemini 2.0, production agentic systems" },
+                                { year: "1999-2024", role: "Operator", desc: "Industrial precision & process discipline at Murata Finland (MEMS Tech)" },
+                                { year: "2016-Present", role: "3D Designer & Modeler", desc: "Technical design, spatial reasoning & 3D visualization" },
+                                { year: "2018-Present", role: "Software Developer", desc: "C# systems, game dev (8 titles on itch.io) & full-stack apps" },
+                                { year: "2024-Present", role: "AI Engineer", desc: "Multi-agent orchestration, autonomous systems & cloud deployments" },
                             ].map((item, i) => (
                                 <div
                                     key={i}
