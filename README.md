@@ -55,7 +55,7 @@ graph TD
 While my focus is on Enterprise AI, I have a deep history in systems thinking and logic through gaming:
 
 - ♟️ **Yes Man Chess AI**: Stockfish-powered retro chess with personality-driven commentary and authentic CRT effects.
-- 🎮 **[Indie Game Portfolio](https://sr3design.itch.io/)**: 8 published titles on Itch.io (Unity, C#, JS) exploring game AI, UI/UX, and complex logic patterns.
+- 🎮 **[Indie Game Portfolio](https://sr3design.itch.io/)**: 10 published titles on Itch.io (Unity, C#, JS) exploring game AI, UI/UX, and complex logic patterns.
 - 🃏 **Poker Analytics Engine**: Game simulation and probability visualization tool for decision analysis.
 
 ---
@@ -83,6 +83,14 @@ While my focus is on Enterprise AI, I have a deep history in systems thinking an
 ![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+
+---
+
+## 📊 Overview
+
+- 🚀 **42 Repositories** — Autonomous agent systems, full-stack web apps, and game logic
+- ⚡ **Core Focus** — Multi-agent orchestration, AWS serverless architectures, and end-to-end deployments
+- 🛠️ **CI/CD Driven** — Automated production workflows via GitHub Actions and Terraform IaC
 
 ---
 

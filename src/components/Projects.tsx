@@ -75,7 +75,7 @@ const projects: ProjectItem[] = [
     {
         title: "Indie Game Portfolio",
         status: "Live",
-        description: "8 published games on Itch.io showcasing game mechanics, AI, and level design. Built with Unity/C# and JavaScript.",
+        description: "10 published games on Itch.io showcasing game mechanics, AI, and level design. Built with Unity/C# and JavaScript.",
         tags: ["Unity", "C#", "JavaScript", "Game Design"],
         link: "https://sr3design.itch.io/",
         cta: "Play Games",

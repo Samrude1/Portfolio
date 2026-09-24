@@ -139,7 +139,7 @@ export default function About() {
                             {[
                                 { year: "1999-2024", role: "Operator", desc: "Industrial precision & process discipline at Murata Finland (MEMS Tech)" },
                                 { year: "2016-Present", role: "3D Designer & Modeler", desc: "Technical design, spatial reasoning & 3D visualization" },
-                                { year: "2018-Present", role: "Software Developer", desc: "C# systems, game dev (8 titles on itch.io) & full-stack apps" },
+                                { year: "2018-Present", role: "Software Developer", desc: "C# systems, game dev (10 titles on itch.io) & full-stack apps" },
                                 { year: "2024-Present", role: "AI Engineer", desc: "Multi-agent orchestration, autonomous systems & cloud deployments" },
                             ].map((item, i) => (
                                 <div
