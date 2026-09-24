@@ -87,6 +87,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                                 className={`text-[10px] font-bold tracking-widest px-2.5 py-1 rounded-full border backdrop-blur-md ${
                                     isLive
                                         ? "bg-primary border-primary text-white shadow-[0_0_12px_rgba(0,102,204,0.6)]"
+                                        : project.status === "Open Source"
+                                        ? "bg-emerald-600/90 border-emerald-500 text-white shadow-[0_0_10px_rgba(16,185,129,0.4)]"
                                         : "bg-amber-500/90 border-amber-400 text-white shadow-[0_0_10px_rgba(245,158,11,0.4)]"
                                 }`}
                             >

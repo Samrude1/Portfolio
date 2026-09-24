@@ -45,8 +45,8 @@ graph TD
 | **Digital Twin (AWS)**   | ✅ **Live**   | Bedrock · DynamoDB · Terraform    | **Memory:** Multi-modal digital twin with long-term memory and AWS serverless infra.      |
 | **EngineeringTeam Crew** | ✅ **Live**   | CrewAI · Claude 3.7 · GPT-4       | **Automation:** Full autonomous software team drafting, coding, and testing Python apps.  |
 | **AgentSquad Platform**  | ✅ **Live**   | OpenAI SDK · Gemini · React       | **Intelligence:** Multi-agent platform for Sales pipelines and Deep Research.             |
-| **ContractSense AI**     | 🏗️ **In Dev** | FastAPI · Claude 3.7 · TypeScript | **Business AI:** Legal-grade contract risk analysis and PII-masking with zero-login demo. |
-| **CareAssist AI**        | 🏗️ **In Dev** | AWS · SQS · Lambda · Aurora       | **HealthTech:** Autonomous patient note structuring and triage for the Sote-sector.       |
+| **Agentic Architect**           | 📦 **Open Source** | Next.js 16 · React Flow · Prisma  | **Architecture AI:** Interactive 4-tier system visualizer and automatic Prisma/API/UI code generator. |
+| **Agentic Fullstack Template**  | 📦 **Open Source** | TypeScript · Python · CI/CD · OWASP | **Cognitive OS:** Studio-grade governance template & 17 skills for autonomous coding agents. |
 
 ---
 

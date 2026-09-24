@@ -40,26 +40,26 @@ const projects: ProjectItem[] = [
         github: "https://github.com/Samrude1/Digital-Twin-AWS"
     },
     {
-        title: "CareAssist AI",
-        status: "In Development",
-        description: "HealthTech solution for autonomous patient note structuring and triage. Built with AWS Event-driven architecture to transform unstructured sote-data into structured formats.",
-        tags: ["AWS SQS", "Lambda", "Aurora v2", "PII-Anonymization"],
-        link: "",
-        cta: "Request Demo",
-        image: "/projects/careassist-v2.jpg",
-        linkDescription: "Internal Development",
-        github: ""
+        title: "Agentic Fullstack Template",
+        status: "Open Source",
+        description: "Studio-grade cognitive development environment and deterministic governance template for autonomous AI agents. Features 17 specialized skills, zero context-rot state persistence, and automated quality gates.",
+        tags: ["Agentic Dev", "TypeScript", "Python", "CI/CD", "OWASP"],
+        link: "https://github.com/Samrude1/agentic-fullstack-template",
+        cta: "View Repository",
+        image: "/projects/agentic-template-v1.jpg",
+        linkDescription: "GitHub Template",
+        github: "https://github.com/Samrude1/agentic-fullstack-template"
     },
     {
-        title: "ContractSense AI",
-        status: "In Development",
-        description: "Legal-grade contract risk analysis platform. Features PII-masking, CoT-visualization of legal risks, and a zero-login demo philosophy for immediate business value.",
-        tags: ["FastAPI", "Claude 3.7", "PDF-Parsing", "RegTech"],
-        link: "",
-        cta: "Request Demo",
-        image: "/projects/contractsense-v2.jpg",
-        linkDescription: "Private Repository",
-        github: ""
+        title: "Agentic Architect",
+        status: "Open Source",
+        description: "AI-powered fullstack architecture visualizer and code generation engine. Transforms requirements into interactive 4-tier React Flow system diagrams, Prisma schemas, Next.js API handlers, and React 19 UI components.",
+        tags: ["Next.js 16", "React Flow", "Vercel AI SDK", "Prisma", "TypeScript"],
+        link: "https://github.com/Samrude1/Agentic-Architect",
+        cta: "View Repository",
+        image: "/projects/agentic-architect-v1.jpg",
+        linkDescription: "GitHub Repository",
+        github: "https://github.com/Samrude1/Agentic-Architect"
     },
     {
         title: "AgentSquad Platform",
